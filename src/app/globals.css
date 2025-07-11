@@ -1,0 +1,103 @@
+@import "tailwindcss";
+/* app/globals.css */
+@layer {
+  @font-face {
+    font-family: "Sharp Grotesk";
+    src: url("/fonts/SharpGrotesk-Medium20.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Sharp Grotesk";
+    src: url("/fonts/SharpGrotesk-SemiBold25.woff2") format("woff2");
+    font-weight: 600;
+    font-style: bold;
+    font-display: swap;
+  }
+}
+
+:root {
+  --gradient-main: linear-gradient(180deg, #8b55ff 0%, #433199 100%);
+}
+
+@theme {
+  --font-family-sans: "Sharp Grotesk", sans-serif;
+  --font-family-mono: "Roboto Mono", monospace;
+  --font-family-jost: "Jost", Helvetica, Arial, Lucida, sans-serif;
+  --font-family-inter: "Inter", sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
+
+  /* Your color variables */
+  --color-background: #001241;
+  --color-bg-secondary: #d7fff7;
+  --color-text: #171717;
+  --color-text-secondary: #4a4b54;
+  --color-menu: #241b37;
+  --color-menu-secondary: #2f2741;
+  /* ... other color variables */
+}
+
+body {
+  font-family: var(
+    --font-family-inter
+  ); /* Changed to Inter for better readability */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Apply fonts directly to heading elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-jost); /* Jost for all headings */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Specific styling for different heading levels */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Description and paragraph styling */
+p {
+  font-family: var(--font-family-inter);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
