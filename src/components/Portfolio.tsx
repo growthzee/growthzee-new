@@ -83,9 +83,7 @@ export default function Portfolio() {
             </p>
           </div>
           <a
-            href="https://dribbble.com/Shakhari1"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/portfolio"
             className="text-[14px] uppercase bg-gradient-to-t from-[#433199] to-[#8b55ff] text-white font-bold py-4 px-6 rounded-xl mt-4 cursor-pointer hover:bg-[#8b55ffa2] transition-colors"
           >
             View Portfolio

@@ -52,22 +52,26 @@ export default function PricingCheatSheet() {
                 <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-4 bg-gray-900">
                   <TabsTrigger
                     value="development"
-                    className="data-[state=active]:bg-purple-600">
+                    className="data-[state=active]:bg-purple-600"
+                  >
                     Development
                   </TabsTrigger>
                   <TabsTrigger
                     value="lead-gen"
-                    className="data-[state=active]:bg-purple-600">
+                    className="data-[state=active]:bg-purple-600"
+                  >
                     Lead Generation
                   </TabsTrigger>
                   <TabsTrigger
                     value="consulting"
-                    className="data-[state=active]:bg-purple-600">
+                    className="data-[state=active]:bg-purple-600"
+                  >
                     Consulting
                   </TabsTrigger>
                   <TabsTrigger
                     value="social-media"
-                    className="data-[state=active]:bg-purple-600">
+                    className="data-[state=active]:bg-purple-600"
+                  >
                     Social Media
                   </TabsTrigger>
                 </TabsList>
@@ -168,7 +172,8 @@ export default function PricingCheatSheet() {
                           <Badge
                             key={platform}
                             variant="outline"
-                            className="justify-center py-2 border-gray-700 bg-gray-800">
+                            className="justify-center py-2 border-gray-700 bg-gray-800"
+                          >
                             {platform}
                           </Badge>
                         ))}
@@ -337,7 +342,8 @@ export default function PricingCheatSheet() {
                           <Badge
                             key={platform}
                             variant="outline"
-                            className="justify-center py-2 border-gray-700 bg-gray-800">
+                            className="justify-center py-2 border-gray-700 bg-gray-800"
+                          >
                             {platform}
                           </Badge>
                         ))}
@@ -399,14 +405,11 @@ export default function PricingCheatSheet() {
                   <div className="flex items-center">
                     <Phone className="h-6 w-6 mr-2 text-purple-500" />
                     <span className="text-lg">
-                      CALL/WHATSAPP: +1 (424)323-8570
+                      CALL/WHATSAPP: +91 99638 32825
                     </span>
                   </div>
                   <Button className="bg-purple-600 hover:bg-purple-700" asChild>
-                    <a
-                      href="https://calendly.com/peter-allmybusinessideas"
-                      target="_blank"
-                      rel="noopener noreferrer">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                       SCHEDULE A MEETING
                     </a>
                   </Button>
