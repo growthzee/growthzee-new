@@ -11,7 +11,15 @@ export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
 
   const navItems = useMemo(
-    () => ["Home", "Portfolio", "Services", "Packages", "About Us", "Contact"],
+    () => [
+      "Home",
+      "Portfolio",
+      "Services",
+      "Packages",
+      "About Us",
+      "Blogs",
+      "Contact",
+    ],
     []
   );
 
@@ -28,7 +36,8 @@ export default function Navbar() {
       // Determine which section is in view (excluding About Us)
       const scrollPosition = window.scrollY + 100;
       for (const item of navItems) {
-        if (item === "About Us" || item === "Contact") continue; // Skip About Us and Contact as they're separate pages
+        if (item === "About Us" || item === "Contact" || item === "Blogs")
+          continue; // Skip About Us and Contact as they're separate pages
 
         const section = document.getElementById(item.toLowerCase());
         if (section) {
@@ -97,6 +106,11 @@ export default function Navbar() {
       return;
     }
     if (item === "Contact") {
+      setIsMenuOpen(false);
+      // Navigation will be handled by Next.js Link
+      return;
+    }
+    if (item === "Blogs") {
       setIsMenuOpen(false);
       // Navigation will be handled by Next.js Link
       return;
@@ -176,6 +190,18 @@ export default function Navbar() {
               ) : item === "Contact" ? (
                 <Link
                   href="/contact"
+                  className={`${
+                    activeLink === item
+                      ? "bg-[#2F2641] p-2 px-3 font-medium"
+                      : "font-medium text-[14px] px-1 py-1"
+                  }`}
+                  onClick={() => setActiveLink(item)}
+                >
+                  {item}
+                </Link>
+              ) : item === "Blogs" ? (
+                <Link
+                  href="/blogs"
                   className={`${
                     activeLink === item
                       ? "bg-[#2F2641] p-2 px-3 font-medium"
@@ -292,6 +318,21 @@ export default function Navbar() {
                 ) : item === "Contact" ? (
                   <Link
                     href="/contact"
+                    className={`text-lg ${
+                      activeLink === item
+                        ? "bg-[#2F2641] text-white p-3 px-6 font-medium rounded-lg"
+                        : "font-medium text-white px-1 py-1"
+                    }`}
+                    onClick={() => {
+                      setActiveLink(item);
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    {item}
+                  </Link>
+                ) : item === "Blogs" ? (
+                  <Link
+                    href="/blogs"
                     className={`text-lg ${
                       activeLink === item
                         ? "bg-[#2F2641] text-white p-3 px-6 font-medium rounded-lg"

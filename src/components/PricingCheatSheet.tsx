@@ -44,7 +44,7 @@ export default function PricingCheatSheet() {
             <div className="space-y-8">
               <div className="flex justify-center mb-6">
                 <div className="text-3xl text-white font-bold">
-                  ALL MYBUSINESS <span className="text-purple-600">IDEA.</span>
+                  GrowthZee <span className="text-purple-600">IDEA.</span>
                 </div>
               </div>
 
@@ -79,19 +79,19 @@ export default function PricingCheatSheet() {
                 {/* Development Tab */}
                 <TabsContent value="development" className="space-y-4">
                   <h2 className="text-2xl lg:pt-1 md:pt-[10px] sm:pt-[25px] pt-[25px] text-white font-bold">
-                    Mobile App & Website Development
+                    Website Design & Development
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <PricingCard
-                      title="Standard"
-                      price="$149"
+                      title="Basic Plan"
+                      price="₹9,999"
                       period="month"
-                      description="Basic mobile app and website development package"
+                      description="For Small Size Business"
                       features={[
-                        "Mobile-responsive website",
-                        "Basic app functionality",
-                        "Monthly maintenance",
-                        "Email support",
+                        "Upto 5 Pages",
+                        "Slider",
+                        "Static Website",
+                        "Domain-1st Year Free (.com or .in )",
                       ]}
                       highlight={
                         <Badge className="bg-purple-600 py-0 text-[8px] font-family-mono">
@@ -100,10 +100,10 @@ export default function PricingCheatSheet() {
                       }
                     />
                     <PricingCard
-                      title="Premium"
-                      price="$499"
+                      title="Standard Plan"
+                      price="₹19,999"
                       period="month"
-                      description="Enhanced development with additional features"
+                      description="For Medium Size Business"
                       features={[
                         "Advanced app functionality",
                         "Custom design elements",
@@ -113,10 +113,10 @@ export default function PricingCheatSheet() {
                       ]}
                     />
                     <PricingCard
-                      title="Enterprise"
-                      price="$999"
+                      title="Advanced Plan"
+                      price="₹34,999"
                       period="month"
-                      description="Comprehensive solution for large businesses"
+                      description="For Large Size Business"
                       features={[
                         "Full-scale app development",
                         "Custom integrations",
@@ -182,29 +182,30 @@ export default function PricingCheatSheet() {
                   </Card>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <PricingCard
-                      title="Basic Lead Generation"
-                      price="$500"
+                      title="Starter Plan"
+                      price="₹19,999/month + 18% GST"
                       period="month"
-                      description="Lead generation across 5 major platforms"
+                      description=" New Brands, Startups, & Founders Ready to Kickstart Their Social Media Journey"
                       features={[
-                        "5 platforms of your choice",
-                        "Campaign management",
-                        "Monthly reporting",
-                        "Audience targeting",
-                        "Performance optimization",
+                        "8  Reels (15–30 sec, optimized for engagement & virality)",
+                        "8–10 Thumbnails (Branded reel covers with grid-style consistency) ",
+                        "8 Graphic Posts (High-quality, brand-aligned designs) ",
+                        "3 Carousel Posts (Educational, value-driven & interactive content)",
+                        "Custom Caption + Hashtag Strategy (For each post/reel)",
                       ]}
                     />
                     <PricingCard
-                      title="Premium Lead Generation"
-                      price="$1,000"
+                      title=" Mid-Level Growth Plan"
+                      price=" ₹24,999/month + 18% GST"
                       period="month"
-                      description="Comprehensive lead generation across 10 major platforms"
+                      description="Growing startups & solopreneurs focused on daily brand engagement without 
+breaking the bank."
                       features={[
-                        "All 10 major platforms",
-                        "Advanced campaign management",
-                        "Bi-weekly reporting",
-                        "Custom audience creation",
-                        "A/B testing",
+                        "12 Reels (15–30 sec each, crafted for relatability & virality)",
+                        "12 Custom Thumbnails (Branded, visually uniform for grid appeal)",
+                        "30 Stories/Month (Daily brand stories, offers, trends, and interactions) ",
+                        "10 Graphic Posts (High-quality designs including memes, relatable content & trend jacks)",
+                        "3 Carousels or Info Posts (Value-packed for education or storytelling)",
                         "Conversion tracking",
                       ]}
                     />

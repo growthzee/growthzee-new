@@ -107,7 +107,7 @@ export default function ContactPage() {
       </div>
 
       {/* Contact Methods Grid */}
-      <div className="w-full bg-bg-secondary py-16">
+      <div className="w-full bg-gray-800 py-16">
         <div className="container mx-auto px-5">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
