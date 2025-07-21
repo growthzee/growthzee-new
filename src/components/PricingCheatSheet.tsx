@@ -66,7 +66,7 @@ export default function PricingCheatSheet() {
                     value="consulting"
                     className="data-[state=active]:bg-purple-600"
                   >
-                    Consulting
+                    eCommerce Store Management
                   </TabsTrigger>
                   <TabsTrigger
                     value="social-media"
@@ -83,15 +83,16 @@ export default function PricingCheatSheet() {
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <PricingCard
-                      title="Basic Plan"
-                      price="₹9,999"
+                      title="Starter Plan"
+                      price="₹24,999"
                       period="month"
-                      description="For Small Size Business"
+                      description=" New Brands & Small Stores Looking for Strong Online Presence"
                       features={[
-                        "Upto 5 Pages",
-                        "Slider",
-                        "Static Website",
-                        "Domain-1st Year Free (.com or .in )",
+                        "Shopify Theme Customization (Design & Layout)",
+                        "Homepage, Product Page, Collection Page Setup",
+                        "Professional Banners Design (Festive/Offer-based)",
+                        "Product Catalog Management (up to 50 products)",
+                        "Daily Inventory Check & Update",
                       ]}
                       highlight={
                         <Badge className="bg-purple-600 py-0 text-[8px] font-family-mono">
@@ -100,30 +101,31 @@ export default function PricingCheatSheet() {
                       }
                     />
                     <PricingCard
-                      title="Standard Plan"
-                      price="₹19,999"
+                      title="Growth Plan"
+                      price="34,999"
                       period="month"
-                      description="For Medium Size Business"
+                      description="Growing Brands Needing Constant Upgrades & Conversion Support"
                       features={[
-                        "Advanced app functionality",
-                        "Custom design elements",
-                        "Priority support",
+                        "Product Upload: Up to 200 Products (incl. Variants)",
+                        "Bulk Editing, Tags, SEO-Ready Listings",
+                        "Weekly Banner & Offer Updates",
                         "Performance optimization",
-                        "Regular updates",
+                        "Weekly Banner & Offer Updates",
+                        "Festive & Flash Sale Landing Pages",
                       ]}
                     />
                     <PricingCard
-                      title="Advanced Plan"
-                      price="₹34,999"
+                      title="Scale Plan"
+                      price="₹44,999"
                       period="month"
-                      description="For Large Size Business"
+                      description="Best For: High-Growth D2C Brands Wanting Automation & Serious Revenue"
                       features={[
-                        "Full-scale app development",
-                        "Custom integrations",
-                        "Dedicated support team",
-                        "Advanced analytics",
-                        "White-label options",
-                        "24/7 technical assistance",
+                        "Unlimited Product Uploads",
+                        "Combo Offers, Bundles, Smart Collection Logic",
+                        "Amazon/Flipkart Integration Support",
+                        "Custom Checkout Apps (Post Purchase Offers, Order Bumps)",
+                        "Funnel Tracking (Product > Cart > Checkout)",
+                        "A/B Testing on Banners & CTA",
                       ]}
                     />
                   </div>
@@ -215,13 +217,16 @@ breaking the bank."
                 {/* Consulting Tab */}
                 <TabsContent value="consulting" className="space-y-4">
                   <h2 className="text-2xl lg:pt-1 md:pt-[10px] sm:pt-[25px] pt-[25px] text-white font-bold">
-                    Business Consulting
+                    eCommerce Store Management
                   </h2>
                   <Card className="border-gray-800 bg-gray-900 text-white">
                     <CardHeader>
-                      <CardTitle>Consulting Services</CardTitle>
+                      <CardTitle>
+                        Growthzee eCommerce Store Management Plans
+                      </CardTitle>
                       <CardDescription className="text-gray-400">
-                        Professional business consulting with flexible options
+                        Growthzee becomes your complete eCommerce command
+                        center.
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -229,12 +234,12 @@ breaking the bank."
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div className="border border-gray-800 rounded-lg p-4 bg-gray-800">
                             <h3 className="text-xl text-white font-semibold mb-2">
-                              Remote Consulting
+                              Multi-Platform Boost Plan
                             </h3>
                             <p className="text-3xl text-white font-bold">
-                              $600
+                              ₹35,000
                               <span className="text-lg font-normal text-gray-400">
-                                /hour
+                                /month
                               </span>
                             </p>
                             <ul className="mt-4 space-y-2">
@@ -244,7 +249,7 @@ breaking the bank."
                                   className="mr-2 text-purple-500"
                                 />
                                 <span className="text-white">
-                                  Virtual meetings
+                                  Custom Store Design + Weekly Banners
                                 </span>
                               </li>
                               <li className="flex items-center">
@@ -253,7 +258,7 @@ breaking the bank."
                                   className="mr-2 text-purple-500"
                                 />
                                 <span className="text-white">
-                                  Screen sharing
+                                  Product Uploads (100/month)
                                 </span>
                               </li>
                               <li className="flex items-center">
@@ -262,17 +267,44 @@ breaking the bank."
                                   className="mr-2 text-purple-500"
                                 />
                                 <span className="text-white">
-                                  Digital documentation
+                                  Offer Setup + Countdown Timer
+                                </span>
+                              </li>
+                              <li className="flex items-center">
+                                <Check
+                                  size={18}
+                                  className="mr-2 text-purple-500"
+                                />
+                                <span className="text-white">
+                                  Inventory & Order Flow Support
+                                </span>
+                              </li>
+                              <li className="flex items-center">
+                                <Check
+                                  size={18}
+                                  className="mr-2 text-purple-500"
+                                />
+                                <span className="text-white">
+                                  Review Tools + Chat Integrations
+                                </span>
+                              </li>
+                              <li className="flex items-center">
+                                <Check
+                                  size={18}
+                                  className="mr-2 text-purple-500"
+                                />
+                                <span className="text-white">
+                                  Store Performance Tracking (Monthly Report)
                                 </span>
                               </li>
                             </ul>
                           </div>
                           <div className="border border-gray-800 rounded-lg p-4 bg-gray-800">
                             <h3 className="text-xl text-white font-semibold mb-2">
-                              In-Person Consulting
+                              Ultimate Growth Plan
                             </h3>
                             <p className="text-3xl text-white font-bold">
-                              $1,000
+                              ₹45,000
                               <span className="text-lg font-normal text-gray-400">
                                 /hour
                               </span>
@@ -284,7 +316,8 @@ breaking the bank."
                                   className="mr-2 text-purple-500"
                                 />
                                 <span className="text-white">
-                                  On-site meetings
+                                  Upto 200 Product Listings/month (shared across
+                                  platforms)
                                 </span>
                               </li>
                               <li className="flex items-center">
@@ -293,7 +326,7 @@ breaking the bank."
                                   className="mr-2 text-purple-500"
                                 />
                                 <span className="text-white">
-                                  Hands-on assistance
+                                  Title, Tag & Description Optimization
                                 </span>
                               </li>
                               <li className="flex items-center">
@@ -302,7 +335,25 @@ breaking the bank."
                                   className="mr-2 text-purple-500"
                                 />
                                 <span className="text-white">
-                                  Team workshops
+                                  Platform-Specific Offer Planning + Execution
+                                </span>
+                              </li>
+                              <li className="flex items-center">
+                                <Check
+                                  size={18}
+                                  className="mr-2 text-purple-500"
+                                />
+                                <span className="text-white">
+                                  Centralized Inventory Coordination
+                                </span>
+                              </li>
+                              <li className="flex items-center">
+                                <Check
+                                  size={18}
+                                  className="mr-2 text-purple-500"
+                                />
+                                <span className="text-white">
+                                  Weekly Campaign Planning for Events/Sales
                                 </span>
                               </li>
                             </ul>
@@ -311,8 +362,9 @@ breaking the bank."
                         <div className="bg-gray-800 p-4 rounded-lg mt-4">
                           <p className="font-semibold">Important Note:</p>
                           <p className="text-gray-300">
-                            3-hour minimum retainer required for all consulting
-                            services
+                            You focus on building the brand. We&apos;ll handle
+                            the systems, dashboards, tools, and operations—
+                            professionally and reliably.
                           </p>
                         </div>
                       </div>
