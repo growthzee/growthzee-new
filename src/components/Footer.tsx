@@ -92,9 +92,7 @@ export default function Footer() {
                 support@growthzee.com
               </p>
               <p
-                // onClick={() =>
-                //   window.open(`https://wa.me/8801721495805`, "_blank")
-                // }
+                onClick={() => window.open(`https://wa.link/oy4na3`, "_blank")}
                 className="text-[#A3A3A3] text-[18px] font-mono mt-5 cursor-pointer hover:text-[#804FEF]"
               >
                 WhatsApp:+91 99638 32825
@@ -102,7 +100,7 @@ export default function Footer() {
               {/* Social Icons */}
               <div className="flex gap-4 mt-6">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/growthzee/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white border border-[#443883] rounded-full p-3 hover:text-[#6F51FF] text-[20px]"
@@ -110,7 +108,7 @@ export default function Footer() {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/growthzee?t=n5rCU-eWpy4wJaB4ofYlHg&s=09"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white border border-[#443883] rounded-full p-3 hover:text-[#6F51FF] text-[20px]"
@@ -118,7 +116,7 @@ export default function Footer() {
                   <FaTwitter />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/growthzee/?igsh=NDJzdzFvdmg4aDFl#"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white border border-[#443883] rounded-full p-3 hover:text-[#6F51FF] text-[20px]"
@@ -126,7 +124,7 @@ export default function Footer() {
                   <FaInstagram />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/growthzee/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white border border-[#443883] rounded-full  p-3 hover:text-[#6F51FF] text-[20px]"

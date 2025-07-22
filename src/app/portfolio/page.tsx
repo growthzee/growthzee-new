@@ -480,14 +480,6 @@ export default function PortfolioPage() {
                     <FaExternalLinkAlt />
                     View Live Project
                   </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 bg-white border-2 border-[#7A41F2] text-[#7A41F2] px-6 py-3 rounded-xl font-semibold hover:bg-[#7A41F2] hover:text-white transition-all duration-300"
-                  >
-                    <FaEye />
-                    Case Study
-                  </motion.button>
                 </div>
               </div>
             </motion.div>
