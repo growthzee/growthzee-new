@@ -121,7 +121,7 @@ export async function updatePost(
   updates: Partial<BlogPost>
 ): Promise<BlogPost | null> {
   try {
-    const updateData: any = {};
+    const updateData: Partial<PrismaBlogPost> = {};
 
     if (updates.title) updateData.title = updates.title;
     if (updates.slug) updateData.slug = updates.slug;

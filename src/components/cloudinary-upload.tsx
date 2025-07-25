@@ -7,19 +7,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { X, Upload, ImageIcon, Loader2 } from "lucide-react";
 
-interface ImageUploadProps {
+interface CloudinaryUploadProps {
   value?: string;
   onChange?: (url: string) => void;
   onRemove?: () => void;
   placeholder?: string;
 }
 
-export function ImageUpload({
+export function CloudinaryUpload({
   value,
   onChange,
   onRemove,
   placeholder = "Upload cover image",
-}: ImageUploadProps) {
+}: CloudinaryUploadProps) {
   const [isUploading, setIsUploading] = useState(false);
 
   const handleFileUpload = async (file: File) => {
@@ -31,19 +31,13 @@ export function ImageUpload({
     setIsUploading(true);
 
     try {
-      // Create FormData for Cloudinary upload
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "blog_images"); // You'll create this in Cloudinary
 
-      // Upload to Cloudinary
-      const response = await fetch(
-        `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
 
       if (!response.ok) {
         throw new Error("Upload failed");
@@ -51,11 +45,11 @@ export function ImageUpload({
 
       const data = await response.json();
 
-      // Get the secure URL from Cloudinary response
-      const imageUrl = data.secure_url;
-
-      // Call onChange with the Cloudinary URL
-      onChange?.(imageUrl);
+      if (data.success) {
+        onChange?.(data.url);
+      } else {
+        throw new Error(data.error || "Upload failed");
+      }
     } catch (error) {
       console.error("Upload error:", error);
       alert("Upload failed. Please try again.");
@@ -79,10 +73,6 @@ export function ImageUpload({
     }
   };
 
-  const handleRemove = () => {
-    onRemove?.();
-  };
-
   // If there's already an image
   if (value) {
     return (
@@ -93,17 +83,13 @@ export function ImageUpload({
               src={value || "/placeholder.svg"}
               alt="Cover image"
               className="w-full h-48 object-cover rounded-lg"
-              onError={(e) => {
-                e.currentTarget.src =
-                  "/placeholder.svg?height=200&width=400&text=Image+Not+Found";
-              }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
               <Button
                 type="button"
                 variant="destructive"
                 size="sm"
-                onClick={handleRemove}
+                onClick={onRemove}
                 className="bg-red-500 hover:bg-red-600"
               >
                 <X className="h-4 w-4 mr-2" />
@@ -111,8 +97,8 @@ export function ImageUpload({
               </Button>
             </div>
           </div>
-          <p className="text-xs text-gray-500 mt-2 truncate">
-            📁 Stored in Cloudinary
+          <p className="text-xs text-green-600 mt-2">
+            ✅ Uploaded to Cloudinary
           </p>
         </CardContent>
       </Card>
@@ -132,7 +118,7 @@ export function ImageUpload({
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
-            id="image-upload"
+            id="cloudinary-upload"
             disabled={isUploading}
           />
 
@@ -155,7 +141,7 @@ export function ImageUpload({
                   : "Drag and drop an image here, or click to select"}
               </p>
 
-              <label htmlFor="image-upload">
+              <label htmlFor="cloudinary-upload">
                 <Button
                   type="button"
                   disabled={isUploading}
@@ -171,7 +157,7 @@ export function ImageUpload({
                     ) : (
                       <>
                         <Upload className="h-4 w-4 mr-2" />
-                        Choose Image
+                        Upload Image
                       </>
                     )}
                   </span>
@@ -179,9 +165,11 @@ export function ImageUpload({
               </label>
             </div>
 
-            <p className="text-xs text-gray-400">
-              Supports: JPG, PNG, GIF up to 10MB
-            </p>
+            <div className="text-xs text-gray-400 space-y-1">
+              <p>📁 Images stored securely in Cloudinary</p>
+              <p>🚀 Automatic optimization & fast delivery</p>
+              <p>📏 Supports: JPG, PNG, GIF up to 10MB</p>
+            </div>
           </div>
         </div>
       </CardContent>

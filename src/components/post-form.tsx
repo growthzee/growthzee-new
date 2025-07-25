@@ -17,7 +17,8 @@ import { Badge } from "@/components/ui/badge";
 import type { BlogPost } from "@/lib/blog";
 import { Save, Eye, Calendar, User, Tag } from "lucide-react";
 import Link from "next/link";
-import { ImageUpload } from "@/app/admin/posts/components/image-upload";
+
+import { CloudinaryUpload } from "./cloudinary-upload";
 import { RichTextEditor } from "@/app/admin/posts/components/rich-text-editor";
 
 interface PostFormProps {
@@ -103,7 +104,7 @@ export function PostForm({ post, onSubmit }: PostFormProps) {
               </CardContent>
             </Card>
 
-            {/* Cover Image */}
+            {/* Cover Image with Cloudinary Upload */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
@@ -112,7 +113,7 @@ export function PostForm({ post, onSubmit }: PostFormProps) {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ImageUpload
+                <CloudinaryUpload
                   value={coverImage}
                   onChange={setCoverImage}
                   onRemove={() => setCoverImage("")}
@@ -196,7 +197,7 @@ export function PostForm({ post, onSubmit }: PostFormProps) {
                   disabled={isLoading}
                   className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
                 >
-                  <Save className="w-4 h-4 mr-2" />
+                  <Save className="w-4 w-4 mr-2" />
                   {isLoading
                     ? "Saving..."
                     : status === "published"
