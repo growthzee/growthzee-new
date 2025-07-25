@@ -1,3 +1,6 @@
+import { prisma } from "./prisma";
+import type { BlogPost as PrismaBlogPost, PostStatus } from "@prisma/client";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -5,75 +8,198 @@ export interface BlogPost {
   content: string;
   excerpt: string;
   author: string;
-  publishedAt: string;
+  publishedAt: string | null;
   status: "draft" | "published";
   tags: string[];
   featuredImage?: string;
   coverImage?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
-// In a real app, this would be a database
-const blogPosts: BlogPost[] = [
-  {
-    id: "1",
-    title: "Getting Started with Next.js",
-    slug: "getting-started-nextjs",
-    content: "Next.js is a powerful React framework...",
-    excerpt: "Learn the basics of Next.js and how to get started.",
-    author: "Admin",
-    publishedAt: "2024-01-15",
-    status: "published",
-    tags: ["nextjs", "react", "tutorial"],
-    coverImage: "/placeholder.svg?height=400&width=800",
-  },
-  {
-    id: "2",
-    title: "Advanced TypeScript Tips",
-    slug: "advanced-typescript-tips",
-    content: "TypeScript offers many advanced features...",
-    excerpt: "Discover advanced TypeScript techniques for better code.",
-    author: "Admin",
-    publishedAt: "2024-01-10",
-    status: "draft",
-    tags: ["typescript", "programming"],
-    coverImage: "/placeholder.svg?height=400&width=800",
-  },
-];
+// Convert Prisma BlogPost to our BlogPost interface
+function convertPrismaPost(post: PrismaBlogPost): BlogPost {
+  return {
+    id: post.id,
+    title: post.title,
+    slug: post.slug,
+    content: post.content,
+    excerpt: post.excerpt,
+    author: post.author,
+    publishedAt: post.publishedAt?.toISOString().split("T")[0] || null,
+    status: post.status.toLowerCase() as "draft" | "published",
+    tags: post.tags,
+    featuredImage: post.featuredImage || undefined,
+    coverImage: post.coverImage || undefined,
+    createdAt: post.createdAt.toISOString(),
+    updatedAt: post.updatedAt.toISOString(),
+  };
+}
 
 export async function getAllPosts(): Promise<BlogPost[]> {
-  return blogPosts;
+  try {
+    const posts = await prisma.blogPost.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+    return posts.map(convertPrismaPost);
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return [];
+  }
 }
 
 export async function getPostById(id: string): Promise<BlogPost | null> {
-  return blogPosts.find((post) => post.id === id) || null;
+  try {
+    const post = await prisma.blogPost.findUnique({
+      where: { id },
+    });
+    return post ? convertPrismaPost(post) : null;
+  } catch (error) {
+    console.error("Error fetching post:", error);
+    return null;
+  }
+}
+
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  try {
+    const post = await prisma.blogPost.findUnique({
+      where: { slug },
+    });
+    return post ? convertPrismaPost(post) : null;
+  } catch (error) {
+    console.error("Error fetching post by slug:", error);
+    return null;
+  }
+}
+
+export async function getPublishedPosts(): Promise<BlogPost[]> {
+  try {
+    const posts = await prisma.blogPost.findMany({
+      where: {
+        status: "PUBLISHED",
+      },
+      orderBy: {
+        publishedAt: "desc",
+      },
+    });
+    return posts.map(convertPrismaPost);
+  } catch (error) {
+    console.error("Error fetching published posts:", error);
+    return [];
+  }
 }
 
 export async function createPost(
-  post: Omit<BlogPost, "id">
+  postData: Omit<BlogPost, "id" | "createdAt" | "updatedAt">
 ): Promise<BlogPost> {
-  const newPost: BlogPost = {
-    ...post,
-    id: Date.now().toString(),
-  };
-  blogPosts.unshift(newPost);
-  return newPost;
+  try {
+    const post = await prisma.blogPost.create({
+      data: {
+        title: postData.title,
+        slug: postData.slug,
+        content: postData.content,
+        excerpt: postData.excerpt,
+        author: postData.author,
+        status: postData.status.toUpperCase() as PostStatus,
+        tags: postData.tags,
+        coverImage: postData.coverImage,
+        featuredImage: postData.featuredImage,
+        publishedAt: postData.status === "published" ? new Date() : null,
+      },
+    });
+    return convertPrismaPost(post);
+  } catch (error) {
+    console.error("Error creating post:", error);
+    throw new Error("Failed to create post");
+  }
 }
 
 export async function updatePost(
   id: string,
   updates: Partial<BlogPost>
 ): Promise<BlogPost | null> {
-  const index = blogPosts.findIndex((post) => post.id === id);
-  if (index === -1) return null;
+  try {
+    const updateData: any = {};
 
-  blogPosts[index] = { ...blogPosts[index], ...updates };
-  return blogPosts[index];
+    if (updates.title) updateData.title = updates.title;
+    if (updates.slug) updateData.slug = updates.slug;
+    if (updates.content) updateData.content = updates.content;
+    if (updates.excerpt) updateData.excerpt = updates.excerpt;
+    if (updates.author) updateData.author = updates.author;
+    if (updates.tags) updateData.tags = updates.tags;
+    if (updates.coverImage !== undefined)
+      updateData.coverImage = updates.coverImage;
+    if (updates.featuredImage !== undefined)
+      updateData.featuredImage = updates.featuredImage;
+
+    if (updates.status) {
+      updateData.status = updates.status.toUpperCase() as PostStatus;
+      // Set publishedAt when publishing
+      if (updates.status === "published") {
+        updateData.publishedAt = new Date();
+      } else if (updates.status === "draft") {
+        updateData.publishedAt = null;
+      }
+    }
+
+    const post = await prisma.blogPost.update({
+      where: { id },
+      data: updateData,
+    });
+
+    return convertPrismaPost(post);
+  } catch (error) {
+    console.error("Error updating post:", error);
+    return null;
+  }
 }
 
 export async function deletePost(id: string): Promise<boolean> {
-  const index = blogPosts.findIndex((post) => post.id === id);
-  if (index === -1) return false;
+  try {
+    await prisma.blogPost.delete({
+      where: { id },
+    });
+    return true;
+  } catch (error) {
+    console.error("Error deleting post:", error);
+    return false;
+  }
+}
 
-  blogPosts.splice(index, 1);
-  return true;
+export async function searchPosts(query: string): Promise<BlogPost[]> {
+  try {
+    const posts = await prisma.blogPost.findMany({
+      where: {
+        OR: [
+          {
+            title: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+          {
+            content: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+          {
+            excerpt: {
+              contains: query,
+              mode: "insensitive",
+            },
+          },
+        ],
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+    return posts.map(convertPrismaPost);
+  } catch (error) {
+    console.error("Error searching posts:", error);
+    return [];
+  }
 }
