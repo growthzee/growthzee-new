@@ -57,25 +57,38 @@ export async function getPostById(id: string): Promise<BlogPost | null> {
     });
     return post ? convertPrismaPost(post) : null;
   } catch (error) {
-    console.error("Error fetching post:", error);
+    console.error("Error fetching post by ID:", error);
     return null;
   }
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   try {
+    console.log(`[getPostBySlug] Attempting to fetch post with slug: ${slug}`);
     const post = await prisma.blogPost.findUnique({
       where: { slug },
     });
-    return post ? convertPrismaPost(post) : null;
+    if (post) {
+      console.log(
+        `[getPostBySlug] Found post: ${post.title} (Status: ${post.status})`
+      );
+      return convertPrismaPost(post);
+    } else {
+      console.log(`[getPostBySlug] No post found for slug: ${slug}`);
+      return null;
+    }
   } catch (error) {
-    console.error("Error fetching post by slug:", error);
+    console.error(
+      `[getPostBySlug] Error fetching post by slug ${slug}:`,
+      error
+    );
     return null;
   }
 }
 
 export async function getPublishedPosts(): Promise<BlogPost[]> {
   try {
+    console.log("[getPublishedPosts] Fetching all published posts...");
     const posts = await prisma.blogPost.findMany({
       where: {
         status: "PUBLISHED",
@@ -84,6 +97,7 @@ export async function getPublishedPosts(): Promise<BlogPost[]> {
         publishedAt: "desc",
       },
     });
+    console.log(`[getPublishedPosts] Found ${posts.length} published posts.`);
     return posts.map(convertPrismaPost);
   } catch (error) {
     console.error("Error fetching published posts:", error);

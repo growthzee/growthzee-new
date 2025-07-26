@@ -4,7 +4,7 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
-    domains: ["flagcdn.com"],
+    domains: ["flagcdn.com", "res.cloudinary.com"],
   },
   eslint: {
     ignoreDuringBuilds: true,
