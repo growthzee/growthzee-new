@@ -19,7 +19,7 @@ import { Save, Eye, Calendar, User, Tag } from "lucide-react";
 import Link from "next/link";
 
 import { CloudinaryUpload } from "./cloudinary-upload";
-import { RichTextEditor } from "@/app/admin/posts/components/rich-text-editor";
+import { AdvancedTiptapEditor } from "@/app/admin/posts/components/advanced-tiptap-editor";
 
 interface PostFormProps {
   post?: BlogPost;
@@ -148,7 +148,7 @@ export function PostForm({ post, onSubmit }: PostFormProps) {
                 <CardTitle>Content</CardTitle>
               </CardHeader>
               <CardContent>
-                <RichTextEditor
+                <AdvancedTiptapEditor
                   name="content"
                   value={content}
                   onChange={setContent}
