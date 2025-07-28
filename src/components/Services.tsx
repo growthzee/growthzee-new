@@ -12,13 +12,13 @@ const serviceData: Service[] = [
     id: 1,
     name: "Social Media Marketing",
     icon: "/images/service1.svg",
-    dec: "At Allmybusinessidea, we offer expert social media services to help your brand grow and engage with your audience effectively.",
+    dec: "At Growthzee, we offer expert social media services to help your brand grow and engage with your audience effectively.",
   },
   {
     id: 2,
     name: "Business Consulting",
     icon: "/images/service2.svg",
-    dec: "At Allmybusinessidea, we provide expert business consulting to help you optimize strategies, increase efficiency, and drive growth for your company.",
+    dec: "At Growthzee, we provide expert business consulting to help you optimize strategies, increase efficiency, and drive growth for your company.",
   },
   {
     id: 3,
@@ -48,7 +48,8 @@ export default function Services() {
           {serviceData.map((item) => (
             <div
               key={item.id}
-              className="rounded-2xl  p-6 py-10 border border-[#E9E9E9] hover:border-none hover:shadow-2xl transition-all duration-300">
+              className="rounded-2xl  p-6 py-10 border border-[#E9E9E9] hover:border-none hover:shadow-2xl transition-all duration-300"
+            >
               <div className="flex-1 flex-col items-start space-x-4 ">
                 <div className="w-[80px] h-[80px] flex items-center justify-center bg-[#E9E8FF] rounded-2xl ">
                   <Image
