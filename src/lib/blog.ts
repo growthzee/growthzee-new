@@ -38,36 +38,56 @@ function convertPrismaPost(post: PrismaBlogPost): BlogPost {
 
 export async function getAllPosts(): Promise<BlogPost[]> {
   try {
+    console.log("[getAllPosts] Environment:", process.env.NODE_ENV);
+    console.log(
+      "[getAllPosts] Database URL exists:",
+      !!process.env.DATABASE_URL
+    );
+
     const posts = await prisma.blogPost.findMany({
       orderBy: {
         createdAt: "desc",
       },
     });
+    console.log(`[getAllPosts] Successfully fetched ${posts.length} posts`);
     return posts.map(convertPrismaPost);
   } catch (error) {
-    console.error("Error fetching posts:", error);
+    console.error("[getAllPosts] Error fetching posts:", error);
     return [];
   }
 }
 
 export async function getPostById(id: string): Promise<BlogPost | null> {
   try {
+    console.log(`[getPostById] Fetching post with ID: ${id}`);
     const post = await prisma.blogPost.findUnique({
       where: { id },
     });
-    return post ? convertPrismaPost(post) : null;
+    if (post) {
+      console.log(`[getPostById] Found post: ${post.title}`);
+      return convertPrismaPost(post);
+    } else {
+      console.log(`[getPostById] No post found for ID: ${id}`);
+      return null;
+    }
   } catch (error) {
-    console.error("Error fetching post by ID:", error);
+    console.error(`[getPostById] Error fetching post by ID ${id}:`, error);
     return null;
   }
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   try {
+    console.log(`[getPostBySlug] Environment: ${process.env.NODE_ENV}`);
     console.log(`[getPostBySlug] Attempting to fetch post with slug: ${slug}`);
+    console.log(
+      `[getPostBySlug] Database URL exists: ${!!process.env.DATABASE_URL}`
+    );
+
     const post = await prisma.blogPost.findUnique({
       where: { slug },
     });
+
     if (post) {
       console.log(
         `[getPostBySlug] Found post: ${post.title} (Status: ${post.status})`
@@ -88,19 +108,67 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
 export async function getPublishedPosts(): Promise<BlogPost[]> {
   try {
+    console.log("[getPublishedPosts] Environment:", process.env.NODE_ENV);
+    console.log(
+      "[getPublishedPosts] Database URL exists:",
+      !!process.env.DATABASE_URL
+    );
     console.log("[getPublishedPosts] Fetching all published posts...");
-    const posts = await prisma.blogPost.findMany({
+
+    // First, let's check ALL posts to see their statuses
+    const allPosts = await prisma.blogPost.findMany({
+      select: {
+        id: true,
+        title: true,
+        status: true,
+        publishedAt: true,
+        createdAt: true,
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+
+    console.log(
+      `[getPublishedPosts] Total posts in database: ${allPosts.length}`
+    );
+    console.log(
+      "[getPublishedPosts] All posts with status:",
+      allPosts.map((p) => ({
+        title: p.title.substring(0, 30) + "...",
+        status: p.status,
+        publishedAt: p.publishedAt,
+        id: p.id,
+      }))
+    );
+
+    // Now get only published posts
+    const publishedPosts = await prisma.blogPost.findMany({
       where: {
         status: "PUBLISHED",
       },
       orderBy: {
         publishedAt: "desc",
       },
+      // Remove any potential limit - let's fetch ALL published posts
     });
-    console.log(`[getPublishedPosts] Found ${posts.length} published posts.`);
-    return posts.map(convertPrismaPost);
+
+    console.log(
+      `[getPublishedPosts] Found ${publishedPosts.length} published posts.`
+    );
+    console.log(
+      `[getPublishedPosts] Published post titles:`,
+      publishedPosts.map((p) => p.title.substring(0, 30) + "...")
+    );
+
+    const convertedPosts = publishedPosts.map(convertPrismaPost);
+    console.log(
+      `[getPublishedPosts] Returning ${convertedPosts.length} converted posts`
+    );
+
+    return convertedPosts;
   } catch (error) {
-    console.error("Error fetching published posts:", error);
+    console.error("[getPublishedPosts] Error fetching published posts:", error);
     return [];
   }
 }
@@ -135,7 +203,7 @@ export async function updatePost(
   updates: Partial<BlogPost>
 ): Promise<BlogPost | null> {
   try {
-    const updateData: Partial<PrismaBlogPost> = {};
+    const updateData: any = {};
 
     if (updates.title) updateData.title = updates.title;
     if (updates.slug) updateData.slug = updates.slug;
