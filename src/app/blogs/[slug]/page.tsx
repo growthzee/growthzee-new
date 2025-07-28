@@ -1,24 +1,28 @@
-import { getPostBySlug, getPublishedPosts } from "@/lib/blog";
+import { getPostBySlug } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import { ClientNavbar } from "@/components/client-navbar";
 import { ClientFooter } from "@/components/client-footer";
 import { BlogPostClientContent } from "@/components/blog-post-client-content";
 
 interface BlogPostPageProps {
-  params: Promise<{ slug: string }>; // Keep this as Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
-// generateStaticParams for pre-rendering paths at build time
-export async function generateStaticParams() {
-  const posts = await getPublishedPosts();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+// Force dynamic rendering
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+// Remove generateStaticParams to prevent static generation issues
+// export async function generateStaticParams() {
+//   const posts = await getPublishedPosts()
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//   }))
+// }
 
 // generateMetadata for SEO
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const { slug } = await params; // Await params here
+  const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) {
@@ -39,7 +43,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = await params; // Await params here
+  const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post || post.status !== "published") {

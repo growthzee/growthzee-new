@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Calendar, User, Clock } from "lucide-react";
+import { useState } from "react";
 
 interface BlogCardProps {
   slug: string;
@@ -23,6 +24,9 @@ export function BlogCard({
   author,
   index,
 }: BlogCardProps) {
+  const [imageError, setImageError] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
+
   // Calculate reading time based on description length
   const readingTime = Math.ceil(description.length / 200) || 1;
 
@@ -39,6 +43,30 @@ export function BlogCard({
     }
   };
 
+  // Get fallback image URL
+  const getFallbackImage = () => {
+    return `/api/placeholder?width=500&height=300&text=${encodeURIComponent(
+      "Blog Image"
+    )}`;
+  };
+
+  // Get image source with fallback
+  const getImageSrc = () => {
+    if (imageError || !image || image.includes("/placeholder.svg")) {
+      return getFallbackImage();
+    }
+    return image;
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+    setImageLoading(false);
+  };
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -47,15 +75,19 @@ export function BlogCard({
       className="group bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300 border border-white/20"
     >
       <Link href={`/blogs/${slug}`}>
-        <div className="aspect-video overflow-hidden">
+        <div className="aspect-video overflow-hidden relative">
+          {imageLoading && (
+            <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+              <div className="text-gray-400 text-sm">Loading...</div>
+            </div>
+          )}
           <img
-            src={image || "/placeholder.svg?height=300&width=500"}
+            src={getImageSrc() || "/placeholder.svg"}
             alt={title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            onError={(e) => {
-              e.currentTarget.src =
-                "/placeholder.svg?height=300&width=500&text=Blog+Image";
-            }}
+            onError={handleImageError}
+            onLoad={handleImageLoad}
+            style={{ display: imageLoading ? "none" : "block" }}
           />
         </div>
 

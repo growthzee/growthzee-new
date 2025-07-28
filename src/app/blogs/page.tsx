@@ -4,6 +4,10 @@ import { ClientFooter } from "@/components/client-footer";
 import { ClientBlogWrapper } from "@/components/client-blog-wrapper";
 import { BlogsHero } from "@/components/blogs-hero";
 
+// Force dynamic rendering to prevent static generation issues
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default async function BlogsPage() {
   // Fetch published posts from database
   const posts = await getPublishedPosts();
