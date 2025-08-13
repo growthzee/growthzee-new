@@ -108,7 +108,7 @@ export default function Footer() {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://x.com/growthzee?t=n5rCU-eWpy4wJaB4ofYlHg&s=09"
+                  href="https://x.com/growthzee"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white border border-[#443883] rounded-full p-3 hover:text-[#6F51FF] text-[20px]"
@@ -116,7 +116,7 @@ export default function Footer() {
                   <FaTwitter />
                 </a>
                 <a
-                  href="https://www.instagram.com/growthzee/?igsh=NDJzdzFvdmg4aDFl#"
+                  href="https://www.instagram.com/growthzee"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white border border-[#443883] rounded-full p-3 hover:text-[#6F51FF] text-[20px]"
