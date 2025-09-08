@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa"; // Only need full star icon
 
@@ -19,19 +18,16 @@ export default function ReviewCard({
     `https://flagcdn.com/w20/${code.toLowerCase()}.png`;
 
   return (
-    <div className="bg-white mx-auto max-w-[370px] min-h-[250px] rounded-xl p-6 border border-[#EAEAEA] hover:border-[#7A41F2] transition-all duration-300">
+    <div className="bg-black/40 backdrop-blur-sm mx-auto max-w-[370px] min-h-[250px] rounded-xl p-6 border border-white/10 hover:border-[#80e01a] hover:bg-[#80e01a1a] transition-colors duration-300 shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_0_30px_0_rgba(128,224,26,0.15)]">
       {/* User info with flag */}
       <div className="flex justify-start items-start gap-3 mb-4">
-        {/* Avatar */}
         <div className="rounded-full  flex flex-col items-start justify-center">
-          <span className="text-[#000000] font-medium text-[18px]">
-            {username}
-          </span>
+          <span className="text-white font-medium text-[18px]">{username}</span>
           <div className="flex items-center">
             {countryCode && (
               <div className="w-5 h-3 relative">
                 <Image
-                  src={getFlagUrl(countryCode)}
+                  src={getFlagUrl(countryCode) || "/placeholder.svg"}
                   alt={`${countryCode} flag`}
                   fill
                   className="object-cover rounded-sm"
@@ -39,7 +35,7 @@ export default function ReviewCard({
                 />
               </div>
             )}
-            <h3 className="text-[#A3A3A3] ml-1 font-medium text-[12px]">
+            <h3 className="text-white/60 ml-1 font-medium text-[12px]">
               {country}
             </h3>
           </div>
@@ -49,7 +45,7 @@ export default function ReviewCard({
       <div></div>
 
       {/* Comment */}
-      <p className="text-[#4A4B54] text-[16px] font-mono ">{comment}</p>
+      <p className="text-white/80 text-[16px]">{comment}</p>
       {/* Fixed 5-star rating */}
       <div className="flex items-center gap-1 mt-4">
         {[...Array(5)].map((_, i) => (

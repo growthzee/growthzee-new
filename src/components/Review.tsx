@@ -1,6 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
 import ReviewCard from "@/common/ReviewCard";
-import React from "react";
 
 export default function Review() {
   const testimonials = [
@@ -163,36 +164,48 @@ export default function Review() {
       x: "-100%",
       transition: {
         duration: 200, // Slower duration for horizontal scroll
-        repeat: Infinity,
+        repeat: Number.POSITIVE_INFINITY,
         ease: "linear",
       },
     },
   };
   return (
-    <section id="testimonials" className="bg-bg-secondary py-20">
+    <section
+      id="testimonials"
+      className="relative isolate overflow-hidden bg-black py-20 text-white"
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-[#80e01a] blur-[120px] opacity-30"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-10 top-10 h-[260px] w-[260px] rounded-full bg-white blur-[120px] opacity-10"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-40 top-1/3 h-[520px] w-[520px] rounded-full bg-[#80e01a] blur-[140px] opacity-20"
+      />
       <div className="container mx-auto">
-        <div className="lg:max-w-4xl md:max-w-3xl max-w-2xl px-5">
-          <h1 className="lg:text-[56px] md:text-[40px] text-[32px] text-[#171717] font-medium">
-            What Our Clients <br /> Say About Us
+        <div className="relative z-10 lg:max-w-4xl md:max-w-3xl max-w-2xl px-5">
+          <h1 className="lg:text-[56px] md:text-[40px] text-[32px] text-white font-medium">
+            What Our Clients <br />{" "}
+            <span className="text-[#80e01a]">Say About Us</span>
           </h1>
-          <p className="text-[#4A4B54] text-[18px] mt-5">
+          <p className="text-white/70 text-[18px] mt-5">
             From startups to global enterprises, our clients share how our
             solutions have helped transform their businesses and drive success.
           </p>
         </div>
-
-        {/* Single column with horizontal scroll */}
-        <div className="mt-10 overflow-hidden">
+        <div className="relative z-10 mt-10 overflow-hidden">
           <motion.div
-            className="flex gap-6 w-max" // w-max makes container as wide as its content
+            className="flex gap-6 w-max"
             variants={continuousUpAnimation}
             initial="initial"
-            animate="animate">
-            {/* Original testimonials */}
+            animate="animate"
+          >
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="w-[300px]">
-                {" "}
-                {/* Fixed width for each card */}
                 <ReviewCard
                   username={testimonial.username}
                   country={testimonial.country}
@@ -201,8 +214,6 @@ export default function Review() {
                 />
               </div>
             ))}
-
-            {/* Duplicate testimonials for seamless looping */}
             {testimonials.map((testimonial) => (
               <div key={`dup-${testimonial.id}`} className="w-[300px]">
                 <ReviewCard

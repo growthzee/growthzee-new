@@ -1,8 +1,6 @@
 "use client";
 
 import type React from "react";
-
-// import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Card,
@@ -28,49 +26,64 @@ import {
 import { Button } from "@/components/ui/button";
 
 export default function PricingCheatSheet() {
-  // const [expanded, setExpanded] = useState<string | null>(null);
-
   return (
-    <div id="packages" className="bg-[#030712]">
-      <main className="container  mx-auto px-4 py-8">
+    <div id="packages" className="relative overflow-hidden bg-black">
+      {/* Background glows */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+        {/* dominant left green bloom */}
+        <div className="absolute -left-40 top-0 h-[820px] w-[820px] rounded-full bg-[#80e01a] opacity-[0.22] blur-[220px]" />
+        {/* left white hotspot */}
+        <div className="absolute left-6 top-24 h-[300px] w-[300px] rounded-full bg-white opacity-[0.18] blur-[120px]" />
+        {/* extra left-bottom wash to extend the green on the left side */}
+        <div className="absolute -left-32 bottom-0 h-[520px] w-[520px] rounded-full bg-[#80e01a] opacity-[0.12] blur-[180px]" />
+        {/* keep a subtle right bloom so the section has balance, but left remains dominant */}
+        <div className="absolute -right-24 -top-8 h-[700px] w-[700px] rounded-full bg-[#80e01a] opacity-[0.10] blur-[170px]" />
+        {/* vignette for readability */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(0,0,0,0.6)_70%)]" />
+      </div>
+
+      <main className="relative z-10 container mx-auto px-4 py-8">
         <div className="flex flex-col items-center justify-center mb-8">
           <div className="w-full max-w-4xl">
             <h1 className="text-3xl font-bold text-white text-center mb-2">
               Pricing Sheet
             </h1>
-            <p className="text-center text-gray-400 mb-8">
-              One Stop Solution For Your Business
+            <p className="text-center text-white/70 mb-8">
+              <span className="text-[#80e01a]">One Stop Solution</span> For Your
+              Business
             </p>
+
             <div className="space-y-8">
               <div className="flex justify-center mb-6">
                 <div className="text-3xl text-white font-bold">
-                  GrowthZee <span className="text-purple-600">IDEA.</span>
+                  GrowthZee <span className="text-[#80e01a]">IDEA.</span>
                 </div>
               </div>
 
+              {/* Tabs */}
               <Tabs defaultValue="development" className="w-full">
-                <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-4 bg-gray-900">
+                <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-4 bg-gray-900/70 border border-white/10 rounded-lg p-1">
                   <TabsTrigger
                     value="development"
-                    className="data-[state=active]:bg-purple-600"
+                    className="text-white data-[state=active]:bg-[#80e01a] data-[state=active]:text-black"
                   >
                     Development
                   </TabsTrigger>
                   <TabsTrigger
                     value="lead-gen"
-                    className="data-[state=active]:bg-purple-600"
+                    className="text-white data-[state=active]:bg-[#80e01a] data-[state=active]:text-black"
                   >
                     Lead Generation
                   </TabsTrigger>
                   <TabsTrigger
                     value="consulting"
-                    className="data-[state=active]:bg-purple-600"
+                    className="text-white data-[state=active]:bg-[#80e01a] data-[state=active]:text-black"
                   >
                     eCommerce Store Management
                   </TabsTrigger>
                   <TabsTrigger
                     value="social-media"
-                    className="data-[state=active]:bg-purple-600"
+                    className="text-white data-[state=active]:bg-[#80e01a] data-[state=active]:text-black"
                   >
                     Social Media
                   </TabsTrigger>
@@ -81,6 +94,7 @@ export default function PricingCheatSheet() {
                   <h2 className="text-2xl lg:pt-1 md:pt-[10px] sm:pt-[25px] pt-[25px] text-white font-bold">
                     Website Design & Development
                   </h2>
+
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <PricingCard
                       title="Starter Plan"
@@ -95,7 +109,7 @@ export default function PricingCheatSheet() {
                         "Daily Inventory Check & Update",
                       ]}
                       highlight={
-                        <Badge className="bg-purple-600 py-0 text-[8px] font-family-mono">
+                        <Badge className="bg-[#80e01a] text-black py-0 text-[8px] font-family-mono">
                           Free Trial Available
                         </Badge>
                       }
@@ -136,7 +150,7 @@ export default function PricingCheatSheet() {
                   <h2 className="text-2xl lg:pt-1 md:pt-[10px] sm:pt-[25px] pt-[25px] text-white font-bold">
                     Lead Generation Services
                   </h2>
-                  <Card className="mb-4 border-gray-800 bg-gray-900 text-white">
+                  <Card className="mb-4 border-gray-800 bg-gray-900/80 text-white">
                     <CardHeader>
                       <CardTitle className="flex items-center justify-between">
                         <span className="font-bold text-white">
@@ -145,7 +159,7 @@ export default function PricingCheatSheet() {
                         <TooltipProvider>
                           <Tooltip>
                             <TooltipTrigger>
-                              <Info size={18} className="text-gray-400" />
+                              <Info size={18} className="text-white/60" />
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="max-w-xs text-white">
@@ -174,7 +188,7 @@ export default function PricingCheatSheet() {
                           <Badge
                             key={platform}
                             variant="outline"
-                            className="justify-center py-2 border-gray-700 bg-gray-800"
+                            className="justify-center py-2 border-white/10 bg-black/40 text-white"
                           >
                             {platform}
                           </Badge>
@@ -182,6 +196,7 @@ export default function PricingCheatSheet() {
                       </div>
                     </CardContent>
                   </Card>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <PricingCard
                       title="Starter Plan"
@@ -219,12 +234,12 @@ breaking the bank."
                   <h2 className="text-2xl lg:pt-1 md:pt-[10px] sm:pt-[25px] pt-[25px] text-white font-bold">
                     eCommerce Store Management
                   </h2>
-                  <Card className="border-gray-800 bg-gray-900 text-white">
+                  <Card className="border-gray-800 bg-gray-900/80 text-white">
                     <CardHeader>
                       <CardTitle>
                         Growthzee eCommerce Store Management Plans
                       </CardTitle>
-                      <CardDescription className="text-gray-400">
+                      <CardDescription className="text-white/70">
                         Growthzee becomes your complete eCommerce command
                         center.
                       </CardDescription>
@@ -232,139 +247,74 @@ breaking the bank."
                     <CardContent>
                       <div className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div className="border border-gray-800 rounded-lg p-4 bg-gray-800">
+                          <div className="border border-white/10 rounded-lg p-4 bg-black/40">
                             <h3 className="text-xl text-white font-semibold mb-2">
                               Multi-Platform Boost Plan
                             </h3>
                             <p className="text-3xl text-white font-bold">
                               ₹35,000
-                              <span className="text-lg font-normal text-gray-400">
+                              <span className="text-lg font-normal text-white/70">
                                 /month
                               </span>
                             </p>
                             <ul className="mt-4 space-y-2">
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Custom Store Design + Weekly Banners
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Product Uploads (100/month)
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Offer Setup + Countdown Timer
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Inventory & Order Flow Support
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Review Tools + Chat Integrations
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Store Performance Tracking (Monthly Report)
-                                </span>
-                              </li>
+                              {[
+                                "Custom Store Design + Weekly Banners",
+                                "Product Uploads (100/month)",
+                                "Offer Setup + Countdown Timer",
+                                "Inventory & Order Flow Support",
+                                "Review Tools + Chat Integrations",
+                                "Store Performance Tracking (Monthly Report)",
+                              ].map((txt) => (
+                                <li key={txt} className="flex items-center">
+                                  <Check
+                                    size={18}
+                                    className="mr-2 text-[#80e01a]"
+                                  />
+                                  <span className="text-white">{txt}</span>
+                                </li>
+                              ))}
                             </ul>
                           </div>
-                          <div className="border border-gray-800 rounded-lg p-4 bg-gray-800">
+
+                          <div className="border border-white/10 rounded-lg p-4 bg-black/40">
                             <h3 className="text-xl text-white font-semibold mb-2">
                               Ultimate Growth Plan
                             </h3>
                             <p className="text-3xl text-white font-bold">
                               ₹45,000
-                              <span className="text-lg font-normal text-gray-400">
+                              <span className="text-lg font-normal text-white/70">
                                 /hour
                               </span>
                             </p>
                             <ul className="mt-4 space-y-2">
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Upto 200 Product Listings/month (shared across
-                                  platforms)
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Title, Tag & Description Optimization
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Platform-Specific Offer Planning + Execution
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Centralized Inventory Coordination
-                                </span>
-                              </li>
-                              <li className="flex items-center">
-                                <Check
-                                  size={18}
-                                  className="mr-2 text-purple-500"
-                                />
-                                <span className="text-white">
-                                  Weekly Campaign Planning for Events/Sales
-                                </span>
-                              </li>
+                              {[
+                                "Upto 200 Product Listings/month (shared across platforms)",
+                                "Title, Tag & Description Optimization",
+                                "Platform-Specific Offer Planning + Execution",
+                                "Centralized Inventory Coordination",
+                                "Weekly Campaign Planning for Events/Sales",
+                              ].map((txt) => (
+                                <li key={txt} className="flex items-center">
+                                  <Check
+                                    size={18}
+                                    className="mr-2 text-[#80e01a]"
+                                  />
+                                  <span className="text-white">{txt}</span>
+                                </li>
+                              ))}
                             </ul>
                           </div>
                         </div>
-                        <div className="bg-gray-800 p-4 rounded-lg mt-4">
-                          <p className="font-semibold">Important Note:</p>
-                          <p className="text-gray-300">
+
+                        <div className="bg-black/40 p-4 rounded-lg mt-4 border border-white/10">
+                          <p className="font-semibold text-white">
+                            Important Note:
+                          </p>
+                          <p className="text-white/80">
                             You focus on building the brand. We&apos;ll handle
-                            the systems, dashboards, tools, and operations—
-                            professionally and reliably.
+                            the systems, dashboards, tools, and
+                            operations—professionally and reliably.
                           </p>
                         </div>
                       </div>
@@ -377,7 +327,7 @@ breaking the bank."
                   <h2 className="text-2xl lg:pt-1 md:pt-[10px] sm:pt-[25px] pt-[25px] text-white font-bold">
                     Social Media Marketing
                   </h2>
-                  <Card className="mb-4 border-gray-800 bg-gray-900 text-white">
+                  <Card className="mb-4 border-gray-800 bg-gray-900/80 text-white">
                     <CardHeader>
                       <CardTitle>Available Platforms</CardTitle>
                     </CardHeader>
@@ -395,7 +345,7 @@ breaking the bank."
                           <Badge
                             key={platform}
                             variant="outline"
-                            className="justify-center py-2 border-gray-700 bg-gray-800"
+                            className="justify-center py-2 border-white/10 bg-black/40 text-white"
                           >
                             {platform}
                           </Badge>
@@ -403,6 +353,7 @@ breaking the bank."
                       </div>
                     </CardContent>
                   </Card>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <PricingCard
                       title="Basic Social Media"
@@ -437,31 +388,36 @@ breaking the bank."
                 </TabsContent>
               </Tabs>
 
-              <Card className="border-gray-800 bg-gray-900 text-white">
+              {/* Special offers */}
+              <Card className="border-white/10 bg-black/40 text-white">
                 <CardHeader>
                   <CardTitle>Special Offers</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-purple-900/30 border border-purple-800 rounded-lg p-4">
-                    <h3 className="text-xl font-semibold text-purple-300 mb-2">
+                  <div className="bg-[#80e01a1a] border border-[#80e01a33] rounded-lg p-4">
+                    <h3 className="text-xl font-semibold text-[#80e01a] mb-2">
                       New Client Discount
                     </h3>
-                    <p className="text-purple-200">
+                    <p className="text-white">
                       50% off any service for the first month
                     </p>
                   </div>
                 </CardContent>
               </Card>
 
-              <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 text-white">
+              {/* Callout */}
+              <div className="bg-gray-900/80 p-6 rounded-lg border border-white/10 text-white">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                   <div className="flex items-center">
-                    <Phone className="h-6 w-6 mr-2 text-purple-500" />
+                    <Phone className="h-6 w-6 mr-2 text-[#80e01a]" />
                     <span className="text-lg">
                       CALL/WHATSAPP: +91 99638 32825
                     </span>
                   </div>
-                  <Button className="bg-purple-600 hover:bg-purple-700" asChild>
+                  <Button
+                    className="bg-[#80e01a] hover:bg-[#6dcc12] text-black"
+                    asChild
+                  >
                     <a href="#" target="_blank" rel="noopener noreferrer">
                       SCHEDULE A MEETING
                     </a>
@@ -469,18 +425,19 @@ breaking the bank."
                 </div>
               </div>
 
+              {/* FAQ */}
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1" className="border-gray-800">
+                <AccordionItem value="item-1" className="border-white/10">
                   <AccordionTrigger className="text-white">
                     Frequently Asked Questions
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-300">
+                  <AccordionContent className="text-white/80">
                     <div className="space-y-4">
                       <div>
                         <h3 className="font-semibold text-white">
                           What&apos;s included in the Standard package?
                         </h3>
-                        <p className="text-gray-400">
+                        <p className="text-white/70">
                           The Standard package includes a mobile-responsive
                           website, basic app functionality, monthly maintenance,
                           and email support.
@@ -490,7 +447,7 @@ breaking the bank."
                         <h3 className="font-semibold text-white">
                           Do clients pay for marketing campaigns?
                         </h3>
-                        <p className="text-gray-400">
+                        <p className="text-white/70">
                           Yes, clients pay for the actual marketing campaigns
                           separately. Our fees cover management and
                           optimization.
@@ -500,7 +457,7 @@ breaking the bank."
                         <h3 className="font-semibold text-white">
                           Is there a minimum commitment period?
                         </h3>
-                        <p className="text-gray-400">
+                        <p className="text-white/70">
                           Development packages are billed monthly with no
                           long-term commitment. Consulting requires a 3-hour
                           minimum retainer.
@@ -536,25 +493,25 @@ function PricingCard({
   highlight,
 }: PricingCardProps) {
   return (
-    <Card className="flex flex-col border-gray-800 bg-gray-900 text-white">
+    <Card className="flex flex-col border-white/10 bg-gray-900/80 text-white">
       <CardHeader>
         <div className="flex justify-between items-start">
           <CardTitle>{title}</CardTitle>
           {highlight && <div>{highlight}</div>}
         </div>
-        <CardDescription className="text-gray-400">
+        <CardDescription className="text-white/70">
           {description}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow flex flex-col">
         <div className="mb-4">
           <span className="text-3xl font-bold">{price}</span>
-          <span className="text-gray-400">/{period}</span>
+          <span className="text-white/70">/{period}</span>
         </div>
         <ul className="space-y-2 flex-grow">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start">
-              <Check size={18} className="mr-2 text-purple-500 mt-0.5" />
+              <Check size={18} className="mr-2 text-[#80e01a] mt-0.5" />
               <span>{feature}</span>
             </li>
           ))}

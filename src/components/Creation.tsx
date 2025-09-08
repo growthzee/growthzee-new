@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaArrowDown } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
@@ -52,38 +52,55 @@ export default function Creation() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="bg-bg-secondary py-20 px-4 sm:px-6 lg:px-12">
-      <div className="container mx-auto px-5">
+    <div className="relative overflow-hidden bg-black py-20 px-4 sm:px-6 lg:px-12">
+      {/* background layers */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        {/* left green bloom */}
+        <div className="absolute -left-32 top-10 h-[480px] w-[480px] rounded-full bg-[#80e01a] opacity-30 blur-3xl" />
+        {/* right soft green to balance */}
+        <div className="absolute right-[-180px] top-24 h-[560px] w-[560px] rounded-full bg-[#80e01a] opacity-20 blur-3xl" />
+        {/* subtle white hotspot */}
+        <div className="absolute right-16 -top-10 h-[320px] w-[320px] rounded-full bg-white opacity-10 blur-3xl" />
+        {/* vignette to keep content readable */}
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
+
+      {/* content */}
+      <div className="container relative z-10 mx-auto px-5">
         <div className="max-w-8xl mx-auto text-center">
-          <h1 className="lg:text-[56px] md:text-[40px] text-[32px] text-[#171717] font-medium">
-            Our Web/App Creation Packages
+          <h1 className="lg:text-[56px] md:text-[40px] text-[32px] text-white font-medium">
+            Our <span className="text-[#80e01a]">Web/App </span> Creation
+            Packages
           </h1>
-          <p className="text-[#171717] text-base sm:text-lg mt-4 font-mono">
-            Our web and app packages are designed for those who have a clear
-            vision for their simple website or mobile app business. If you have
-            a more complex project in mind, please reach out to us directly for
-            personalized assistance.
+          <p className="text-white/80 text-base sm:text-lg mt-4 font-mono">
+            Our web and app <span className="text-[#80e01a]">packages</span> are
+            designed for those who have a clear vision for their simple{" "}
+            <span className="text-[#80e01a]">website</span>
+            or mobile app business. If you have a more complex{" "}
+            <span className="text-[#80e01a]">project</span> in mind, please
+            reach out to us directly for{" "}
+            <span className="text-[#80e01a]">personalized</span> assistance.
           </p>
         </div>
 
-        <div className="mt-12  mx-auto space-y-6">
+        <div className="mt-12 mx-auto space-y-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md overflow-hidden">
+              className="bg-white rounded-xl shadow-md overflow-hidden"
+            >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex gap-x-4  justify-between items-center lg:px-6 md:px-4 px-4 py-4 text-left ">
+                className="w-full flex gap-x-4 justify-between items-center lg:px-6 md:px-4 px-4 py-4 text-left"
+              >
                 <div className="md:w-full sm:w-3/2 w-2/2">
                   <span className="md:text-[20px] sm:text-[12px] font-medium text-[#171717]">
                     {faq.question}
                   </span>
                 </div>
-                {
-                  <div className="w-[50px] h-[50px]  cursor-pointer flex justify-center items-center border border-[#171717] rounded-full">
-                    {openIndex === index ? <IoClose /> : <FaArrowDown />}
-                  </div>
-                }
+                <div className="w-[50px] h-[50px] cursor-pointer flex justify-center items-center border border-[#171717] rounded-full">
+                  {openIndex === index ? <IoClose /> : <FaArrowDown />}
+                </div>
               </button>
 
               <AnimatePresence>
@@ -92,7 +109,8 @@ export default function Creation() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.4 }}>
+                    transition={{ duration: 0.4 }}
+                  >
                     <div className="px-6 pb-5 text-[16px] sm:text-base text-[#4A4B54] whitespace-pre-line">
                       {faq.answer}
                     </div>

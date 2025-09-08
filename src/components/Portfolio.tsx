@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
@@ -54,37 +54,44 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="relative w-full py-20 z-0 min-h-[100vh] bg-bg-secondary overflow-hidden"
+      className="relative w-full py-20 z-0 min-h-[100vh] bg-black text-white overflow-hidden"
     >
-      <div className="container mx-auto px-5">
-        {/* Portfolio Header */}
-        {/* <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="bg-white w-[200px] flex justify-center items-center text-center rounded-2xl py-4 px-6 text-2xl font-semibold"
-        >
-          <span className="font-jost font-light text-[#171717] rounded-xl uppercase shadow-sm p-2 px-4">
-            Portfolio
-          </span>
-        </motion.div> */}
+      {/* Background with green gradient effects (LEFT side) - mirrors Hero */}
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        {/* Big green bloom anchored to left */}
+        <div className="absolute top-[-6rem] left-[-8%] h-[720px] w-[720px] rounded-full blur-[180px] bg-[#80e01a] opacity-35" />
+        {/* Inner white hotspot inside the green bloom */}
+        <div className="absolute top-[-2rem] left-[2%] h-[420px] w-[420px] rounded-full blur-[140px] bg-white/20" />
+        {/* Left-origin soft spread with smooth falloff */}
+        <div className="absolute inset-y-0 left-0 w-[70%] bg-[radial-gradient(900px_700px_at_5%_10%,rgba(128,224,26,0.45)_0%,rgba(128,224,26,0.18)_35%,rgba(0,0,0,0)_70%)]" />
+        {/* Vignette to preserve contrast */}
+        <div className="absolute inset-0 bg-[radial-gradient(1200px_800px_at_10%_15%,rgba(0,0,0,0)_0%,rgba(0,0,0,0.35)_55%,rgba(0,0,0,0.9)_100%)]" />
 
+        {/* Boosted right-side glow visibility */}
+        <div className="absolute top-[-2rem] right-[-5%] h-[760px] w-[760px] rounded-full blur-[180px] bg-[#80e01a] opacity-45" />
+        <div className="absolute top-[2rem] right-[2%] h-[440px] w-[440px] rounded-full blur-[140px] bg-white/25" />
+        <div className="absolute inset-y-0 right-0 w-[58%] bg-[radial-gradient(860px_640px_at_95%_18%,rgba(128,224,26,0.5)_0%,rgba(128,224,26,0.24)_42%,rgba(0,0,0,0)_78%)]" />
+      </div>
+
+      {/* Ensure all content sits above glows and remains white for contrast */}
+      <div className="relative z-10 container mx-auto px-5 text-white">
         {/* Title and Button */}
         <div className="flex justify-between items-center sm:flex-row flex-col mt-10">
-          <div className="">
-            <h1 className="lg:text-[56px] md:text-[40px] text-[32px] text-[#171717] font-medium">
-              View our projects to see our <br /> quality and creativity.
+          <div>
+            <h1 className="lg:text-[56px] md:text-[40px] text-[32px] text-white font-semibold">
+              View our projects to see our <br />{" "}
+              <span className="text-[#80e01a]">quality and creativity.</span>
             </h1>
-            <p className="text-[#171717] text-[18px] font-mono mt-5">
+            <p className="text-white/90 text-[18px] font-mono mt-5">
               Explore the range of services we offer to elevate your online
               presence and drive growth.
             </p>
           </div>
+
+          {/* Make CTA highly visible with border, glow shadow, and focus ring */}
           <a
             href="/portfolio"
-            className="text-[14px] uppercase bg-gradient-to-t from-[#433199] to-[#8b55ff] text-white font-bold py-4 px-6 rounded-xl mt-4 cursor-pointer hover:bg-[#8b55ffa2] transition-colors"
+            className="inline-flex items-center justify-center text-[14px] uppercase bg-[#80e01a] text-white font-bold py-4 px-7 rounded-xl mt-4 cursor-pointer transition-all border border-[#80e01a] shadow-[0_0_0_0_rgba(128,224,26,0)] hover:shadow-[0_0_34px_rgba(128,224,26,0.55)] hover:bg-[#80e01a]/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#80e01a]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
             View Portfolio
           </a>
@@ -101,17 +108,18 @@ export default function Portfolio() {
               <div className="rounded-2xl">
                 <div className="relative w-full h-[300px]">
                   <Image
-                    src={project.img}
+                    src={project.img || "/placeholder.svg"}
                     alt={project.name}
                     fill
                     className="object-cover rounded-2xl"
                   />
                 </div>
                 <div className="flex flex-col mt-5">
-                  <h2 className="text-[18px] font-medium text-[#171717]">
+                  {/* Enforce white titles for strong contrast */}
+                  <h2 className="text-[18px] font-medium text-white">
                     {project.name}
                   </h2>
-                  <p className="text-[#A3A3A3] text-[12px] uppercase mt-2 font-semibold">
+                  <p className="text-white/80 text-[12px] uppercase mt-2 font-semibold">
                     {project.brand}
                   </p>
                 </div>
@@ -136,7 +144,7 @@ export default function Portfolio() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
-                  className="absolute -top-10 right-0 text-white text-2xl z-10 hover:text-[#8b55ff] transition-colors"
+                  className="absolute -top-10 right-0 text-white text-2xl z-10 hover:text-[#80e01a] transition-colors"
                   onClick={() => setSelectedImage(null)}
                   aria-label="Close modal"
                 >
@@ -145,7 +153,7 @@ export default function Portfolio() {
 
                 <div className="relative w-full aspect-video bg-gray-800 rounded-t-lg overflow-hidden">
                   <Image
-                    src={selectedImage.img}
+                    src={selectedImage.img || "/placeholder.svg"}
                     alt={selectedImage.name}
                     fill
                     className="object-contain"
