@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 interface Service {
   id: number;
@@ -6,32 +7,41 @@ interface Service {
   icon: string;
   dec: string;
 }
+
 const serviceData: Service[] = [
   {
     id: 1,
-    name: "Social Media Marketing",
-    icon: "/images/service1.svg",
+    name: "Social Media Handling",
+    icon: "/social-media-marketing-vector-icon.png",
     dec: "At Growthzee, we offer expert social media services to help your brand grow and engage with your audience effectively.",
   },
   {
     id: 2,
     name: "Business Consulting",
-    icon: "/images/service2.svg",
+    icon: "/business-consulting-vector-icon.png",
     dec: "At Growthzee, we provide expert business consulting to help you optimize strategies, increase efficiency, and drive growth for your company.",
   },
   {
     id: 3,
     name: "Lead generation",
-    icon: "/images/service3.svg",
+    icon: "/lead-generation-vector-icon.png",
     dec: "We specialize in lead generation strategies that help you attract, engage, and convert high-quality prospects into valuable customers.",
   },
   {
     id: 4,
     name: "Web/App Development",
-    icon: "/images/service4.svg",
+    icon: "/web-development-vector-icon.png",
     dec: "Our UX design and web/app development services are focused on creating intuitive, enjoyable, and efficient digital experiences.",
   },
 ];
+
+const serviceLinks: { [key: number]: string } = {
+  1: "/services/social-media-marketing",
+  2: "/services/business-consulting",
+  3: "/services/lead-generation",
+  4: "/services/web-app-development",
+};
+
 export default function Services() {
   return (
     <section
@@ -52,36 +62,64 @@ export default function Services() {
       />
 
       <div className="relative z-10 container mx-auto py-20 px-5">
-        <h1 className="lg:text-[56px] md:text-[40px] text-[32px] font-medium text-white">
+        <h1 className="lg:text-[56px] md:text-[40px] text-[32px] font-medium text-white mb-4">
           <span className="text-[#80e01a]">Services</span> we offer
         </h1>
-        <p className="text-white/80 text-[18px] mt-4 font-mono">
+        <p className="text-white/80 text-[18px] mt-4 font-mono mb-10">
           Explore our services to boost your online presence and drive growth,
           from web <br /> design, development to SEO and digital marketing.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 md:gap-5 gap-4 mt-10">
-          {serviceData.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 md:gap-5 gap-4">
+          {serviceData.map((service, index) => (
             <div
-              key={item.id}
-              className="rounded-2xl p-6 py-10 border-2 border-[#80e01a] bg-black/30 hover:bg-[#80e01a1a] transition-colors duration-300"
+              key={service.id}
+              className="group rounded-2xl p-6 py-10 border-2 border-[#80e01a] bg-black/30 hover:bg-[#80e01a]/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#80e01a]/20 flex flex-col justify-between min-h-[400px]"
             >
-              <div className="flex-1 flex-col items-start space-x-4">
-                <div className="w-[80px] h-[80px] flex items-center justify-center rounded-2xl bg-[#80e01a1a]">
-                  <Image
-                    src={item.icon || "/placeholder.svg"}
-                    alt="service icon"
-                    width={32}
-                    height={32}
-                  />
+              <div>
+                <div className="mb-6">
+                  <div className="w-[80px] h-[80px] flex items-center justify-center rounded-2xl bg-[#80e01a]/10 group-hover:bg-[#80e01a]/20 group-hover:scale-110 transition-all duration-300">
+                    <Image
+                      src={service.icon || "/placeholder.svg"}
+                      alt={`${service.name} vector illustration`}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-[24px] mt-10 font-medium text-white">
-                  {item.name}
+
+                <h3 className="text-[24px] font-medium text-white group-hover:text-[#80e01a] transition-colors duration-300 mb-4">
+                  {service.name}
                 </h3>
+
+                <p className="text-white/80 font-mono text-[16px] leading-relaxed mb-6 line-clamp-4">
+                  {service.dec}
+                </p>
               </div>
-              <p className="mt-4 text-white/80 font-mono text-[18px]">
-                {item.dec}
-              </p>
+
+              <a href={serviceLinks[service.id]} className="block">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full border-[#80e01a] text-[#80e01a] hover:bg-[#80e01a] hover:text-black transition-all duration-300 bg-transparent"
+                >
+                  Learn More
+                  <svg
+                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Button>
+              </a>
             </div>
           ))}
         </div>
