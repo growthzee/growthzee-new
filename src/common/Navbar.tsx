@@ -36,7 +36,12 @@ export default function Navbar() {
       // Determine which section is in view (excluding About Us)
       const scrollPosition = window.scrollY + 100;
       for (const item of navItems) {
-        if (item === "About Us" || item === "Contact" || item === "Blogs")
+        if (
+          item === "About Us" ||
+          item === "Contact" ||
+          item === "Blogs" ||
+          item === "Portfolio"
+        )
           continue; // Skip About Us and Contact as they're separate pages
 
         const section = document.getElementById(item.toLowerCase());
@@ -111,6 +116,11 @@ export default function Navbar() {
       return;
     }
     if (item === "Blogs") {
+      setIsMenuOpen(false);
+      // Navigation will be handled by Next.js Link
+      return;
+    }
+    if (item === "Portfolio") {
       setIsMenuOpen(false);
       // Navigation will be handled by Next.js Link
       return;
@@ -202,6 +212,16 @@ export default function Navbar() {
               ) : item === "Blogs" ? (
                 <Link
                   href="/blogs"
+                  className={`${
+                    activeLink === item ? activeDesktop : inactiveDesktop
+                  }`}
+                  onClick={() => setActiveLink(item)}
+                >
+                  {item}
+                </Link>
+              ) : item === "Portfolio" ? (
+                <Link
+                  href="/portfolio"
                   className={`${
                     activeLink === item ? activeDesktop : inactiveDesktop
                   }`}
