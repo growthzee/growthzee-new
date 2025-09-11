@@ -24,7 +24,7 @@ export default function Map() {
 
       {/* Map background image layered above black/glow, below content */}
       <div
-        className="absolute inset-0 z-0 bg-[url('/images/bgmap.png')] bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-[url('/images/bgmap.webp')] bg-cover bg-center bg-no-repeat"
         style={{ backgroundPosition: "center center" }}
       />
 
