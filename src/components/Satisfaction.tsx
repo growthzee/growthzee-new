@@ -9,7 +9,7 @@ export default function Satisfaction() {
         {/* Black base */}
         <div className="absolute inset-0 bg-black" />
         {/* Left neon glow */}
-        <div className="absolute -left-24 top-0 w-[720px] h-[720px] rounded-full bg-[#80e01a] blur-[180px] opacity-45" />
+        {/* <div className="absolute -left-24 top-0 w-[720px] h-[720px] rounded-full bg-[#80e01a] blur-[180px] opacity-45" /> */}
         {/* White hotspot inside the green for realism */}
         <div className="absolute left-40 top-24 w-64 h-64 rounded-full bg-white blur-[140px] opacity-10" />
         {/* Subtle right-hand fill so edges don't feel empty */}

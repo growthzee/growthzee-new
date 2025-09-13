@@ -48,10 +48,10 @@ export default function Services() {
       id="services"
       className="relative isolate overflow-hidden bg-black text-white"
     >
-      <div
+      {/* <div
         aria-hidden
-        className="pointer-events-none absolute -left-20 -top-24 h-[720px] w-[720px] rounded-full bg-[#80e01a] opacity-30 blur-[140px]"
-      />
+        className="pointer-events-none absolute -left-20 -top-24 mt- h-[720px] w-[720px] rounded-full bg-[#80e01a] opacity-30 blur-[140px]"
+      /> */}
       <div
         aria-hidden
         className="pointer-events-none absolute left-[10%] top-[6%] h-[360px] w-[360px] rounded-full bg-white/20 blur-[180px]"

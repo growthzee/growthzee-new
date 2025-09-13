@@ -174,10 +174,10 @@ export default function Review() {
       id="testimonials"
       className="relative isolate overflow-hidden bg-black py-20 text-white"
     >
-      <div
+      {/* <div
         aria-hidden
         className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-[#80e01a] blur-[120px] opacity-30"
-      />
+      /> */}
       <div
         aria-hidden
         className="pointer-events-none absolute left-10 top-10 h-[260px] w-[260px] rounded-full bg-white blur-[120px] opacity-10"
