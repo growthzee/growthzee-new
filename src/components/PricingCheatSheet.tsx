@@ -389,7 +389,7 @@ breaking the bank."
               </Tabs>
 
               {/* Special offers */}
-              <Card className="border-white/10 bg-black/40 text-white">
+              {/* <Card className="border-white/10 bg-black/40 text-white">
                 <CardHeader>
                   <CardTitle>Special Offers</CardTitle>
                 </CardHeader>
@@ -403,7 +403,7 @@ breaking the bank."
                     </p>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
               {/* Callout */}
               <div className="bg-gray-900/80 p-6 rounded-lg border border-white/10 text-white">
