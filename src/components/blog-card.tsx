@@ -105,7 +105,7 @@ export function BlogCard({
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#80e01a] transition-colors line-clamp-2">
             {title}
           </h3>
 
@@ -121,7 +121,7 @@ export function BlogCard({
               {author}
             </div>
 
-            <span className="text-purple-300 font-medium text-sm group-hover:text-purple-200 transition-colors">
+            <span className="text-[#80e01a] font-medium text-sm group-hover:text-[#80e01a]/80 transition-colors">
               Read more →
             </span>
           </div>

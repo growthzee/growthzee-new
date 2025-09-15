@@ -116,17 +116,10 @@ export default function PortfolioPage() {
       <Navbar />
 
       {/* Hero Section with Dark Background */}
-      <div className="relative w-full pt-20 min-h-screen">
-        <div
-          className="absolute inset-0 z-0 bg-[url('/images/satisfaction.png')] bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundPosition: "center center",
-          }}
-        ></div>
+      <div className="relative w-full pt-20 min-h-screen bg-black">
         <div className="container mx-auto flex flex-col justify-between relative py-20 px-5 z-5 min-h-screen">
-          {/* Decorative Elements */}
-          <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-[#7A41F2]/10 to-[#342582]/10 rounded-full blur-xl"></div>
-          <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-[#342582]/10 to-[#7A41F2]/10 rounded-full blur-xl"></div>
+          <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-[#80e01a]/10 to-[#80e01a]/20 rounded-full blur-xl"></div>
+          <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-[#80e01a]/20 to-[#80e01a]/10 rounded-full blur-xl"></div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -138,24 +131,29 @@ export default function PortfolioPage() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-block p-4 bg-gradient-to-r from-[#7A41F2]/20 to-[#342582]/20 rounded-full mb-8"
+              className="inline-block p-4 bg-gradient-to-r from-[#80e01a]/20 to-[#80e01a]/30 rounded-full mb-8"
             >
               <div className="text-5xl">🎨</div>
             </motion.div>
 
             <h1 className="text-white capitalize lg:text-[56px] md:text-[40px] text-[32px] font-medium md:leading-[70px]">
-              Our Creative Portfolio Showcasing Excellence in Digital
-              Innovation.
+              Our <span className="text-[#80e01a]">Creative Portfolio</span>{" "}
+              Showcasing <span className="text-[#80e01a]">Excellence</span> in
+              Digital Innovation.
             </h1>
 
             <p className="text-[#A3A3A3] text-lg mt-6 max-w-2xl mx-auto">
-              Explore our collection of stunning projects that showcase our
-              creativity, technical expertise, and commitment to delivering
-              exceptional digital experiences.
+              Explore our collection of{" "}
+              <span className="text-[#80e01a]">stunning projects</span> that
+              showcase our creativity, technical expertise, and commitment to
+              delivering{" "}
+              <span className="text-[#80e01a]">
+                exceptional digital experiences
+              </span>
+              .
             </p>
           </motion.div>
 
-          {/* Stats Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -169,7 +167,7 @@ export default function PortfolioPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="flex flex-col justify-between rounded-[20px] bg-gradient-to-b from-[#2F2741] to-[#2F2741] px-8 py-12 h-full transition-all duration-300 border border-transparent hover:border-t hover:border-l hover:border-[#7A41F2] hover:bg-gradient-to-b hover:from-[#03001400] hover:via-[#342582] hover:to-[#7A41F2] hover:shadow-[0_0_40px_rgba(122,65,242,0.4)]"
+                className="flex flex-col justify-between rounded-[20px] bg-gradient-to-b from-[#2F2741] to-[#2F2741] px-8 py-12 h-full transition-all duration-300 border border-transparent hover:border-t hover:border-l hover:border-[#80e01a] hover:bg-gradient-to-b hover:from-[#03001400] hover:via-[#80e01a]/20 hover:to-[#80e01a]/30 hover:shadow-[0_0_40px_rgba(128,224,26,0.4)]"
               >
                 <div className="text-3xl mb-3">{stat.icon}</div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -197,12 +195,18 @@ export default function PortfolioPage() {
               className=""
             >
               <h2 className="lg:text-[48px] md:text-[36px] text-[28px] text-[#171717] font-medium leading-tight">
-                View our projects to see our <br /> quality and creativity.
+                View our projects to see our <br />{" "}
+                <span className="text-[#80e01a]">quality and creativity</span>.
               </h2>
               <p className="text-[#666666] text-[16px] mt-4 max-w-lg">
-                Each project represents our dedication to excellence,
-                innovation, and client satisfaction. Discover the stories behind
-                our most successful collaborations.
+                Each project represents our dedication to{" "}
+                <span className="text-[#80e01a]">excellence</span>,{" "}
+                <span className="text-[#80e01a]">innovation</span>, and client
+                satisfaction. Discover the stories behind our most{" "}
+                <span className="text-[#80e01a]">
+                  successful collaborations
+                </span>
+                .
               </p>
             </motion.div>
 
@@ -219,7 +223,7 @@ export default function PortfolioPage() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 text-[14px] uppercase bg-gradient-to-r from-[#7A41F2] to-[#342582] text-white font-bold py-4 px-8 rounded-xl cursor-pointer hover:shadow-lg transition-all duration-300"
+                className="flex items-center gap-2 text-[14px] uppercase bg-gradient-to-r from-[#80e01a] to-[#60b015] text-white font-bold py-4 px-8 rounded-xl cursor-pointer hover:shadow-lg transition-all duration-300"
               >
                 GET STARTED
                 <FaArrowRight className="text-sm" />
@@ -232,7 +236,6 @@ export default function PortfolioPage() {
             </motion.div>
           </div>
 
-          {/* Category Filter */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -248,8 +251,8 @@ export default function PortfolioPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-[#7A41F2] to-[#342582] text-white shadow-lg"
-                    : "bg-white text-[#666666] border border-gray-200 hover:border-[#7A41F2] hover:text-[#7A41F2] shadow-sm"
+                    ? "bg-gradient-to-r from-[#80e01a] to-[#60b015] text-white shadow-lg"
+                    : "bg-white text-[#666666] border border-gray-200 hover:border-[#80e01a] hover:text-[#80e01a] shadow-sm"
                 }`}
               >
                 {category}
@@ -291,9 +294,8 @@ export default function PortfolioPage() {
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                      {/* Category Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="bg-white/90 backdrop-blur-sm text-[#7A41F2] px-3 py-1 rounded-full text-xs font-semibold">
+                        <span className="bg-white/90 backdrop-blur-sm text-[#80e01a] px-3 py-1 rounded-full text-xs font-semibold">
                           {project.category}
                         </span>
                       </div>
@@ -308,7 +310,6 @@ export default function PortfolioPage() {
                         </div>
                       </div>
 
-                      {/* Hover Actions */}
                       <AnimatePresence>
                         {hoveredProject === project.id && (
                           <motion.div
@@ -320,7 +321,7 @@ export default function PortfolioPage() {
                             <motion.button
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
-                              className="flex-1 bg-white/90 backdrop-blur-sm text-[#7A41F2] py-2 px-4 rounded-xl font-semibold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2"
+                              className="flex-1 bg-white/90 backdrop-blur-sm text-[#80e01a] py-2 px-4 rounded-xl font-semibold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2"
                             >
                               <FaEye />
                               View Details
@@ -328,7 +329,7 @@ export default function PortfolioPage() {
                             <motion.button
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
-                              className="bg-[#7A41F2]/90 backdrop-blur-sm text-white p-2 rounded-xl hover:bg-[#7A41F2] transition-colors"
+                              className="bg-[#80e01a]/90 backdrop-blur-sm text-white p-2 rounded-xl hover:bg-[#80e01a] transition-colors"
                             >
                               <FaExternalLinkAlt />
                             </motion.button>
@@ -339,7 +340,7 @@ export default function PortfolioPage() {
 
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-[#7A41F2] text-xs font-semibold bg-[#7A41F2]/10 px-2 py-1 rounded-md">
+                        <span className="text-[#80e01a] text-xs font-semibold bg-[#80e01a]/10 px-2 py-1 rounded-md">
                           {project.year}
                         </span>
                         <div className="flex items-center gap-1">
@@ -350,7 +351,7 @@ export default function PortfolioPage() {
                         </div>
                       </div>
 
-                      <h3 className="text-[18px] font-bold text-[#171717] mb-2 group-hover:text-[#7A41F2] transition-colors">
+                      <h3 className="text-[18px] font-bold text-[#171717] mb-2 group-hover:text-[#80e01a] transition-colors">
                         {project.name}
                       </h3>
 
@@ -364,7 +365,7 @@ export default function PortfolioPage() {
                         </p>
                         <motion.div
                           whileHover={{ x: 5 }}
-                          className="text-[#7A41F2] opacity-0 group-hover:opacity-100 transition-all duration-300"
+                          className="text-[#80e01a] opacity-0 group-hover:opacity-100 transition-all duration-300"
                         >
                           <FaArrowRight className="text-sm" />
                         </motion.div>
@@ -376,26 +377,30 @@ export default function PortfolioPage() {
             </AnimatePresence>
           </motion.div>
 
-          {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mt-20 bg-gradient-to-r from-[#7A41F2]/5 to-[#342582]/5 rounded-3xl p-12"
+            className="text-center mt-20 bg-gradient-to-r from-[#80e01a]/5 to-[#80e01a]/10 rounded-3xl p-12"
           >
             <h3 className="text-[#171717] text-2xl md:text-3xl font-bold mb-4">
-              Ready to Start Your Next Project?
+              Ready to Start Your{" "}
+              <span className="text-[#80e01a]">Next Project</span>?
             </h3>
             <p className="text-[#666666] mb-8 max-w-2xl mx-auto">
-              Let&apos;s collaborate to bring your vision to life. We&apos;re
-              passionate about creating exceptional digital experiences that
-              drive results.
+              Let&apos;s collaborate to bring your{" "}
+              <span className="text-[#80e01a]">vision to life</span>. We&apos;re
+              passionate about creating{" "}
+              <span className="text-[#80e01a]">
+                exceptional digital experiences
+              </span>{" "}
+              that drive results.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#7A41F2] to-[#342582] text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-r from-[#80e01a] to-[#60b015] text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
             >
               Get Started Today
             </motion.button>
@@ -446,7 +451,7 @@ export default function PortfolioPage() {
                       {selectedImage.name}
                     </h2>
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="text-[#7A41F2] font-semibold">
+                      <span className="text-[#80e01a] font-semibold">
                         {selectedImage.brand}
                       </span>
                       <span className="text-[#666666]">•</span>
@@ -462,7 +467,7 @@ export default function PortfolioPage() {
                       </div>
                     </div>
                   </div>
-                  <span className="bg-[#7A41F2]/10 text-[#7A41F2] px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-[#80e01a]/10 text-[#80e01a] px-3 py-1 rounded-full text-sm font-semibold">
                     {selectedImage.category}
                   </span>
                 </div>
@@ -475,7 +480,7 @@ export default function PortfolioPage() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 bg-gradient-to-r from-[#7A41F2] to-[#342582] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
+                    className="flex items-center gap-2 bg-gradient-to-r from-[#80e01a] to-[#60b015] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
                   >
                     <FaExternalLinkAlt />
                     View Live Project
