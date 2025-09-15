@@ -182,11 +182,14 @@ export default function PortfolioPage() {
         </div>
       </div>
 
-      {/* Content Section with Light Background */}
-      <div className="w-full bg-[#F8F9FA] py-20 -mx-5">
-        <div className="container mx-auto px-5">
+      {/* Content Section with Dark Background */}
+      <div className="w-full bg-black py-16 px-5">
+        <div className="container mx-auto">
+          <div className="absolute left-10 w-24 h-24 bg-gradient-to-r from-[#80e01a]/10 to-[#80e01a]/20 rounded-full blur-xl"></div>
+          <div className="absolute right-20 w-32 h-32 bg-gradient-to-r from-[#80e01a]/20 to-[#80e01a]/10 rounded-full blur-xl"></div>
+
           {/* Title and Button Section */}
-          <div className="flex justify-between items-center sm:flex-row flex-col mb-12">
+          <div className="flex justify-between items-center sm:flex-row flex-col mb-12 relative z-10">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -194,11 +197,11 @@ export default function PortfolioPage() {
               viewport={{ once: true }}
               className=""
             >
-              <h2 className="lg:text-[48px] md:text-[36px] text-[28px] text-[#171717] font-medium leading-tight">
+              <h2 className="lg:text-[48px] md:text-[36px] text-[28px] text-white font-medium leading-tight">
                 View our projects to see our <br />{" "}
                 <span className="text-[#80e01a]">quality and creativity</span>.
               </h2>
-              <p className="text-[#666666] text-[16px] mt-4 max-w-lg">
+              <p className="text-[#A3A3A3] text-[16px] mt-4 max-w-lg">
                 Each project represents our dedication to{" "}
                 <span className="text-[#80e01a]">excellence</span>,{" "}
                 <span className="text-[#80e01a]">innovation</span>, and client
@@ -229,7 +232,7 @@ export default function PortfolioPage() {
                 <FaArrowRight className="text-sm" />
               </motion.a>
 
-              <div className="flex items-center gap-2 text-[#666666] text-sm">
+              <div className="flex items-center gap-2 text-[#A3A3A3] text-sm">
                 <FaStar className="text-[#FFD700]" />
                 <span>4.9/5 Client Rating</span>
               </div>
@@ -252,7 +255,7 @@ export default function PortfolioPage() {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category
                     ? "bg-gradient-to-r from-[#80e01a] to-[#60b015] text-white shadow-lg"
-                    : "bg-white text-[#666666] border border-gray-200 hover:border-[#80e01a] hover:text-[#80e01a] shadow-sm"
+                    : "bg-gray-800 text-[#A3A3A3] border border-gray-700 hover:border-[#80e01a] hover:text-[#80e01a] shadow-sm"
                 }`}
               >
                 {category}
@@ -280,7 +283,7 @@ export default function PortfolioPage() {
                   onMouseEnter={() => setHoveredProject(project.id)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                  <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-800 hover:border-[#80e01a]/50">
                     <div className="relative overflow-hidden">
                       <div className="relative w-full h-[280px]">
                         <Image
@@ -345,22 +348,22 @@ export default function PortfolioPage() {
                         </span>
                         <div className="flex items-center gap-1">
                           <FaStar className="text-[#FFD700] text-xs" />
-                          <span className="text-xs text-[#666666]">
+                          <span className="text-xs text-[#A3A3A3]">
                             {project.rating}
                           </span>
                         </div>
                       </div>
 
-                      <h3 className="text-[18px] font-bold text-[#171717] mb-2 group-hover:text-[#80e01a] transition-colors">
+                      <h3 className="text-[18px] font-bold text-white mb-2 group-hover:text-[#80e01a] transition-colors">
                         {project.name}
                       </h3>
 
-                      <p className="text-[#666666] text-sm mb-3 line-clamp-2">
+                      <p className="text-[#A3A3A3] text-sm mb-3 line-clamp-2">
                         {project.description}
                       </p>
 
                       <div className="flex items-center justify-between">
-                        <p className="text-[#A3A3A3] text-[12px] uppercase font-semibold">
+                        <p className="text-[#666666] text-[12px] uppercase font-semibold">
                           {project.brand}
                         </p>
                         <motion.div
@@ -382,13 +385,13 @@ export default function PortfolioPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mt-20 bg-gradient-to-r from-[#80e01a]/5 to-[#80e01a]/10 rounded-3xl p-12"
+            className="text-center mt-20 bg-gradient-to-r from-[#80e01a]/5 to-[#80e01a]/10 rounded-3xl p-12 border border-[#80e01a]/20"
           >
-            <h3 className="text-[#171717] text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">
               Ready to Start Your{" "}
               <span className="text-[#80e01a]">Next Project</span>?
             </h3>
-            <p className="text-[#666666] mb-8 max-w-2xl mx-auto">
+            <p className="text-[#A3A3A3] mb-8 max-w-2xl mx-auto">
               Let&apos;s collaborate to bring your{" "}
               <span className="text-[#80e01a]">vision to life</span>. We&apos;re
               passionate about creating{" "}
