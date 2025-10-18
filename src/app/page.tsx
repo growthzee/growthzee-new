@@ -20,7 +20,7 @@ export default function Home() {
       {/* <Portfolio /> */}
       <Services />
       <Creation />
-      <PricingCheatSheet />
+      {/* <PricingCheatSheet /> */}
       <Satisfaction />
       <Review />
       <Faq />
