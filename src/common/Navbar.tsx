@@ -11,15 +11,7 @@ export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
 
   const navItems = useMemo(
-    () => [
-      "Home",
-      "Portfolio",
-      "Services",
-      "Packages",
-      "About Us",
-      "Blogs",
-      "Contact",
-    ],
+    () => ["Home", "Portfolio", "Services", "About Us", "Blogs", "Contact"],
     []
   );
 

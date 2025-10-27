@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
 // import Portfolio from "@/components/Portfolio";
-import PricingCheatSheet from "@/components/PricingCheatSheet";
+// import PricingCheatSheet from "@/components/PricingCheatSheet";
 import Review from "@/components/Review";
 import Satisfaction from "@/components/Satisfaction";
 import Services from "@/components/Services";
