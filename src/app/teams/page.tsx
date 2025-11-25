@@ -92,7 +92,7 @@ const teamMembers = [
   },
   {
     id: 8,
-    name: "Sourav bharti",
+    name: "Sourav Bharti",
     role: "E-commerce Expert",
     image1:
       "https://res.cloudinary.com/doy1iucnw/image/upload/v1763982671/IMG_1087_po8f1q.jpg",
