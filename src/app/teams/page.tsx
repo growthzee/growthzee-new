@@ -42,7 +42,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Ayan Pakhira",
-    role: "Technical Lead & Full-Stack Developer",
+    role: "Technical Head & Full-Stack Developer",
     image1:
       "https://res.cloudinary.com/doy1iucnw/image/upload/v1763984233/20251105_124328_bivwqf.jpg",
     image2:
