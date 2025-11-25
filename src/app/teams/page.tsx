@@ -52,7 +52,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Ishika Tyagi",
-    role: "HR Manager",
+    role: "HR Recuiter Team",
     image1:
       "https://res.cloudinary.com/doy1iucnw/image/upload/v1764052727/WhatsApp_Image_2025-11-25_at_11.43.59_AM_dlghvl.jpg",
     image2:
