@@ -351,7 +351,7 @@ export default function Hero() {
               Get Started
             </a>
             <a
-              href="#services"
+              href="/services"
               className="inline-block px-8 py-4 text-gray-300 font-medium border border-gray-600 rounded-full hover:border-[#80e01a] hover:text-[#80e01a] transition-colors"
             >
               Our Services
