@@ -3,122 +3,41 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const [activeLink, setActiveLink] = useState("Home");
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
   const navItems = useMemo(
-    () => ["Home", "Portfolio", "Services", "About Us", "Blogs", "Contact"],
+    () => [
+      { name: "Home", href: "/" },
+      { name: "Portfolio", href: "/portfolio" },
+      { name: "Services", href: "/services" },
+      { name: "About Us", href: "/about-us" },
+      { name: "Team", href: "/teams" },
+      { name: "Blogs", href: "/blogs" },
+      { name: "Contact", href: "/contact" },
+    ],
     []
   );
 
-  // Track scroll position and active section
+  // Track scroll position for navbar background
   useEffect(() => {
     const handleScroll = () => {
-      // Check if scrolled past 10px
       if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
-      }
-
-      // Determine which section is in view (excluding About Us)
-      const scrollPosition = window.scrollY + 100;
-      for (const item of navItems) {
-        if (
-          item === "About Us" ||
-          item === "Contact" ||
-          item === "Blogs" ||
-          item === "Portfolio"
-        )
-          continue; // Skip About Us and Contact as they're separate pages
-
-        const section = document.getElementById(item.toLowerCase());
-        if (section) {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionTop + sectionHeight
-          ) {
-            setActiveLink(item);
-            break;
-          }
-        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [navItems]);
-
-  // Update active link when menu opens
-  useEffect(() => {
-    if (isMenuOpen) {
-      const scrollPosition = window.scrollY + 100;
-      for (const item of navItems) {
-        if (item === "About Us") continue;
-
-        const section = document.getElementById(item.toLowerCase());
-        if (section) {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionTop + sectionHeight
-          ) {
-            setActiveLink(item);
-            break;
-          }
-        }
-      }
-    }
-  }, [isMenuOpen, navItems]);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id.toLowerCase());
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-    setActiveLink(id);
-    setIsMenuOpen(false);
-  };
-
-  const handleNavClick = (item: string) => {
-    if (item === "About Us") {
-      setIsMenuOpen(false);
-      // Navigation will be handled by Next.js Link
-      return;
-    }
-    if (item === "Home") {
-      setIsMenuOpen(false);
-      // Navigation will be handled by Next.js Link
-      return;
-    }
-    if (item === "Contact") {
-      setIsMenuOpen(false);
-      // Navigation will be handled by Next.js Link
-      return;
-    }
-    if (item === "Blogs") {
-      setIsMenuOpen(false);
-      // Navigation will be handled by Next.js Link
-      return;
-    }
-    if (item === "Portfolio") {
-      setIsMenuOpen(false);
-      // Navigation will be handled by Next.js Link
-      return;
-    }
-    scrollToSection(item);
-  };
+  }, []);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -140,13 +59,13 @@ export default function Navbar() {
     }
   }, [isMenuOpen]);
 
-  // Keep classes static strings so Tailwind can see arbitrary hex colors.
-  const activeDesktop =
-    "bg-[#80e01a]/20 border border-[#80e01a] p-2 px-3 font-medium rounded-lg";
-  const inactiveDesktop = "font-medium text-[14px] px-1 py-1";
-  const activeMobile =
-    "bg-[#80e01a]/20 border border-[#80e01a] text-white p-3 px-6 font-medium rounded-lg";
-  const inactiveMobile = "font-medium text-white px-1 py-1";
+  // Check if current path matches the nav item
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <nav
@@ -170,72 +89,17 @@ export default function Navbar() {
       <div className="hidden lg:flex items-center space-x-4">
         <ul className="flex rounded-xl space-x-8 bg-black/80 text-white px-5 py-3">
           {navItems.map((item) => (
-            <li key={item}>
-              {item === "About Us" ? (
-                <Link
-                  href="/about-us"
-                  className={`${
-                    activeLink === item ? activeDesktop : inactiveDesktop
-                  }`}
-                  onClick={() => setActiveLink(item)}
-                >
-                  {item}
-                </Link>
-              ) : item === "Home" ? (
-                <Link
-                  href="/"
-                  className={`${
-                    activeLink === item ? activeDesktop : inactiveDesktop
-                  }`}
-                  onClick={() => setActiveLink(item)}
-                >
-                  {item}
-                </Link>
-              ) : item === "Contact" ? (
-                <Link
-                  href="/contact"
-                  className={`${
-                    activeLink === item ? activeDesktop : inactiveDesktop
-                  }`}
-                  onClick={() => setActiveLink(item)}
-                >
-                  {item}
-                </Link>
-              ) : item === "Blogs" ? (
-                <Link
-                  href="/blogs"
-                  className={`${
-                    activeLink === item ? activeDesktop : inactiveDesktop
-                  }`}
-                  onClick={() => setActiveLink(item)}
-                >
-                  {item}
-                </Link>
-              ) : item === "Portfolio" ? (
-                <Link
-                  href="/portfolio"
-                  className={`${
-                    activeLink === item ? activeDesktop : inactiveDesktop
-                  }`}
-                  onClick={() => setActiveLink(item)}
-                >
-                  {item}
-                </Link>
-              ) : (
-                <Link
-                  href={`#${item.toLowerCase()}`}
-                  scroll={false}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item);
-                  }}
-                  className={`${
-                    activeLink === item ? activeDesktop : inactiveDesktop
-                  }`}
-                >
-                  {item}
-                </Link>
-              )}
+            <li key={item.name}>
+              <Link
+                href={item.href}
+                className={`font-medium text-[14px] px-3 py-2 rounded-lg transition-all duration-200 ${
+                  isActive(item.href)
+                    ? "bg-[#80e01a]/20 border border-[#80e01a]"
+                    : "hover:text-[#80e01a]"
+                }`}
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
@@ -286,75 +150,18 @@ export default function Navbar() {
             className="fixed top-0 right-0 w-full h-screen bg-black/95 lg:hidden flex flex-col items-center justify-center space-y-8 z-[90]"
           >
             {navItems.map((item) => (
-              <div key={item}>
-                {item === "About Us" ? (
-                  <Link
-                    href="/about-us"
-                    className={`text-lg ${
-                      activeLink === item ? activeMobile : inactiveMobile
-                    }`}
-                    onClick={() => {
-                      setActiveLink(item);
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    {item}
-                  </Link>
-                ) : item === "Home" ? (
-                  <Link
-                    href="/"
-                    className={`text-lg ${
-                      activeLink === item ? activeMobile : inactiveMobile
-                    }`}
-                    onClick={() => {
-                      setActiveLink(item);
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    {item}
-                  </Link>
-                ) : item === "Contact" ? (
-                  <Link
-                    href="/contact"
-                    className={`text-lg ${
-                      activeLink === item ? activeMobile : inactiveMobile
-                    }`}
-                    onClick={() => {
-                      setActiveLink(item);
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    {item}
-                  </Link>
-                ) : item === "Blogs" ? (
-                  <Link
-                    href="/blogs"
-                    className={`text-lg ${
-                      activeLink === item ? activeMobile : inactiveMobile
-                    }`}
-                    onClick={() => {
-                      setActiveLink(item);
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    {item}
-                  </Link>
-                ) : (
-                  <Link
-                    href={`#${item.toLowerCase()}`}
-                    scroll={false}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(item);
-                    }}
-                    className={`text-lg ${
-                      activeLink === item ? activeMobile : inactiveMobile
-                    }`}
-                  >
-                    {item}
-                  </Link>
-                )}
-              </div>
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`font-medium text-lg px-6 py-3 rounded-lg transition-all duration-200 ${
+                  isActive(item.href)
+                    ? "bg-[#80e01a]/20 border border-[#80e01a] text-white"
+                    : "text-white hover:text-[#80e01a]"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
             ))}
             <motion.button
               whileHover={{ scale: 1.05 }}
