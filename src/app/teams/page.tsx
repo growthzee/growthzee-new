@@ -72,7 +72,7 @@ const teamMembers = [
   },
   {
     id: 6,
-    name: "Ashee Agarwal",
+    name: "Ashee Agrawal",
     role: "SEO executive",
     image1:
       "https://res.cloudinary.com/doy1iucnw/image/upload/v1763982699/IMG_7726_plt4ab_1_yzlb88.jpg",
