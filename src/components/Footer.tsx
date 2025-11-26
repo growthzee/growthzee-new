@@ -149,7 +149,7 @@ export default function Footer() {
           {/* Left Side: Lecomake Logo & Copyright */}
           <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
             <img
-              src="https://res.cloudinary.com/doy1iucnw/image/upload/v1764060011/lecomake_20website_20version-mokup-bg-updated_n1dfx7.png" // Used your uploaded image filename assuming local serve or fallback to placeholder if needed in real app
+              src="https://res.cloudinary.com/doy1iucnw/image/upload/v1764053666/lecomake_website_logo_updated_hai4yd.png" // Used your uploaded image filename assuming local serve or fallback to placeholder if needed in real app
               alt="Lecomake Logo"
               className="h-10 w-auto invert"
             />

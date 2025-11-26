@@ -125,9 +125,9 @@ const teamMembers = [
     name: "Hamir Thapliya",
     role: "Video Editor",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763986045/Hi_dvc9b0.jpg",
+      "https://res.cloudinary.com/doy1iucnw/image/upload/v1764136698/341140393_141784228855439_6958175145674348213_n_un42ds.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763985629/asd_ktxcz7.jpg",
+      "https://res.cloudinary.com/doy1iucnw/image/upload/v1764136697/WhatsApp_Image_2025-11-25_at_13.52.57_bzmct6.jpg",
     linkedin: "#",
   },
   {
