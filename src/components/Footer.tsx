@@ -174,6 +174,20 @@ export default function Footer() {
                   className="h-12 w-auto object-contain"
                 />
               </div>
+              <div className="flex items-center gap-1 hover:scale-105 transition-transform duration-300">
+                <img
+                  src="https://res.cloudinary.com/doy1iucnw/image/upload/v1764138930/fulllogo_transparent_lo5vkw.png"
+                  alt="Tisa Logo"
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+              <div className="flex items-center gap-1 hover:scale-105 transition-transform duration-300">
+                <img
+                  src="https://res.cloudinary.com/doy1iucnw/image/upload/v1764138988/ninebytez_fk1kfa.png"
+                  alt="Ninebytes Logo"
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
