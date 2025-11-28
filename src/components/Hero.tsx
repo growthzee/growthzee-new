@@ -2,6 +2,7 @@
 
 import Navbar from "@/common/Navbar";
 import { motion } from "framer-motion";
+import { Users } from "lucide-react";
 
 // -----------------------------------------------------------------------
 
@@ -319,9 +320,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance"
           >
-            One stop{" "}
-            <span className="blur-[1px] text-[#80e01a]">solution for your</span>{" "}
-            business
+            Scale Your D2C Brand to
+            <span className="blur-[1px] text-[#80e01a]">10X ROAS</span>{" "}
           </motion.h1>
 
           <motion.p
@@ -330,12 +330,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto text-pretty"
           >
-            GrowthZee is dedicated to transforming your{" "}
-            <span className="text-[#80e01a]">digital concepts</span> into{" "}
-            <span className="text-[#80e01a]">reality</span>. Whether you need a
-            straightforward website for your current business or have a{" "}
-            <span className="text-[#80e01a]">complex idea</span> you&apos;ve
-            been envisioning, we&apos;re here to assist you.
+            GrowthZee helps D2C brands turn
+            <span className="text-[#80e01a]"> ad spend</span> into{" "}
+            <span className="text-[#80e01a]">predictable sales</span> by running
+            and optimizing all your performance channels with a{" "}
+            <span className="text-[#80e01a]">dedicated performance</span>{" "}
+            marketing team.
           </motion.p>
 
           <motion.div
@@ -362,22 +362,38 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex items-center justify-center space-x-3 mb-12 bg-gray-800/50 w-fit mx-auto px-6 py-2 rounded-full border border-gray-700 backdrop-blur-sm"
+            className="flex flex-col items-center justify-center mb-12 space-y-6"
           >
-            <div className="flex space-x-1 text-yellow-400">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="w-4 h-4 fill-current"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
+            {/* Trusted By Pill */}
+            <div className="flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur-sm">
+              <div className="flex -space-x-2">
+                <Users className="w-4 h-4 text-[#80e01a] mr-2" />
+              </div>
+              <span className="text-gray-300 text-sm font-medium">
+                Trusted by <span className="text-white">20+ D2C founders</span>{" "}
+                worldwide
+              </span>
             </div>
-            <span className="text-sm text-gray-300 font-medium">
-              Rated <span className="text-white">4.7/5</span> on Google Reviews
-            </span>
+
+            {/* Stats Row */}
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <span className="text-[#80e01a] font-bold text-lg">
+                  ₹2.5Cr+
+                </span>
+                <span>GMV Managed</span>
+              </div>
+              <div className="hidden sm:block w-1 h-1 bg-gray-700 rounded-full"></div>
+              <div className="flex items-center gap-2">
+                <span className="text-[#80e01a] font-bold text-lg">3.2x</span>
+                <span>Avg ROAS</span>
+              </div>
+              <div className="hidden sm:block w-1 h-1 bg-gray-700 rounded-full"></div>
+              <div className="flex items-center gap-2">
+                <span className="text-[#80e01a] font-bold text-lg">20+</span>
+                <span>Brands</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -391,7 +407,7 @@ export default function Hero() {
       >
         <div className="max-w-7xl mx-auto px-4 mb-6">
           <p className="text-center text-xs font-bold tracking-[0.2em] text-gray-500 uppercase">
-            Powering innovative teams worldwide
+            Your growth engine across these platforms
           </p>
         </div>
 
