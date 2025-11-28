@@ -6,21 +6,6 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 const solutions = [
   {
     id: 1,
-    title: "Social Media Marketing",
-    link: "/social-media-management",
-    icon: (
-      <svg
-        viewBox="0 0 100 100"
-        className="w-full h-full stroke-white stroke-[1] fill-none group-hover:stroke-[#80e01a] transition-colors duration-300"
-      >
-        <circle cx="50" cy="50" r="45" strokeDasharray="4,4" />
-        <line x1="50" y1="25" x2="50" y2="75" />
-        <line x1="25" y1="50" x2="75" y2="50" />
-      </svg>
-    ),
-  },
-  {
-    id: 2,
     title: "Performance Marketing",
     link: "/performance-marketing",
     icon: (
@@ -35,22 +20,40 @@ const solutions = [
     ),
   },
   {
-    id: 3,
-    title: "Ecommerce Management",
-    link: "/ecommerce-management",
+    id: 2,
+    title: "Social Media Marketing",
+    link: "/social-media-management",
     icon: (
       <svg
-        viewBox="0 0 100 60"
+        viewBox="0 0 100 100"
         className="w-full h-full stroke-white stroke-[1] fill-none group-hover:stroke-[#80e01a] transition-colors duration-300"
       >
-        <rect x="2" y="2" width="96" height="56" />
-        <path d="M2,58 C2,2 98,2 98,58" />
-        <line x1="61" y1="2" x2="61" y2="58" />
-        <line x1="61" y1="38" x2="98" y2="38" />
-        <path d="M61,38 C61,58 80,58 80,38" />
+        <circle cx="50" cy="50" r="45" strokeDasharray="4,4" />
+        <line x1="50" y1="25" x2="50" y2="75" />
+        <line x1="25" y1="50" x2="75" y2="50" />
       </svg>
     ),
   },
+  {
+    id: 3,
+    title: "Lead Generation",
+    link: "/lead-generation",
+    icon: (
+      <svg
+        viewBox="0 0 100 100"
+        className="w-full h-full stroke-white stroke-[1] fill-none group-hover:stroke-[#80e01a] transition-colors duration-300"
+      >
+        {/* Funnel Shape */}
+        <path d="M10,20 L90,20 L60,60 L60,90 L40,90 L40,60 Z" />
+        {/* Inner Lines */}
+        <line x1="25" y1="35" x2="75" y2="35" />
+        <line x1="35" y1="50" x2="65" y2="50" />
+        {/* Coin/Lead dropping */}
+        <circle cx="50" cy="10" r="4" />
+      </svg>
+    ),
+  },
+
   {
     id: 4,
     title: "Website & Web Design",
@@ -92,6 +95,24 @@ const solutions = [
             transform={`rotate(${i * 30} 50 50)`}
           />
         ))}
+      </svg>
+    ),
+  },
+
+  {
+    id: 6,
+    title: "Ecommerce Management",
+    link: "/ecommerce-management",
+    icon: (
+      <svg
+        viewBox="0 0 100 60"
+        className="w-full h-full stroke-white stroke-[1] fill-none group-hover:stroke-[#80e01a] transition-colors duration-300"
+      >
+        <rect x="2" y="2" width="96" height="56" />
+        <path d="M2,58 C2,2 98,2 98,58" />
+        <line x1="61" y1="2" x2="61" y2="58" />
+        <line x1="61" y1="38" x2="98" y2="38" />
+        <path d="M61,38 C61,58 80,58 80,38" />
       </svg>
     ),
   },
