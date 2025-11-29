@@ -26,39 +26,40 @@ export default function Satisfaction() {
         <div className="container mx-auto flex flex-col justify-between py-20 px-5 min-h-screen">
           <div className="text-center max-w-6xl mx-auto px-4">
             <h1 className="text-white capitalize lg:text-[56px] md:text-[40px] text-[32px] font-medium md:leading-[70px]">
-              We Deliver{" "}
-              <span className="text-[#80e01a]">Innovative Solutions</span> That
-              Drive Business Success.
+              Numbers That Prove
+              <span className="text-[#80e01a]">Our Performance</span> Marketing
+              Works.
             </h1>
           </div>
 
           {/* Stats grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-20 px-4">
             <CommitmentCard
-              title="Satisfaction"
-              percen="100%"
-              dec="We are dedicated to delivering high-quality work and exceeding expectations, ensuring a 100% satisfaction rate with every project."
+              title="Average ROAS"
+              percen="3.5x to 4.2x"
+              dec="Across Meta, Google, Amazon & Flipkart campaigns managed in the last 6 months."
             />
             <CommitmentCard
-              title="COMMITMENT"
-              percen="101%"
-              dec="We are dedicated to meeting deadlines, maintaining clear communication, and ensuring the highest quality in all our work."
+              title="Ad Spend Managed"
+              percen="₹1.5Cr+"
+              dec="Performance budgets handled for D2C, e‑commerce and lead‑gen brands."
             />
             <CommitmentCard
-              title="PROJECTS"
-              percen="800+"
-              dec="With a track record of completing over 800+ projects, We pride ourselves on delivering quality work on time & within budget."
+              title="Brands Scaled"
+              percen="20+"
+              dec="D2C and online businesses we’ve helped grow with performance marketing."
             />
             <CommitmentCard
-              title="CLIENTS"
-              percen="500+"
-              dec="We've had the privilege of working with over 300 clients worldwide, treating each with the utmost respect and professionalism."
+              title="Client Retention"
+              percen="98%"
+              dec="Most clients stay with us 6+ months because we focus on ROAS, not vanity metrics."
             />
           </div>
 
           <div className="text-center max-w-6xl mx-auto px-4 mt-10">
             <h2 className="lg:text-[56px] md:text-[40px] text-[32px] text-white font-medium">
-              World <span className="text-[#80e01a]">domination</span> 25%
+              From India to the World –{" "}
+              <span className="text-[#80e01a]">Our Client</span> Footprint
             </h2>
           </div>
         </div>
