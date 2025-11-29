@@ -14,7 +14,7 @@ export default function Navbar() {
   const navItems = useMemo(
     () => [
       { name: "Home", href: "/" },
-      { name: "Case Studies", href: "/portfolio" },
+      { name: "Cases", href: "/portfolio" },
       { name: "Services", href: "/services" },
       { name: "About Us", href: "/about-us" },
       { name: "Team", href: "/teams" },
