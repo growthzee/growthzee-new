@@ -27,7 +27,7 @@ export default function Satisfaction() {
           <div className="text-center max-w-6xl mx-auto px-4">
             <h1 className="text-white capitalize lg:text-[56px] md:text-[40px] text-[32px] font-medium md:leading-[70px]">
               Numbers That Prove
-              <span className="text-[#80e01a]">Our Performance</span> Marketing
+              <span className="text-[#80e01a]"> Our Performance</span> Marketing
               Works.
             </h1>
           </div>
