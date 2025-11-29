@@ -4,7 +4,7 @@ import Navbar from "@/common/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
-// --- Main Services Data (Exact data provided) ---
+// --- Main Services Data ---
 const servicesData = [
   {
     id: "01",
@@ -109,6 +109,28 @@ const servicesData = [
             transform={`rotate(${i * 30} 50 50)`}
           />
         ))}
+      </svg>
+    ),
+  },
+  {
+    id: "06",
+    title: "Lead Generation",
+    link: "/lead-generation",
+    description:
+      "High‑intent, qualified leads for real estate and other high‑ticket services using Meta and Google ads.",
+    tags: ["Real Estate", "High Ticket", "Funnel Strategy"],
+    icon: (
+      <svg
+        viewBox="0 0 100 100"
+        className="w-full h-full stroke-black stroke-[1.5] fill-none"
+      >
+        {/* Funnel Shape */}
+        <polygon points="20,20 80,20 55,65 55,90 45,90 45,65" />
+        <line x1="20" y1="20" x2="80" y2="20" />
+        {/* Dotted path for flow */}
+        <circle cx="50" cy="35" r="2" fill="black" stroke="none" />
+        <circle cx="50" cy="45" r="2" fill="black" stroke="none" />
+        <circle cx="50" cy="55" r="2" fill="black" stroke="none" />
       </svg>
     ),
   },
