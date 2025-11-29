@@ -37,10 +37,10 @@ const WorkProcess = () => {
       iconBg: "bg-gradient-to-br from-[#80e01a] to-[#4ade80]",
       circleBorder: "#80e01a",
       items: [
-        { id: 1, text: "Briefing" },
-        { id: 2, text: "Debriefing" },
-        { id: 3, text: "Account access" },
-        { id: 4, text: "Project system setup" },
+        { id: 1, text: "Business & goals briefing" },
+        { id: 2, text: "Access to Meta, Shopify, E commers" },
+        { id: 3, text: "Existing data & campaign review" },
+        { id: 4, text: "Success metrics & ROAS targets finalise" },
       ],
     },
     {
@@ -52,11 +52,11 @@ const WorkProcess = () => {
       iconBg: "bg-gradient-to-br from-white to-gray-400",
       circleBorder: "#ffffff",
       items: [
-        { id: 5, text: "Unit economics" },
-        { id: 6, text: "Website audit" },
-        { id: 7, text: "Advertising audit" },
-        { id: 8, text: "Competitor analysis" },
-        { id: 9, text: "Strategy development" },
+        { id: 5, text: "Unit economics & break‑even analysis" },
+        { id: 6, text: "Website / landing page & funnel audit" },
+        { id: 7, text: "Ad account audit (Meta, Google, Amazon, Flipkart)" },
+        { id: 8, text: "Competitor & audience research" },
+        { id: 9, text: "3‑month growth strategy document" },
       ],
     },
     {
@@ -68,10 +68,10 @@ const WorkProcess = () => {
       iconBg: "bg-gradient-to-br from-[#80e01a] to-emerald-600",
       circleBorder: "#80e01a",
       items: [
-        { id: 10, text: "Tracking setup" },
-        { id: 11, text: "Merchant setup" },
-        { id: 12, text: "Ad content creation" },
-        { id: 13, text: "Campaigns setup" },
+        { id: 10, text: "Tracking & pixel / Conversion API setup" },
+        { id: 11, text: "Campaign structure & audiences planning" },
+        { id: 12, text: "Creatives & copy mapping (client assets + edits)" },
+        { id: 13, text: "Shopify / marketplace offers & pricing setup" },
       ],
     },
     {
@@ -83,9 +83,10 @@ const WorkProcess = () => {
       iconBg: "bg-gradient-to-br from-white to-gray-300",
       circleBorder: "#ffffff",
       items: [
-        { id: 14, text: "Reporting setup" },
-        { id: 15, text: "Actionable insights" },
-        { id: 16, text: "Results optimization" },
+        { id: 14, text: "Daily optimization & budget re‑allocation" },
+        { id: 15, text: "Weekly performance report & insights call" },
+        { id: 16, text: "ROAS & CPA improvement actions" },
+        { id: 17, text: "Next 90‑day scaling roadmap" },
       ],
     },
   ];
