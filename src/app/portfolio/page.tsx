@@ -12,6 +12,7 @@ import {
 import Navbar from "@/common/Navbar";
 import Footer from "@/components/Footer";
 
+// 1. Updated Interface to include 'link'
 interface Portfolio {
   id: number;
   name: string;
@@ -21,78 +22,92 @@ interface Portfolio {
   rating?: number;
   year?: string;
   description?: string;
+  link: string; // Added link property
 }
 
+// 2. Updated Data with links
 const PortfolioData: Portfolio[] = [
   {
     id: 1,
-    name: "Interior Solutions Website Design",
-    img: "/images/project1.png",
-    brand: "Interior Pro",
-    category: "Web Design",
+    name: "Vorne Perfmes",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764592233/Screenshot_2025-12-01_at_18-00-23_Vorne_Affordable_Luxury_Perfumes_from_India_d5orfb.png",
+    brand: "Vorne",
+    category: "Shopify Store",
     rating: 5.0,
-    year: "2024",
+    year: "2025",
     description:
-      "Modern interior design website with stunning visuals and seamless user experience.",
+      "A Shopify store for premium perfumes with a sleek design and seamless user experience.",
+    link: "https://vorne.in", // Example link
   },
   {
     id: 2,
-    name: "Dog care Website Design",
-    img: "/images/project2.png",
-    brand: "PetCare Plus",
-    category: "Web Design",
+    name: "Kerala Secrets",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764592670/Screenshot_2025-12-01_at_18-07-41_Kerala_Secrets_-_A_Beauty_Legacy_from_the_Lands_of_Kerala_bd4vjp.png",
+    brand: "Kerala Secrets",
+    category: "Shopify Store",
     rating: 4.9,
-    year: "2024",
+    year: "2025",
     description:
-      "Comprehensive pet care platform with booking system and health tracking.",
+      "A beauty and wellness Shopify store inspired by traditional Kerala remedies.",
+    link: "https://keralasecrets.com", // Replace with actual link
   },
   {
     id: 3,
-    name: "Course Platform",
-    img: "/images/project3.png",
-    brand: "EduTech",
-    category: "Web App",
+    name: "Fitleasure",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764592983/Screenshot_2025-12-01_at_18-11-20_Online_shopping_site_for_Latest_Activewear_Exclusively_for_Women_Fitleasure_fbzqck.png",
+    brand: "Fitleasure",
+    category: "Shopify Store",
     rating: 5.0,
-    year: "2023",
+    year: "2025",
     description:
-      "Interactive learning platform with video streaming and progress tracking.",
+      "A fitness and athleisure shopify store with a modern and energetic design.",
+    link: "https://fitleasure.com", // Replace with actual link
   },
   {
     id: 4,
-    name: "Habit Tracking Website Design",
-    img: "/images/project4.png",
-    brand: "HabitFlow",
-    category: "Mobile App",
+    name: "Asian Bond",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764593128/Screenshot_2025-12-01_at_18-14-12_Best_Concrete_Hardener_in_India_Asian_Bond_Manufacturer_fnnlgf.png",
+    brand: "AsianBond",
+    category: "Web App",
     rating: 4.8,
-    year: "2024",
+    year: "2025",
     description:
-      "Beautiful habit tracking app with gamification and social features.",
+      "A construction materials web app with a focus on durability and reliability.",
+    link: "https://www.asianbond.in/", // Replace with actual link
   },
   {
     id: 5,
-    name: "Tradilib Website Design",
-    img: "/images/project5.png",
-    brand: "TradiLib",
-    category: "Web Design",
+    name: "The Inkboy",
+    img: "/images/inkboy.png",
+    brand: "Ink Boy",
+    category: "SEO Optimization",
     rating: 4.9,
-    year: "2023",
+    year: "2024",
     description:
-      "Traditional library management system with modern digital interface.",
+      "A Tattoo studio website optimized for search engines to attract local clients.",
+    link: "https://theinkboy.com", // Replace with actual link
   },
   {
     id: 6,
-    name: "Dashboard Designs",
-    img: "/images/project6.png",
-    brand: "Analytics Pro",
-    category: "Dashboard",
+    name: "Jobzshala",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764593519/Screenshot_2025-12-01_at_18-21-48_Explore_More_Jobs_Career_Opportunities_in_India_2025_Jobzshala_tx0kwd.png",
+    brand: "Jobzshala",
+    category: "SEO Optimization",
     rating: 5.0,
-    year: "2024",
+    year: "2025",
     description:
-      "Advanced analytics dashboard with real-time data visualization.",
+      "A job portal website optimized for SEO to connect job seekers with employers.",
+    link: "https://jobzshala.com/", // Replace with actual link
   },
 ];
 
-const categories = ["All", "Web Design", "Web App", "Mobile App", "Dashboard"];
+const categories = [
+  "All",
+  "Shopify Store",
+  "Web App",
+  "SEO Optimization",
+  "Designs",
+];
 
 const stats = [
   { number: "50+", label: "Projects Completed", icon: "🎯" },
@@ -324,18 +339,25 @@ export default function PortfolioPage() {
                             <motion.button
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
+                              // View details keeps opening the modal
                               className="flex-1 bg-white/90 backdrop-blur-sm text-[#80e01a] py-2 px-4 rounded-xl font-semibold text-sm hover:bg-white transition-colors flex items-center justify-center gap-2"
                             >
                               <FaEye />
                               View Details
                             </motion.button>
-                            <motion.button
+
+                            {/* 3. Grid External Link Button */}
+                            <motion.a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()} // Prevent modal from opening
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
-                              className="bg-[#80e01a]/90 backdrop-blur-sm text-white p-2 rounded-xl hover:bg-[#80e01a] transition-colors"
+                              className="bg-[#80e01a]/90 backdrop-blur-sm text-white p-2 rounded-xl hover:bg-[#80e01a] transition-colors flex items-center justify-center"
                             >
                               <FaExternalLinkAlt />
-                            </motion.button>
+                            </motion.a>
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -480,14 +502,18 @@ export default function PortfolioPage() {
                 </p>
 
                 <div className="flex gap-4">
-                  <motion.button
+                  {/* 4. Modal Live Project Button */}
+                  <motion.a
+                    href={selectedImage.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 bg-gradient-to-r from-[#80e01a] to-[#60b015] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
+                    className="flex items-center gap-2 bg-gradient-to-r from-[#80e01a] to-[#60b015] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 cursor-pointer"
                   >
                     <FaExternalLinkAlt />
                     View Live Project
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
