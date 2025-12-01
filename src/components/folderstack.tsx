@@ -26,9 +26,9 @@ const FolderStack = () => {
       id: 1,
       title: "Onboarding",
       description:
-        "We conduct a briefing with you and assess the project's scope. If both parties are ready to proceed after the briefing all necessary accesses are provided to us. The team begins setting up the project system.",
+        "Your journey with us starts with a focused discovery call where we understand your business goals, brand identity, and growth expectations.Whether you need SEO services, performance marketing, Meta ads, Google ads, e-commerce store management, or Shopify development, our process is structured to map everything clearly.Once aligned, you share the required accesses so we can set up dashboards, tracking, and your website or website development ecosystem smoothly.",
       result:
-        "The project's goals, expectations, target audience and key performance indicators (KPIs) are clear. Necessary tools and systems are configured.",
+        "Your project receives a refined growth strategy, KPI roadmap, and a fully configured system—from SEO foundations to ad accounts. A luxury-grade start with total operational clarity.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       subFeatures: [
@@ -41,9 +41,9 @@ const FolderStack = () => {
       id: 2,
       title: "Exploration",
       description:
-        "We dive deep into your business metrics, analyzing unit economics and conducting comprehensive audits of your website and current advertising efforts to identify opportunities.",
+        "This is where we go deep. We break down your business metrics, analyze unit economics, and audit every layer of your digital presence—your website performance, SEO foundations, ad accounts, campaign structures, and your entire acquisition funnel across Google Ads, Meta Ads, and performance marketing channels. We also study your competitors, e-commerce benchmarks, and technical gaps to uncover hidden opportunities.",
       result:
-        "A complete roadmap of opportunities and a clear understanding of the competitive landscape. We have a solid strategy ready for execution.",
+        "A crystal-clear roadmap revealing growth unlocks, SEO potential, funnel leaks, and competitive threats giving you a strategy refined enough to execute instantly.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       subFeatures: [
@@ -56,9 +56,9 @@ const FolderStack = () => {
       id: 3,
       title: "Setup",
       description:
-        "Our technical team configures all tracking pixels, sets up merchant centers, and creates high-converting ad creatives tailored to your brand's voice and audience.",
+        "In this phase, our technical team configures all tracking systems — from pixels and event tracking to analytics and conversion setup. We also optimize your merchant center, ensure SEO-friendly technical foundations, and produce high-converting ad creatives tailored to your brand voice. Finally, we structure your Google Ads, Meta Ads, and performance marketing campaigns for a smooth launch.",
       result:
-        "All technical tracking is verified. Creative assets are approved and uploaded. Campaign structures are built and ready for launch.",
+        "All tracking and attribution systems are verified. Creatives are finalized and uploaded. Campaign structures across SEO, Google Ads, Meta Ads, and e-commerce are ready to go live without any technical gaps.",
       image:
         "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       subFeatures: [
@@ -71,9 +71,9 @@ const FolderStack = () => {
       id: 4,
       title: "Growth",
       description:
-        "We launch the campaigns and immediately begin our optimization cycle. We report weekly on performance and provide actionable insights for scaling.",
+        "Once the campaigns go live, we immediately enter the optimization and scaling cycle. Our team closely monitors performance across Meta Ads, Google Ads, Shopify Analytics, and GA4, identifying what drives the highest ROAS and where scaling makes sense. We send weekly performance reports, highlight growth opportunities, and continuously optimize your SEO, ad funnels, creatives, targeting, and budget distribution. Every decision is backed by data, not assumptions — ensuring consistent, predictable growth for your brand.",
       result:
-        "Consistent growth in ROAS and revenue. Transparent reporting and a clear path forward for scaling your marketing budget profitably.",
+        "•	Steady improvement in ROAS, revenue, CAC, and overall profitability. Transparent weekly reporting with clear insights and action pointS. Smart scaling roadmap for your Meta Ads, Google Ads, and SEO performance. A reliable system built for long-term, sustainable growth",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       subFeatures: [
