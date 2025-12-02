@@ -21,7 +21,12 @@ const solutions = [
   },
   {
     id: 2,
-    title: "Social Media Marketing",
+    // Using JSX here to force the line break exactly where you want it
+    title: (
+      <>
+        Social Media Handling <br /> (Organic)
+      </>
+    ),
     link: "/social-media-management",
     icon: (
       <svg
@@ -220,12 +225,9 @@ const SolutionCard = ({ item, index }) => {
 
         {/* Content Area */}
         <div className="flex items-end justify-between w-full">
-          <h3 className="text-3xl sm:text-4xl font-bold text-white max-w-[80%] leading-[1.1] tracking-tight group-hover:text-[#80e01a] transition-colors duration-300">
-            {item.title.split(" ").map((word, i) => (
-              <span key={i} className="block">
-                {word}
-              </span>
-            ))}
+          {/* UPDATED TITLE RENDERING: Removed .split().map() to keep items on one line */}
+          <h3 className="text-3xl sm:text-4xl font-bold text-white max-w-[90%] leading-[1.1] tracking-tight group-hover:text-[#80e01a] transition-colors duration-300">
+            {item.title}
           </h3>
 
           {/* Arrow Button at bottom right */}
