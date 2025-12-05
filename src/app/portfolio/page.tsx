@@ -36,7 +36,7 @@ const PortfolioData: Portfolio[] = [
     rating: 5.0,
     year: "2025",
     description:
-      "A Shopify store for premium perfumes with a sleek design and seamless user experience.",
+      "A premium Shopify store for luxury perfumes, featuring an elegant layout, smooth navigation, and a refined shopping experience.",
     link: "https://vorne.in", // Example link
   },
   {
@@ -48,7 +48,7 @@ const PortfolioData: Portfolio[] = [
     rating: 4.9,
     year: "2025",
     description:
-      "A beauty and wellness Shopify store inspired by traditional Kerala remedies.",
+      "A beauty and wellness Shopify store inspired by traditional Kerala formulations, designed with warm visuals and a clean product-focused UI.",
     link: "https://keralasecrets.com", // Replace with actual link
   },
   {
@@ -60,7 +60,7 @@ const PortfolioData: Portfolio[] = [
     rating: 5.0,
     year: "2025",
     description:
-      "A fitness and athleisure shopify store with a modern and energetic design.",
+      "A modern and energetic Shopify store for an activewear brand, built with bold visuals, sleek UI, and a performance-driven shopping flow.",
     link: "https://fitleasure.com", // Replace with actual link
   },
   {
@@ -72,7 +72,7 @@ const PortfolioData: Portfolio[] = [
     rating: 4.8,
     year: "2025",
     description:
-      "A construction materials web app with a focus on durability and reliability.",
+      "A construction materials web app built with a professional layout, offering product clarity, durability-focused details, and a smooth browsing experience for industrial buyers.",
     link: "https://www.asianbond.in/", // Replace with actual link
   },
   {
@@ -98,6 +98,126 @@ const PortfolioData: Portfolio[] = [
     description:
       "A job portal website optimized for SEO to connect job seekers with employers.",
     link: "https://jobzshala.com/", // Replace with actual link
+  },
+  {
+    id: 7,
+    name: "TurfTown",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764936706/Screenshot_2025-12-05_at_17-41-33_Turf_Town_India_s_1_Sports_community_cdhxl9.png",
+    brand: "TurfTown",
+    category: "Web App",
+    rating: 5.0,
+    year: "2024",
+    description:
+      "A modern sports community web app designed to help users discover nearby games, venues, coaches, and tournaments with a smooth, fast, and intuitive experience.",
+    link: "https://turftown.in/", // Replace with actual link
+  },
+  {
+    id: 8,
+    name: "Unbound",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764936917/Screenshot_2025-12-05_at_17-45-07_UNBOUND_jrxjw3.png",
+    brand: "Unbound",
+    category: "Shopify Store",
+    rating: 4.8,
+    year: "2025",
+    description:
+      "A sleek and premium Shopify store built for a modest fashion brand, offering a refined shopping experience with clean product displays, minimal UI, and seamless navigation.",
+    link: "https://unbound.ae/", // Replace with actual link
+  },
+  {
+    id: 9,
+    name: "Tisarealtors",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937079/Screenshot_2025-12-05_at_17-47-28_Tis_a_Realtors_Dubai_Real_Estate_kodp7b.png",
+    brand: "Tisarealtors",
+    category: "Web App",
+    rating: 4.8,
+    year: "2024",
+    description:
+      "A professional real estate web platform designed to help users discover premium Dubai properties with advanced search filters, polished UI, and a smooth user experience.",
+    link: "https://tisarealtors.com/", // Replace with actual link
+  },
+  {
+    id: 10,
+    name: "Eldita",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937301/Screenshot_2025-12-05_at_17-51-30_Eldita_Beautiful_Nursery_Furniture_eldita_sq0f3i.png",
+    brand: "Eldita",
+    category: "Shopify Store",
+    rating: 4.5,
+    year: "2024",
+    description:
+      "A modern Shopify store built for premium baby furniture, offering a clean layout, elegant product presentation, and a smooth shopping experience tailored for parents.",
+    link: "https://eldita.com.au/", // Replace with actual link
+  },
+  {
+    id: 11,
+    name: "Stokke",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937476/Screenshot_2025-12-05_at_17-54-27_Stokke_Australia_The_Iconic_Tripp_Trapp_Store_Official_Stokke_Shop_Australia_ii6jm6.png",
+    brand: "Stokke",
+    category: "Shopify Store",
+    rating: 4.7,
+    year: "2024",
+    description:
+      "A sleek and high-conversion Shopify store designed for premium baby products, featuring minimal UI, intuitive navigation, and a seamless buying journey for modern families.",
+    link: "https://stokkeshop.com.au/", // Replace with actual link
+  },
+  {
+    id: 12,
+    name: "Cocoa Creme",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937599/Screenshot_2025-12-05_at_17-56-29_Cocoa_Creme_Rooftop_Cafe_Patisserie_z9okrp.png",
+    brand: "Cocoa Creme",
+    category: "SEO Optimization",
+    rating: 4.8,
+    year: "2024",
+    description:
+      "A visually rich restaurant web app crafted to showcase fine dining with elegance. Smooth navigation, immersive visuals, and a premium design that elevates the culinary brand experience.",
+    link: "https://cocoaandcreme.in/", // Replace with actual link
+  },
+  {
+    id: 13,
+    name: "Marriott Bonvoy",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937740/Screenshot_2025-12-05_at_17-58-46_Marriott_Bonvoy_Hotels_Book_Directly_Get_Exclusive_Rates_t4dsmp.png",
+    brand: "Marriott Bonvoy",
+    category: "SEO Optimization",
+    rating: 4.8,
+    year: "2024",
+    description:
+      "A polished and high-performance hotel booking platform delivering a seamless user journey, intuitive search, and world-class UI to match the luxury of the Marriott brand.",
+    link: "https://www.marriott.com/", // Replace with actual link
+  },
+  {
+    id: 14,
+    name: "Mathsya",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937841/Screenshot_2025-12-05_at_18-00-30_Mathsya_Veg_Fine_Dining_Banquets_hygbih.png",
+    brand: "Mathsya",
+    category: "SEO Optimization",
+    rating: 4.9,
+    year: "2024",
+    description:
+      "A refined restaurant website designed to highlight signature dishes, authentic flavors, and a heritage dining experience — all wrapped in a clean, modern, and user-friendly interface.",
+    link: "https://www.mathsya.co.in/", // Replace with actual link
+  },
+  {
+    id: 15,
+    name: "Hari Priye",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937962/Screenshot_2025-12-05_at_18-02-30_Organic_Ghee_Online_Pure_Desi_Cow_Ghee_India_-_HariPriye_eo1sk9.png",
+    brand: "Hari Priye",
+    category: "Shopify Store",
+    rating: 4.6,
+    year: "2025",
+    description:
+      "A refined restaurant website designed to highlight signature dishes, authentic flavors, and a heritage dining experience — all wrapped in a clean, modern, and user-friendly interface.",
+    link: "https://haripriye.com/", // Replace with actual link
+  },
+  {
+    id: 16,
+    name: "Off Sinners",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764938081/Screenshot_2025-12-05_at_18-04-28_Streetwear_with_OFF_SINNERS_-_Best_Unisex_Clothing_Brand_ct6slb.png",
+    brand: "Off Sinners",
+    category: "Shopify Store",
+    rating: 4.8,
+    year: "2025",
+    description:
+      "A warm, trust-building Shopify store for organic ghee and wellness products. Clean product pages, simple navigation, and a natural color palette designed to inspire confident purchases.",
+    link: "https://offsinners.com/", // Replace with actual link
   },
 ];
 
