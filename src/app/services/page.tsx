@@ -6,24 +6,24 @@ import { motion } from "framer-motion";
 
 // --- Main Services Data ---
 const servicesData = [
-  {
-    id: "01",
-    title: "Social Media Marketing",
-    link: "/social-media-management",
-    description:
-      "Engage your audience and build brand loyalty with data-driven social strategies across Instagram, LinkedIn, and TikTok.",
-    tags: ["Content Strategy", "Community Mgmt", "Influencer Marketing"],
-    icon: (
-      <svg
-        viewBox="0 0 100 100"
-        className="w-full h-full stroke-black stroke-[1.5] fill-none"
-      >
-        <circle cx="50" cy="50" r="45" strokeDasharray="4,4" />
-        <line x1="50" y1="25" x2="50" y2="75" />
-        <line x1="25" y1="50" x2="75" y2="50" />
-      </svg>
-    ),
-  },
+  // {
+  //   id: "01",
+  //   title: "Social Media Marketing",
+  //   link: "/social-media-management",
+  //   description:
+  //     "Engage your audience and build brand loyalty with data-driven social strategies across Instagram, LinkedIn, and TikTok.",
+  //   tags: ["Content Strategy", "Community Mgmt", "Influencer Marketing"],
+  //   icon: (
+  //     <svg
+  //       viewBox="0 0 100 100"
+  //       className="w-full h-full stroke-black stroke-[1.5] fill-none"
+  //     >
+  //       <circle cx="50" cy="50" r="45" strokeDasharray="4,4" />
+  //       <line x1="50" y1="25" x2="50" y2="75" />
+  //       <line x1="25" y1="50" x2="75" y2="50" />
+  //     </svg>
+  //   ),
+  // },
   {
     id: "02",
     title: "Performance Marketing",
@@ -112,28 +112,28 @@ const servicesData = [
       </svg>
     ),
   },
-  {
-    id: "06",
-    title: "Lead Generation",
-    link: "/lead-generation",
-    description:
-      "High‑intent, qualified leads for real estate and other high‑ticket services using Meta and Google ads.",
-    tags: ["Real Estate", "High Ticket", "Funnel Strategy"],
-    icon: (
-      <svg
-        viewBox="0 0 100 100"
-        className="w-full h-full stroke-black stroke-[1.5] fill-none"
-      >
-        {/* Funnel Shape */}
-        <polygon points="20,20 80,20 55,65 55,90 45,90 45,65" />
-        <line x1="20" y1="20" x2="80" y2="20" />
-        {/* Dotted path for flow */}
-        <circle cx="50" cy="35" r="2" fill="black" stroke="none" />
-        <circle cx="50" cy="45" r="2" fill="black" stroke="none" />
-        <circle cx="50" cy="55" r="2" fill="black" stroke="none" />
-      </svg>
-    ),
-  },
+  // {
+  //   id: "06",
+  //   title: "Lead Generation",
+  //   link: "/lead-generation",
+  //   description:
+  //     "High‑intent, qualified leads for real estate and other high‑ticket services using Meta and Google ads.",
+  //   tags: ["Real Estate", "High Ticket", "Funnel Strategy"],
+  //   icon: (
+  //     <svg
+  //       viewBox="0 0 100 100"
+  //       className="w-full h-full stroke-black stroke-[1.5] fill-none"
+  //     >
+  //       {/* Funnel Shape */}
+  //       <polygon points="20,20 80,20 55,65 55,90 45,90 45,65" />
+  //       <line x1="20" y1="20" x2="80" y2="20" />
+  //       {/* Dotted path for flow */}
+  //       <circle cx="50" cy="35" r="2" fill="black" stroke="none" />
+  //       <circle cx="50" cy="45" r="2" fill="black" stroke="none" />
+  //       <circle cx="50" cy="55" r="2" fill="black" stroke="none" />
+  //     </svg>
+  //   ),
+  // },
 ];
 
 export default function ServicesPage() {
