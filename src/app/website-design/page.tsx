@@ -43,9 +43,13 @@ const devServices = [
   {
     id: "shopify",
     title: "Shopify Storefronts",
-    subtitle: "Conversion-First Ecommerce",
-    desc: "We build high-performance Shopify stores designed to sell. From custom Liquid coding to headless setups, we ensure your store is fast, mobile-responsive, and optimized for checkout.",
-    features: ["Custom Theme Dev", "App Integration", "CRO Optimization"],
+    subtitle: "Conversion-Focused Ecommerce",
+    desc: "We create quick-loading Shopify sites that convert well - using tailored designs, seamless connections, while focusing on mobile speed.",
+    features: [
+      "Custom Theme Development",
+      "App Integration",
+      "CRO Optimization",
+    ],
     icon: <ShoppingBag className="w-8 h-8 text-black" />,
     color: "bg-[#95BF47]", // Shopify Greenish
     textColor: "text-black",
@@ -53,9 +57,9 @@ const devServices = [
   {
     id: "nextjs",
     title: "Next.js Development",
-    subtitle: "Blazing Fast SEO Engines",
-    desc: "The choice for modern brands. Server-side rendering for instant load times and superior SEO rankings. Perfect for marketing sites and high-traffic platforms.",
-    features: ["SSR & SSG", "Top-tier SEO", "Vercel Deployment"],
+    subtitle: "Blazing-Fast SEO Engines",
+    desc: "Fast websites today use server-side tricks so they show up fast in search results while loading right away. They run quick thanks to smart tech behind the scenes that helps them pop open instantly.",
+    features: ["Server-Side Rendering", "Top-tier SEO", "Vercel Deployment"],
     icon: <Zap className="w-8 h-8 text-white" />,
     color: "bg-black",
     border: "border-white/20",
@@ -65,7 +69,7 @@ const devServices = [
     id: "mern",
     title: "MERN Stack Apps",
     subtitle: "Custom Web Applications",
-    desc: "For when you need more than a website. We build complex, scalable web applications (SaaS, Portals, Dashboards) using MongoDB, Express, React, and Node.",
+    desc: "We create strong, growing apps - like SaaS tools, dashboards, or online hubs - with MongoDB, Express, React, but also Node.",
     features: ["Full-Stack Logic", "Real-time Data", "API Development"],
     icon: <Database className="w-8 h-8 text-[#80e01a]" />,
     color: "bg-[#111]",
@@ -73,11 +77,11 @@ const devServices = [
     textColor: "text-white",
   },
   {
-    id: "wordpress",
-    title: "WordPress Authority",
-    subtitle: "Content Management Systems",
-    desc: "Beautiful, easy-to-manage websites built on the world's most popular CMS. We create custom, bloat-free themes that load fast and are easy for your team to update.",
-    features: ["Custom Fields", "Security Hardening", "Speed Optimization"],
+    id: "web-app",
+    title: "Web App Development",
+    subtitle: "Modern Web Systems",
+    desc: "We build quick, safe, web tools that fit your company - simple to run, smooth-working, yet ready to expand over time.",
+    features: ["Custom Features", "Security Hardening", "Speed Optimization"],
     icon: <Layout className="w-8 h-8 text-white" />,
     color: "bg-[#21759b]", // WP Blue
     textColor: "text-white",
@@ -88,17 +92,17 @@ const hostingFeatures = [
   {
     icon: <Rocket />,
     title: "Turbo Speed",
-    desc: "NVMe SSD storage and LiteSpeed servers for instant loading.",
+    desc: "NVMe SSDs work with LiteSpeed machines - loads super quick.",
   },
   {
     icon: <ShieldCheck />,
     title: "Ironclad Security",
-    desc: "Free SSL, daily malware scans, and DDoS protection included.",
+    desc: "Get free SSL plus regular malware checks along with automatic DDoS defense.",
   },
   {
     icon: <Globe />,
     title: "99.9% Uptime",
-    desc: "Redundant cloud infrastructure ensures your site never goes down.",
+    desc: "Fault-tolerant web hubs keep your page running nonstop.",
   },
 ];
 
@@ -106,25 +110,25 @@ const processSteps = [
   {
     id: "01",
     title: "Discovery",
-    desc: "We map out your business logic, user flows, and technical requirements before writing a single line of code.",
+    desc: "We get what you do, your targets - also who uses it - before we begin anything.",
     icon: <Search className="text-black" />,
   },
   {
     id: "02",
     title: "Architect",
-    desc: "Designing the database schema, selecting the tech stack, and creating high-fidelity UI/UX prototypes.",
+    desc: "We're setting up the database, picking a solid tech combo, while sketching out smooth interface designs.",
     icon: <PenTool className="text-black" />,
   },
   {
     id: "03",
     title: "Construct",
-    desc: "Writing clean, semantic code. We build the frontend and backend simultaneously with rigorous testing.",
+    desc: "We craft solid code, while putting together the front end along with the back end - making sure everything’s tested well.",
     icon: <Code2 className="text-black" />,
   },
   {
     id: "04",
     title: "Deploy",
-    desc: "Server configuration, domain mapping, and final SEO checks to ensure a flawless go-live experience.",
+    desc: "We got the server ready, then hooked up the domain - after that, we did SEO and quality tests before going live.",
     icon: <Rocket className="text-black" />,
   },
 ];
@@ -437,13 +441,15 @@ export default function WebsiteDesign() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              We Don't Just Build It. <br />
-              We <span className="text-[#80e01a]">Power</span> It.
+              We don't just create it
+              <br />
+              instead <span className="text-[#80e01a]">we keep it </span>{" "}
+              running.
             </h2>
             <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-              Stop worrying about downtime, slow loading speeds, or server
-              management. Our managed hosting solutions ensure your digital
-              assets are always online, secure, and lightning fast.
+              Quit stressing over crashes, laggy pages, or messed-up servers.
+              Your hosted site runs quick, stays safe, yet remains up all the
+              time.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">
@@ -562,19 +568,19 @@ export default function WebsiteDesign() {
         <div className="space-y-4">
           <FAQItem
             question="Who owns the code after the project is done?"
-            answer="You do. Unlike other agencies that hold your site hostage, we transfer 100% intellectual property rights and code ownership to you upon final payment."
+            answer="The code ownership goes to you. We, as a top digital marketing agency and best digital marketing company, do not keep any code ownership with us after the final payment; rather, we transfer 100% ownership to you."
           />
           <FAQItem
             question="Will my site be easy to edit?"
-            answer="Yes. Whether it's Shopify or a custom MERN dashboard, we build user-friendly admin panels so your team can update content without needing a developer."
+            answer="Certainly. We create user-friendly dashboards as a part of our best digital marketing services so that your team will be able to update content without any difficulty."
           />
           <FAQItem
             question="Do you provide maintenance?"
-            answer="Absolutely. We offer monthly care packages that cover security updates, content changes, and 24/7 uptime monitoring."
+            answer="Yes, we are glad to. Our digital marketing agency has on offer monthly care plans that include updates, content changes, and 24/7 monitoring."
           />
           <FAQItem
             question="How long does a typical build take?"
-            answer="A standard corporate site takes 4-6 weeks. Complex web applications and e-commerce stores typically range from 8-12 weeks depending on features."
+            answer="Generally, corporate sites are done in 4–6 weeks. The timeline for advanced web apps or e-commerce projects is 8–12 weeks, depending on the features, and this is all backed up by our expert digital marketing ​‍​‌‍​‍‌services."
           />
         </div>
       </section>

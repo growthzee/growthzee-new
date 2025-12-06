@@ -26,31 +26,31 @@ const services = [
   {
     id: "01",
     title: "Seller Central Ops",
-    desc: "Complete management of your Amazon & Flipkart dashboards. We handle listings, inventory health, and account compliance so you sleep easy.",
+    desc: "Fully managed Amazon and Flipkart accounts - no stress for you. We take care of product posts, stock status, progress tracking, also rule updates, so you stay free to grow your business while we sort out the messy details behind the scenes.",
     icon: <Settings className="w-6 h-6" />,
   },
   {
     id: "02",
     title: "Listing SEO",
-    desc: "We craft product titles and descriptions that rank. Using high-volume keywords to ensure your products appear exactly when customers are buying.",
+    desc: "We create web-friendly titles and descriptions packed with popular search terms. So your items show up faster in results - thanks to smart online strategies that boost visibility right when shoppers are looking.",
     icon: <Search className="w-6 h-6" />,
   },
   {
     id: "03",
     title: "PPC Dominance",
-    desc: "Aggressive ad strategies on Amazon & Flipkart. We lower your ACOS while scaling revenue through Sponsored Products, Brands, and Display ads.",
+    desc: "Aggressive PPC moves made for Amazon plus Flipkart. Our focus? Drop ACOS while boosting sales using Sponsored Products, Brands, or Display Ads instead. Real results only - no fluff. Better returns every time",
     icon: <BarChart3 className="w-6 h-6" />,
   },
   {
     id: "04",
     title: "Brand Stores",
-    desc: "Designing immersive A+ Content and Brand Stores that distinguish you from generic competitors and increase conversion rates.",
+    desc: "We craft top-notch product pages plus brand stores that boost interaction, also sales. Through our online marketing help, your business gets ahead - different from everyone else selling similar stuff.",
     icon: <Globe className="w-6 h-6" />,
   },
   {
     id: "05",
     title: "Inventory Logic",
-    desc: "Data-driven forecasting to prevent stockouts. We manage FBA shipments and ensure your supply chain meets demand spikes.",
+    desc: "Using data-driven forecasting, we prevent stockouts and manage FBA shipments smoothly. Our digital marketing company aligns your supply chain with real customer demand.",
     icon: <Package className="w-6 h-6" />,
   },
 ];
@@ -68,22 +68,22 @@ const timeline = [
   {
     step: "01",
     title: "Audit",
-    text: "Deep dive into your account health, listings, and competitor gaps.",
+    text: "We take a close look at product listings, store performance, while checking where rivals fall short. Since we’re top-rated in online promotion, our reviews uncover unseen chances that lift revenue quickly.",
   },
   {
     step: "02",
     title: "Optimize",
-    text: "Revamping SEO, images, and A+ content for maximum conversion.",
+    text: "From SEO to product images and A+ content, our team revamps everything for higher conversions. This is where our digital marketing agency delivers real impact.",
   },
   {
     step: "03",
     title: "Launch",
-    text: "Structuring PPC campaigns to capture high-intent traffic efficiently.",
+    text: "We run targeted ad campaigns that boost sales right away - so you see results fast. Our online marketing makes sure each rupee works hard for your business instead of vanishing into thin air.",
   },
   {
     step: "04",
     title: "Scale",
-    text: "Expanding to new marketplaces and increasing ad spend profitably.",
+    text: "Using advanced analytics, we expand into new marketplaces and scale ad spend profitably — the reason we’re known for the best digital marketing in India.",
   },
 ];
 
@@ -141,9 +141,11 @@ export default function EcommerceManagement() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lg text-gray-400 max-w-lg leading-relaxed mb-10"
             >
-              We handle the chaos of Amazon, Flipkart, and Meesho so you can
-              focus on building a brand people love. Full-service account
-              management & ads.
+              As the best digital marketing company ., we handle all your
+              Amazon, Flipkart, and Meesho tasks - product pages, promotions,
+              stock, daily workflows - freeing you up to create a brand people
+              enjoy. Full control of your profiles along with results-focused ad
+              campaigns helps boost sales without stress
             </motion.p>
             <motion.button
               initial={{ opacity: 0, y: 30 }}
@@ -393,7 +395,8 @@ export default function EcommerceManagement() {
             Blueprint to <span className="text-[#80e01a]">Bestseller</span>
           </h2>
           <p className="text-gray-400">
-            Our systematic approach to marketplace domination.
+            Our tested method runs on best digital marketing companies help that
+            all over India rely on - so you know it works.
           </p>
         </div>
 
@@ -508,19 +511,19 @@ export default function EcommerceManagement() {
         <div className="space-y-4">
           <FAQItem
             question="Do you guarantee sales?"
-            answer="We guarantee work, strategy, and optimization. While we can't control the market, our 96% retention rate suggests our clients are very happy with the sales growth we deliver."
+            answer="We guarantee the planning, the work, and the optimization. Although no one can take control of the market, we let our results do the talking — and that is the main reason why clients give us the green light as the best digital marketing company for delivering growth consistently through expert digital marketing services."
           />
           <FAQItem
             question="What is your pricing structure?"
-            answer="We operate on a hybrid model: a flat retainer fee plus a small percentage of the revenue growth we generate. This aligns our incentives with yours."
+            answer="Our hybrid model is composed of a flat retainer + a small percentage of the revenue. This keeps things transparent and performance-oriented, pretty much like how the best digital marketing services provider should function."
           />
           <FAQItem
             question="Which marketplaces do you handle?"
-            answer="We specialize in Amazon (India & Global), Flipkart, Meesho, Myntra, Nykaa, and Ajio."
+            answer="We handle Amazon (India & Global), Flipkart, Meesho, Myntra, Nykaa, and Ajio with the support of our experience as a leading digital marketing agency in India."
           />
           <FAQItem
             question="How long before we see results?"
-            answer="PPC optimization shows results in 7-14 days. SEO and organic ranking improvements typically take 30-45 days to fully mature."
+            answer="PPC results are visible within a week or two. SEO and organic growth take around a month to a month and a half. It is due to our thorough planning that we are counted among the best digital marketing companies in India for quick and steady ​‍​‌‍​‍‌results."
           />
         </div>
       </section>

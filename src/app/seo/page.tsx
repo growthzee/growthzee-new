@@ -33,28 +33,28 @@ import { useState } from "react";
 // --- Data ---
 const seoServices = [
   {
-    title: "Technical Architecture",
-    desc: "Google can't rank what it can't crawl. We fix site structure, core web vitals, schema markup, and indexing issues.",
+    title: "Technical SEO",
+    desc: "Google won't list pages it can't understand. We handle all the hidden stuff - like speed, how well bots can scan your site, getting pages into search results, key loading metrics, structured data tweaks, broken bits, or anything else messing with your tech foundation. Your base gets set up for search engines.",
     icon: <LayoutGrid className="w-6 h-6" />,
-    stat: "+40% Crawl Rate",
+    stat: "+40% FASTER CRAWLING & INDEXING",
   },
   {
-    title: "Keyword Dominance",
-    desc: "We target high-intent keywords that drive revenue, not just vanity traffic. Mapping user intent to your pages.",
+    title: "Keyword Research & Strategy",
+    desc: "Figuring out what people search for sets you up for success. Picking smart terms gives your site a real shot at standing out. We pinpoint what buyers are really looking up - keywords that drive sales, not just clicks - using smart targeting instead of guesswork. Next, every keyword gets linked to the best page - boosting rankings while driving results through smart connections instead.",
     icon: <Target className="w-6 h-6" />,
-    stat: "Top 3 Rankings",
+    stat: "TOP 3 RANKINGS FOR TARGET KEYWORDS",
   },
   {
     title: "Content Authority",
-    desc: "Creating long-form, data-backed content that earns backlinks naturally and positions you as the industry leader.",
+    desc: "We create stuff that Google believes plus people enjoy.Facts-based, detailed content that pulls in links, keeps readers longer - also helps you stand out in your field.",
     icon: <FileText className="w-6 h-6" />,
-    stat: "3x Organic Traffic",
+    stat: "3× MORE ORGANIC TRAFFIC",
   },
   {
     title: "Authority Building",
-    desc: "White-hat link acquisition from high DR sites. No PBNs, no spam. Just real relationships and high-quality mentions.",
+    desc: "True connections. Also real pathways. We get top-tier backlinks from trusted, niche-related sites - never using shady methods, private networks, or quick fixes. Instead, solid online credibility.",
     icon: <Layers className="w-6 h-6" />,
-    stat: "High DR Links",
+    stat: "HIGH DR, HIGH TRUST BACKLINKS",
   },
 ];
 
@@ -62,22 +62,22 @@ const rankingProcess = [
   {
     step: "01",
     title: "The Audit",
-    text: "Comprehensive forensic analysis of your site's health, backlink profile, and competitor gaps.",
+    text: "We kick things off with a full site check - spotting tech hiccups, weak content, link quality, alongside rival strategies. That way, we map out exactly how to boost your position using smart online tactics.",
   },
   {
     step: "02",
     title: "The Fix",
-    text: "Cleaning up technical debt, improving page speed, and fixing broken user journeys.",
+    text: "Then we tackle whatever’s slowing your site down. Speed gets boosted, layout becomes clearer, visitors enjoy it more, while smart backend tweaks make search engines happy.",
   },
   {
     step: "03",
     title: "The Content",
-    text: "Deploying high-velocity content silos that capture semantic search intent.",
+    text: "Next up, we craft solid content aimed at ranking well. Whether it’s blog posts or service sections, each one lines up with what users are searching for - helping you get seen easier.",
   },
   {
     step: "04",
     title: "The Surge",
-    text: "Aggressive promotion and link building to push pages from page 2 to #1.",
+    text: "Finding better spots online starts by boosting your links, growing trust, or pushing visibility where it counts. Each step moves your site off page two - into the top spot - and keeps it showing up.",
   },
 ];
 
@@ -118,12 +118,12 @@ export default function SeoOptimization() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-5xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-8"
             >
-              RANK <br />
+              Rank <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#80e01a] to-white/60">
-                HIGHER.
+                Higher
               </span>{" "}
               <br />
-              SELL MORE.
+              Sell More .
             </motion.h1>
 
             <motion.p
@@ -132,9 +132,10 @@ export default function SeoOptimization() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lg text-gray-400 max-w-lg leading-relaxed mb-10"
             >
-              Invisible websites don't generate revenue. We engineer search
-              strategies that put your brand in front of customers exactly when
-              they are ready to buy.
+              Being a best digital marketing company, , we create plans that
+              show your brand right when shoppers are set to purchase - using
+              smart timing instead of guesswork. Each move fits real behavior,
+              so you connect at the perfect moment.
             </motion.p>
 
             <motion.div
@@ -493,10 +494,12 @@ export default function SeoOptimization() {
                     </span>
                   </div>
                   <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                    Perfect for brick-and-mortar stores, clinics, and service
-                    providers. We optimize your Google Business Profile, build
-                    local citations, and generate reviews to make you the #1
-                    choice in your neighborhood.
+                    If your company relies on nearby clients, then getting seen
+                    locally means picking a solid online strategy. Instead of
+                    guessing what works, go for tactics that actually draw
+                    attention right where it matters. We assist clinics, salons,
+                    shops - also service pros - to show up first in local
+                    searches, so you become the go-to pick nearby.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-center gap-3">
@@ -505,11 +508,15 @@ export default function SeoOptimization() {
                     </li>
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="text-[#80e01a] w-5 h-5" />{" "}
+                      <span>Google Business Profile Setup</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle2 className="text-[#80e01a] w-5 h-5" />{" "}
                       <span>Local Citation Building</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="text-[#80e01a] w-5 h-5" />{" "}
-                      <span>Review Management Strategy</span>
+                      <span>Review & Reputation Management</span>
                     </li>
                   </ul>
                 </motion.div>
@@ -524,27 +531,39 @@ export default function SeoOptimization() {
                   <div className="flex items-center gap-3 mb-6 text-[#80e01a]">
                     <Globe size={24} />
                     <span className="font-bold text-xl">
-                      International Expansion
+                      Scale Beyond Borders - Go Worldwide
                     </span>
                   </div>
                   <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                    For eCommerce brands and SaaS companies scaling worldwide.
-                    We structure your Hreflang tags, create localized content,
-                    and build high-authority backlinks to compete on the global
-                    stage.
+                    Brands looking to grow overseas can count on us - our crew
+                    creates plans so you show up worldwide. While we’re known
+                    for top-tier digital marketing, what matters is results.
+                    Instead of hype, we focus on real tools that boost
+                    visibility across borders. Not just talk, but action that
+                    gets noticed far beyond your home base. We tweak your site
+                    so it pulls in visitors from different places while ranking
+                    high on worldwide searches.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="text-[#80e01a] w-5 h-5" />{" "}
-                      <span>Technical Hreflang Setup</span>
+                      <span>International Keyword Targeting</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="text-[#80e01a] w-5 h-5" />{" "}
-                      <span>International Keyword Research</span>
+                      <span>Multi-Region & Multilingual SEO</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <CheckCircle2 className="text-[#80e01a] w-5 h-5" />{" "}
-                      <span>High-DR Link Acquisition</span>
+                      <span>Technical SEO for Global Reach</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle2 className="text-[#80e01a] w-5 h-5" />{" "}
+                      <span>Worldwide Competitor Analysis</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <CheckCircle2 className="text-[#80e01a] w-5 h-5" />{" "}
+                      <span>High-Authority Global Backlinks</span>
                     </li>
                   </ul>
                 </motion.div>

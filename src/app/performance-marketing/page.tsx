@@ -117,63 +117,68 @@ const offerings = [
   {
     title: "PPC Management",
     description:
-      "Capture high-intent demand with precision Google Ads campaigns. We optimize for lower CPC and higher conversion rates.",
+      "We use targeted Google Ads to get quality leads without spending much. Being among the best digital marketing teams, we ensure your ads actually work.",
     icon: <MousePointerClick className="w-6 h-6 text-black" />,
   },
   {
     title: "Paid Social Advertising",
     description:
-      "Scale your brand on Meta, TikTok, and LinkedIn with data-backed creative strategies that stop the scroll and convert.",
+      "Build your name across Meta, or LinkedIn using smart, imaginative ads. We handle your online promotion so you can grab more buyers - our crew knows what works from real results.",
     icon: <Target className="w-6 h-6 text-black" />,
   },
   {
     title: "Conversion Rate Optimization",
     description:
-      "Traffic is useless if it doesn't convert. We analyze user behavior and optimize your landing pages to maximize ROI.",
+      "More traffic is not enough — it must convert. We improve your landing pages and user experience so your business gets better ROI with expert digital marketing services.",
     icon: <TrendingUp className="w-6 h-6 text-black" />,
   },
   {
     title: "Retargeting Strategies",
     description:
-      "Re-engage lost visitors and turn cart abandoners into loyal customers with segmented remarketing flows.",
+      "We get missing visitors back, then make them regular buyers. That’s why people choose us over others for online marketing.",
     icon: <Zap className="w-6 h-6 text-black" />,
   },
   {
     title: "Analytics & Attribution",
     description:
-      "Know exactly where your money goes. We set up advanced tracking to measure ROAS across every touchpoint.",
+      "Track your performance with clear reporting. As a leading digital marketing company, we help you understand where your money goes and what brings the best results.",
     icon: <PieChart className="w-6 h-6 text-black" />,
   },
 ];
 
 const benefits = [
-  "Maximizing ROAS (Return on Ad Spend).",
-  "Transparent, real-time reporting dashboards.",
-  "Creative testing framework for constant improvement.",
-  "Multi-channel attribution modeling.",
-  "Scaling revenue, not just vanity metrics.",
+  "We maximize your ROAS with smart, data-driven strategies.",
+  "Real-time dashboards for full transparency.",
+  "Continuous creative testing for better performance.",
+  "Multi-channel tracking to find what truly works.",
+  "Focus on real revenue — not vanity metrics.",
 ];
 
 const faqs = [
   {
     question: "What is the minimum budget required?",
     answer:
-      "We typically recommend a minimum monthly ad spend of $3,000 to gather enough data for effective optimization and scaling.",
+      "We work with flexible budgets. Our team suggests the best plan based on your goals, making us one of the best digital marketing companies for all business sizes.",
   },
   {
-    question: "How long does it take to see results?",
+    question: "How much cash do you need at least?",
     answer:
-      "While initial setup takes 1-2 weeks, meaningful data usually starts coming in within the first month. Optimization typically matures by month 3.",
+      "We handle different budget needs. So our crew picks a smart strategy that fits your targets - proving we’re a top pick among online digital  marketing firms no matter how big or small your company is.",
   },
   {
-    question: "Do you create the ad creatives?",
+    question: "What’s the timeframe for noticing changes?",
     answer:
-      "Yes! We have an in-house creative team that designs high-converting visuals and copy specifically tailored for performance campaigns.",
+      "Many customers notice changes after about two to four weeks - it really depends on the tool they use and their approach.",
   },
   {
-    question: "Which platforms do you support?",
+    question: "Are you making the ads?",
     answer:
-      "We are experts in Google Ads (Search, Shopping, YouTube), Meta (Facebook, Instagram), TikTok Ads, and LinkedIn Ads.",
+      "Yes. Our best digital marketing  company includes sharp ads designed to boost your results - because they’re built to convert more visitors into customers.",
+  },
+  {
+    question: "What systems can you work on?",
+    answer:
+      "We run ads on Google - like Search, Shopping, or YouTube - not to mention Meta platforms such as Facebook and Instagram, plus also LinkedIn; basically all channels a strong best digital marketing team would cover.",
   },
 ];
 
@@ -181,25 +186,25 @@ const processSteps = [
   {
     title: "Audit & Opportunity Analysis",
     description:
-      "We dive deep into your historical data, identify wasted spend, and find immediate opportunities for growth.",
+      "We look at your old results, cut the useless spending on ads - then spot fast ways to grow. That’s why folks rely on us when picking an best digital marketing services.",
     icon: <Search className="w-5 h-5" />,
   },
   {
     title: "Strategy & Setup",
     description:
-      "We build a full-funnel strategy, set up pixel tracking, and design the initial creative assets for launch.",
+      "We build a full marketing plan, connect tracking tools, then design visuals that grab attention. By doing things this way, we make sure our digital efforts actually work and bring real outcomes.",
     icon: <Target className="w-5 h-5" />,
   },
   {
     title: "Launch & Optimization",
     description:
-      "We go live and monitor daily. We tweak bids, audiences, and creatives to lower CPA and increase ROAS.",
+      "We kick off your campaigns, check results every day - then tweak bids and ads to cut costs while boosting returns, exactly what a best digital marketing company would do.",
     icon: <Zap className="w-5 h-5" />,
   },
   {
     title: "Scale & Dominate",
     description:
-      "Once we hit your KPI targets, we aggressively scale the budget while maintaining profitability.",
+      "When your ads start working, we boost them fast - still keeping profits safe through sharp online marketing moves.",
     icon: <BarChart3 className="w-5 h-5" />,
   },
 ];
@@ -298,8 +303,11 @@ export default function PerformanceMarketing() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            Stop burning cash. We turn your ad spend into profit with
-            data-driven campaigns across Google, Meta, TikTok, and more.
+            Quit tossing cash at ads that never pay off. We make sure each rupee
+            you spend on ads brings real returns - using smart, number-backed
+            methods that actually work. On top of Google Ads, we handle Meta,
+            YouTube - our crew sets up ads, tweaks them regularly, so you see
+            steady results that can grow with your business.
           </motion.p>
 
           <motion.div
@@ -440,22 +448,16 @@ export default function PerformanceMarketing() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-8 opacity-70">
-            {[
-              "Google Ads",
-              "Meta Ads",
-              "TikTok Ads",
-              "LinkedIn Ads",
-              "YouTube Ads",
-              "Pinterest Ads",
-              "Snapchat Ads",
-            ].map((platform) => (
-              <div
-                key={platform}
-                className="px-6 py-3 rounded-full border border-white/20 text-white/80 text-sm font-medium hover:border-[#80e01a] hover:text-[#80e01a] hover:bg-[#80e01a]/10 transition-colors cursor-default"
-              >
-                {platform}
-              </div>
-            ))}
+            {["Google Ads", "Meta Ads", "LinkedIn Ads", "YouTube Ads"].map(
+              (platform) => (
+                <div
+                  key={platform}
+                  className="px-6 py-3 rounded-full border border-white/20 text-white/80 text-sm font-medium hover:border-[#80e01a] hover:text-[#80e01a] hover:bg-[#80e01a]/10 transition-colors cursor-default"
+                >
+                  {platform}
+                </div>
+              )
+            )}
           </div>
         </div>
 
