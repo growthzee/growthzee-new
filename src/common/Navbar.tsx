@@ -91,7 +91,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/">
         <Image
-          src={"/images/logo.png"}
+          src={"/images/christmaslogo.png"}
           alt="Logo"
           width={120}
           height={120}
