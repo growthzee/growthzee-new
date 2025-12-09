@@ -54,9 +54,9 @@ const teamMembers = [
     name: "Ishika Tyagi",
     role: "HR Recuiter Team",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1764052727/WhatsApp_Image_2025-11-25_at_11.43.59_AM_dlghvl.jpg",
+      "https://res.cloudinary.com/doy1iucnw/image/upload/v1765273923/WhatsApp_Image_2025-12-09_at_3.16.12_PM_p8qlt1.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1764052727/WhatsApp_Image_2025-11-25_at_11.49.05_AM_rvnxy5.jpg",
+      "https://res.cloudinary.com/doy1iucnw/image/upload/v1765273923/WhatsApp_Image_2025-12-09_at_3.16.11_PM_iwr18g.jpg",
     linkedin: "https://www.linkedin.com/in/ishika-tyagi23",
   },
 
@@ -142,6 +142,16 @@ const teamMembers = [
   },
   {
     id: 13,
+    name: "Tanisha Yadav",
+    role: "Influencer coordinator",
+    image1:
+      "https://res.cloudinary.com/doy1iucnw/image/upload/v1765273923/WhatsApp_Image_2025-12-09_at_3.12.20_PM_pvsahw.jpg",
+    image2:
+      "https://res.cloudinary.com/doy1iucnw/image/upload/v1765273923/WhatsApp_Image_2025-12-09_at_3.12.19_PM_dyrz9b.jpg",
+    linkedin: "#",
+  },
+  {
+    id: 14,
     name: "Om Prakash",
     role: "Junior Video Editor",
     image1:
@@ -151,7 +161,7 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/om-prakash-927323277",
   },
   {
-    id: 14,
+    id: 15,
     name: "Damini Panjawani",
     role: "Seo Intern",
     image1:
@@ -161,7 +171,7 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/damini-panjwani-80b138370",
   },
   {
-    id: 15,
+    id: 16,
     name: "Shruti Barman",
     role: "Graphic Designer Intern",
     image1:
@@ -171,7 +181,7 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/shruti-barman-a9b73439a",
   },
   {
-    id: 16,
+    id: 17,
     name: "Mahi Sharma",
     role: "Graphic Designer Intern",
     image1:
