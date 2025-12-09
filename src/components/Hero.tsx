@@ -16,6 +16,11 @@ const partners = [
   { name: "Shopify", src: "/images/shopify.png" },
 ];
 
+// 1. DUPLICATE 4 TIMES
+// We repeat the array 4 times to ensure the 'tape' is long enough
+// to cover wide screens without showing a gap before the loop resets.
+const repeatedPartners = [...partners, ...partners, ...partners, ...partners];
+
 export default function Hero() {
   return (
     <section
@@ -175,33 +180,36 @@ export default function Hero() {
       </div>
 
       {/* Marquee Container */}
-      <div className="flex w-full overflow-hidden mask-gradient">
+      <div className="flex w-full overflow-hidden mask-gradient pb-6">
         <motion.div
-          className="flex gap-16 sm:gap-24 items-center whitespace-nowrap"
+          className="flex gap-14 sm:gap-20 items-center whitespace-nowrap"
           initial={{ x: 0 }}
           animate={{ x: "-50%" }}
           transition={{
-            duration: 30,
+            // 2. INCREASED DURATION
+            // Since the list is longer (4x), we increase duration to keep speed steady
+            duration: 60,
             ease: "linear",
             repeat: Number.POSITIVE_INFINITY,
             repeatType: "loop",
           }}
           style={{ width: "fit-content" }}
         >
-          {[...partners, ...partners].map((partner, index) => (
+          {/* 3. USING REPEATED ARRAY (4x) */}
+          {repeatedPartners.map((partner, index) => (
             <div
               key={index}
-              // UPDATED: Increased height and width classes significantly
-              // h-20 (80px) mobile -> h-28 (112px) desktop
-              // w-40 (160px) mobile -> w-60 (240px) desktop
-              className="relative h-20 sm:h-28 w-40 sm:w-60 group flex-shrink-0"
+              // 4. INCREASED HEIGHT
+              // h-20 (80px) on mobile, h-28 (112px) on desktop
+              className="relative h-20 sm:h-28 w-auto flex-shrink-0 group flex items-center justify-center"
             >
               <Image
                 src={partner.src}
                 alt={partner.name}
-                fill
-                // object-contain ensures the whole logo is visible without cropping
-                className="object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-auto h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
               />
             </div>
           ))}
