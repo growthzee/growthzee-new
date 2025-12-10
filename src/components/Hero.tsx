@@ -16,9 +16,6 @@ const partners = [
   { name: "Shopify", src: "/images/shopify.png" },
 ];
 
-// 1. DUPLICATE 4 TIMES
-// We repeat the array 4 times to ensure the 'tape' is long enough
-// to cover wide screens without showing a gap before the loop resets.
 const repeatedPartners = [...partners, ...partners, ...partners, ...partners];
 
 export default function Hero() {
@@ -27,68 +24,35 @@ export default function Hero() {
       id="home"
       className="relative w-full min-h-screen bg-black overflow-hidden flex flex-col justify-between"
     >
-      {/* --- Background Elements (Unchanged) --- */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* ------------------------------------------------------ */}
+        {/* --- UPDATED WRAPPER: Starts below Navbar ------------- */}
+        {/* ------------------------------------------------------ */}
+        {/* Changed 'inset-0' to 'top-20 bottom-0 left-0 right-0' 
+            top-20 (80px) is usually enough to clear the Navbar. 
+            Adjust to top-16 or top-24 if your navbar is smaller/larger. */}
+        <div className="absolute top-20 left-0 right-0 bottom-0 z-0">
+          <Image
+            src="/images/decoration03.png"
+            alt="Hero Background"
+            fill
+            priority
+            className="object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/90" />
+        </div>
+        {/* ------------------------------------------------------ */}
+
+        {/* Floating Elements (Unchanged) */}
         <div className="absolute right-[-10%] top-[-12%] w-[560px] h-[560px] blur-[140px] opacity-40 bg-[radial-gradient(closest-side,rgba(128,224,26,0.35),transparent_70%)]"></div>
         <div className="absolute left-[-12%] bottom-[-14%] w-[620px] h-[620px] blur-[150px] opacity-40 bg-[radial-gradient(closest-side,rgba(128,224,26,0.32),transparent_70%)]"></div>
         <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-[#80e01a]/8 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/3 w-60 h-60 bg-[#80e01a]/12 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/2 right-1/4 transform -translate-y-1/2 rotate-45 w-32 h-32 opacity-20">
-          <svg viewBox="0 0 100 100" className="w-full h-full">
-            <defs>
-              <pattern
-                id="grid"
-                width="10"
-                height="10"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M 10 0 L 0 0 0 10"
-                  fill="none"
-                  stroke="rgba(128,224,26,0.3)"
-                  strokeWidth="0.5"
-                />
-              </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#grid)" />
-            <rect
-              width="100"
-              height="100"
-              fill="none"
-              stroke="rgba(128,224,26,0.4)"
-              strokeWidth="1"
-            />
-          </svg>
-        </div>
+
         <div
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            background:
-              "repeating-linear-gradient(0deg, rgba(255,255,255,0.12) 0 1px, transparent 1px 26px), repeating-linear-gradient(90deg, rgba(255,255,255,0.12) 0 1px, transparent 1px 26px)",
-            WebkitMaskImage:
-              "radial-gradient(70% 70% at 50% 50%, white 60%, transparent 100%)",
-            maskImage:
-              "radial-gradient(70% 70% at 50% 50%, white 60%, transparent 100%)",
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }}
-        />
-        <motion.div
-          className="absolute inset-0 opacity-10"
-          animate={{
-            background: [
-              "linear-gradient(90deg, transparent 0%, rgba(128,224,26,0.1) 50%, transparent 100%)",
-              "linear-gradient(90deg, transparent 100%, rgba(128,224,26,0.1) 150%, transparent 200%)",
-            ],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
           }}
         />
       </div>
@@ -186,8 +150,6 @@ export default function Hero() {
           initial={{ x: 0 }}
           animate={{ x: "-50%" }}
           transition={{
-            // 2. INCREASED DURATION
-            // Since the list is longer (4x), we increase duration to keep speed steady
             duration: 60,
             ease: "linear",
             repeat: Number.POSITIVE_INFINITY,
@@ -195,12 +157,9 @@ export default function Hero() {
           }}
           style={{ width: "fit-content" }}
         >
-          {/* 3. USING REPEATED ARRAY (4x) */}
           {repeatedPartners.map((partner, index) => (
             <div
               key={index}
-              // 4. INCREASED HEIGHT
-              // h-20 (80px) on mobile, h-28 (112px) on desktop
               className="relative h-20 sm:h-28 w-auto flex-shrink-0 group flex items-center justify-center"
             >
               <Image
