@@ -19,26 +19,26 @@ const solutions = [
       </svg>
     ),
   },
-  // {
-  //   id: 2,
-  //   // Using JSX here to force the line break exactly where you want it
-  //   title: (
-  //     <>
-  //       Social Media Handling <br /> (Organic)
-  //     </>
-  //   ),
-  //   link: "/social-media-management",
-  //   icon: (
-  //     <svg
-  //       viewBox="0 0 100 100"
-  //       className="w-full h-full stroke-white stroke-[1] fill-none group-hover:stroke-[#80e01a] transition-colors duration-300"
-  //     >
-  //       <circle cx="50" cy="50" r="45" strokeDasharray="4,4" />
-  //       <line x1="50" y1="25" x2="50" y2="75" />
-  //       <line x1="25" y1="50" x2="75" y2="50" />
-  //     </svg>
-  //   ),
-  // },
+  {
+    id: 2,
+    // Using JSX here to force the line break exactly where you want it
+    title: (
+      <>
+        Social Media Handling <br /> (Organic)
+      </>
+    ),
+    link: "/social-media-management",
+    icon: (
+      <svg
+        viewBox="0 0 100 100"
+        className="w-full h-full stroke-white stroke-[1] fill-none group-hover:stroke-[#80e01a] transition-colors duration-300"
+      >
+        <circle cx="50" cy="50" r="45" strokeDasharray="4,4" />
+        <line x1="50" y1="25" x2="50" y2="75" />
+        <line x1="25" y1="50" x2="75" y2="50" />
+      </svg>
+    ),
+  },
   // {
   //   id: 3,
   //   title: "Lead Generation",

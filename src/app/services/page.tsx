@@ -6,24 +6,24 @@ import { motion } from "framer-motion";
 
 // --- Main Services Data ---
 const servicesData = [
-  // {
-  //   id: "01",
-  //   title: "Social Media Marketing",
-  //   link: "/social-media-management",
-  //   description:
-  //     "Engage your audience and build brand loyalty with data-driven social strategies across Instagram, LinkedIn, and TikTok.",
-  //   tags: ["Content Strategy", "Community Mgmt", "Influencer Marketing"],
-  //   icon: (
-  //     <svg
-  //       viewBox="0 0 100 100"
-  //       className="w-full h-full stroke-black stroke-[1.5] fill-none"
-  //     >
-  //       <circle cx="50" cy="50" r="45" strokeDasharray="4,4" />
-  //       <line x1="50" y1="25" x2="50" y2="75" />
-  //       <line x1="25" y1="50" x2="75" y2="50" />
-  //     </svg>
-  //   ),
-  // },
+  {
+    id: "01",
+    title: "Social Media Handling (Organic)",
+    link: "/social-media-management",
+    description:
+      "Engage your audience and build brand loyalty with data-driven social strategies across Instagram, LinkedIn, and TikTok.",
+    tags: ["Content Strategy", "Community Mgmt", "Influencer Marketing"],
+    icon: (
+      <svg
+        viewBox="0 0 100 100"
+        className="w-full h-full stroke-black stroke-[1.5] fill-none"
+      >
+        <circle cx="50" cy="50" r="45" strokeDasharray="4,4" />
+        <line x1="50" y1="25" x2="50" y2="75" />
+        <line x1="25" y1="50" x2="75" y2="50" />
+      </svg>
+    ),
+  },
   {
     id: "02",
     title: "Performance Marketing",
