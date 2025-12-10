@@ -379,8 +379,7 @@ export default function SocialAndUGC() {
             {/* Organic Metrics */}
             <div className="bg-[#111] border border-white/10 rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-[#80e01a] mb-8 flex items-center gap-3">
-                <Repeat className="w-6 h-6" /> Organic Performance That Speaks
-                for Itself
+                <Repeat className="w-6 h-6" /> Organic Performance
               </h3>
               <div className="grid grid-cols-3 gap-4">
                 {organicMetrics.map((metric, idx) => (
