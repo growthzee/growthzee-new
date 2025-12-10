@@ -163,22 +163,22 @@ const faqs = [
   {
     question: "What is the difference between UGC and Influencer Marketing?",
     answer:
-      "Influencer marketing relies on the creator posting to their own audience. UGC (User Generated Content) is when creators make content specifically for your brand's channels. You own the content, you control the narrative, but it retains that authentic, human feel.",
+      "UGC is authentic, brand-focused content, while influencer marketing relies on the creator’s personality and audience.",
   },
   {
     question: "Do you handle the community management daily?",
     answer:
-      "Yes. Our Organic Handling package includes daily monitoring. We reply to comments, engage with tagged posts, and proactively interact with your target audience to stimulate growth.",
+      "Yes—our team manages replies, comments, DMs, and daily engagement for your brand.",
   },
   {
     question: "Can I use the UGC videos for paid ads?",
     answer:
-      "Absolutely. In fact, we recommend it. All UGC assets we deliver come with full usage rights, meaning you can post them organically or run them as high-performing ad creatives.",
+      "Yes, all delivered UGC includes full usage rights for paid ads at no extra cost.",
   },
   {
     question: "How do you vet the creators?",
     answer:
-      "We have a private network of vetted creators. We look for storytelling ability, video quality, and on-camera charisma, matching the specific aesthetic of your brand to the creator.",
+      "Each creator goes through quality checks, niche matching, and sample reviews before joining our private network.",
   },
 ];
 
@@ -228,23 +228,26 @@ const ugcExamples = [
 const creatorNetwork = [
   {
     title: "Diversity",
-    description: "Vetted creators across all major demographics and niches.",
+    description:
+      "Creators from every niche and demographic ensure your brand reaches the right audience.",
     icon: <Users className="w-6 h-6" />,
   },
   {
     title: "Quality",
     description:
-      "All creators are trained in high-conversion, native video best practices.",
+      "Every creator specializes in high-conversion storytelling aligned with platform standards.",
     icon: <Clapperboard className="w-6 h-6" />,
   },
   {
     title: "Speed",
-    description: "Fast turnaround times on all briefs, often within 7-10 days.",
+    description:
+      "Most projects are delivered within 7–10 days for faster content turnaround.",
     icon: <Zap className="w-6 h-6" />,
   },
   {
     title: "Compliance",
-    description: "Full usage rights included for all delivered assets.",
+    description:
+      "You get full usage rights for all delivered assets with zero hidden conditions.",
     icon: <ShieldCheck className="w-6 h-6" />,
   },
 ];
@@ -255,21 +258,24 @@ const organicMetrics = [
     value: "350",
     unit: "%",
     icon: <BarChart3 className="w-6 h-6" />,
-    description: "Follower Growth Our clients experience.",
+    description:
+      "We help brands grow their organic followers by 350% on average.",
   },
   {
     title: "Engagement Rate",
     value: "12",
     unit: "%",
     icon: <MessageCircle className="w-6 h-6" />,
-    description: "Benchmark engagement rate achieved across platforms.",
+    description:
+      "We consistently deliver engagement levels above industry standards.",
   },
   {
     title: "Profile Visits",
     value: "50",
     unit: "K+",
     icon: <Users className="w-6 h-6" />,
-    description: "Monthly average profile views for managed accounts.",
+    description:
+      "Strong creatives and smart strategy bring consistent profile traffic.",
   },
 ];
 
@@ -279,21 +285,23 @@ const ugcMetrics = [
     value: "2.1",
     unit: "%",
     icon: <ArrowRight className="w-6 h-6" />,
-    description: "UGC content outperforms standard ads by 1.8x.",
+    description:
+      "Our UGC ads perform 1.8x better than regular ads for higher conversions.",
   },
   {
     title: "CPA Reduction",
     value: "35",
     unit: "%",
     icon: <Check className="w-6 h-6" />,
-    description: "Average reduction in Cost Per Acquisition using UGC.",
+    description:
+      "Better ad performance leads to lower acquisition costs and higher profits.",
   },
   {
     title: "Retention",
     value: "65",
     unit: "%",
     icon: <Play className="w-6 h-6" />,
-    description: "Average retention rate for the critical first 3 seconds.",
+    description: "We hook viewers in 3 seconds and keep them watching longer.",
   },
 ];
 
@@ -449,7 +457,7 @@ export default function SocialAndUGC() {
                 <ServiceCard
                   icon={<Users className="w-6 h-6" />}
                   title="Community Management"
-                  description="We don't just post and ghost. We act as the voice of your brand, nurturing relationships in the comments and DMs to turn followers into superfans."
+                  description="We don't post and vanish — we become the brand voice of your brand. As a leading digital marketing company in India, we react to comments, DMs, and other daily interactions to not only build relationships but also convert followers into loyal fans."
                   benefits={[
                     "Daily Engagement",
                     "Sentiment Analysis",
@@ -460,7 +468,7 @@ export default function SocialAndUGC() {
                 <ServiceCard
                   icon={<Repeat className="w-6 h-6" />}
                   title="Strategy & Curation"
-                  description="Consistency builds trust. We curate a perfectly aesthetic feed that aligns with your brand identity while leveraging trending audio and formats for reach."
+                  description="Consistency is what leads to trust. We prepare and design the whole content work for your brand so that it is always a polished and professional one. From captions to hashtags, we make sure your feed is performing at the level of top digital marketing companies in India."
                   benefits={[
                     "Content Calendar",
                     "Caption Copywriting",
@@ -515,9 +523,8 @@ export default function SocialAndUGC() {
               The Content Matrix
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              We don&apos;t just guess what to post. We use a balanced content
-              diet designed to attract new eyes while nurturing existing
-              followers.
+              Our strategy helps brands scale fast, making us one of the best
+              digital marketing companies in India.
             </p>
           </div>
 
@@ -534,8 +541,8 @@ export default function SocialAndUGC() {
                   Viral & Reach
                 </p>
                 <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                  Broad appeal content designed to trigger the algorithm. We use
-                  trending audio, relatable memes, and high-energy hooks.
+                  We create viral, trend-based content that boosts visibility
+                  like the top digital marketing companies.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">
@@ -563,9 +570,8 @@ export default function SocialAndUGC() {
                   Trust & Value
                 </p>
                 <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                  Educational and storytelling content that establishes
-                  authority. This turns a &quot;viewer&quot; into a
-                  &quot;follower.&quot;
+                  Our educational, story-driven content builds trust, making
+                  brands choose us for reliable digital marketing services.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">
@@ -593,8 +599,9 @@ export default function SocialAndUGC() {
                   Sales & Action
                 </p>
                 <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                  Direct response content that drives traffic to your site.
-                  Social proof, testimonials, and clear CTAs.
+                  Benefit-led content with strong CTAs drives sales and traffic,
+                  delivering results expected from the best digital marketing
+                  company in India.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400">
@@ -622,8 +629,8 @@ export default function SocialAndUGC() {
               The Vetted Creator Network
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              We don&apos;t rely on random freelancers. Our private network is
-              hand-picked for quality, performance, and authentic brand fit.
+              Our private network includes only top-quality creators carefully
+              selected for brand fit and consistency.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -762,7 +769,8 @@ export default function SocialAndUGC() {
               </div>
               <h3 className="font-bold text-white mb-2">Analytics</h3>
               <p className="text-xs text-gray-400">
-                Deep-dive reporting on engagement and demographics.
+                Clear visual insights showing which content performs best across
+                metrics and demographics.
               </p>
             </div>
             <div className="bg-[#111] p-6 rounded-2xl border border-white/10 flex flex-col items-center text-center hover:bg-white/5 transition-colors">
@@ -771,7 +779,8 @@ export default function SocialAndUGC() {
               </div>
               <h3 className="font-bold text-white mb-2">Scheduling</h3>
               <p className="text-xs text-gray-400">
-                Auto-posting at optimal times for maximum reach.
+                Automated posting at peak times to maximize reach with zero
+                effort.
               </p>
             </div>
             <div className="bg-[#111] p-6 rounded-2xl border border-white/10 flex flex-col items-center text-center hover:bg-white/5 transition-colors">
@@ -780,7 +789,8 @@ export default function SocialAndUGC() {
               </div>
               <h3 className="font-bold text-white mb-2">Design</h3>
               <p className="text-xs text-gray-400">
-                Premium editing suites for high-end visual assets.
+                Premium editing tools that turn your raw footage into
+                scroll-stopping visuals.
               </p>
             </div>
             <div className="bg-[#111] p-6 rounded-2xl border border-white/10 flex flex-col items-center text-center hover:bg-white/5 transition-colors">
@@ -789,7 +799,8 @@ export default function SocialAndUGC() {
               </div>
               <h3 className="font-bold text-white mb-2">Trend AI</h3>
               <p className="text-xs text-gray-400">
-                AI-assisted trend spotting to catch viral waves early.
+                AI-powered trend detection that helps you catch viral moments
+                before they peak.
               </p>
             </div>
           </div>

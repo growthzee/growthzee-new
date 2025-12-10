@@ -33,8 +33,8 @@ export default function Hero() {
             Adjust to top-16 or top-24 if your navbar is smaller/larger. */}
         <div className="absolute top-20 left-0 right-0 bottom-0 z-0">
           <Image
-            src="/images/decoration03.png"
-            alt="Hero Background"
+            src="/images/001c.png"
+            alt="Growthzee Hero Background"
             fill
             priority
             className="object-cover opacity-40"
