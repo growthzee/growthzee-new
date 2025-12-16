@@ -124,7 +124,7 @@ export default function Hero() {
             <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <span className="text-[#80e01a] font-bold text-lg">
-                  ₹2.5Cr+
+                  ₹1.5Cr+
                 </span>
                 <span>GMV Managed</span>
               </div>
