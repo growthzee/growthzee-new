@@ -219,6 +219,160 @@ const PortfolioData: Portfolio[] = [
       "A warm, trust-building Shopify store for organic ghee and wellness products. Clean product pages, simple navigation, and a natural color palette designed to inspire confident purchases.",
     link: "https://offsinners.com/", // Replace with actual link
   },
+  {
+    id: 17,
+    name: "NOHO",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765957807/mashala-mint-Recovered_01_tz3wsl.jpg",
+    brand: "NOHO",
+    category: "Designs",
+    rating: 4.8,
+    year: "2025",
+    description: "Design for a chips brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 18,
+    name: "Kbiyara Crest",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765957807/opening_soon_qadoyc.jpg",
+    brand: "Kbiyara Crest",
+    category: "Designs",
+    rating: 4.8,
+    year: "2025",
+    description: "Design for a hotel brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 19,
+    name: "Vorne",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765957808/Artboard_6_vblmox.jpg",
+    brand: "Vorne",
+    category: "Designs",
+    rating: 5,
+    year: "2025",
+    description: "Design for a perfume brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 20,
+    name: "Vorne",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765959988/Artboard_4_a96ala.jpg",
+    brand: "Vorne",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a perfume brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 21,
+    name: "Fitleasure",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765959988/Artboard_11_mn746k.jpg",
+    brand: "Fitleasure",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a fitness brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 22,
+    name: "Jobzshala",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765959988/4_yanceb.jpg",
+    brand: "Jobzshala",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a job finder platform",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 23,
+    name: "NOHO",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960258/PERI-PERI_02_gqtouc.jpg",
+    brand: "NOHO",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a chips brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 24,
+    name: "Dream Holiday Hub",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960260/Artboard_4_1_a5hnjr.jpg",
+    brand: "Dream Holiday Hub",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a travel brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 25,
+    name: "Elite Taxi",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/3_am_ftk0cz.jpg",
+    brand: "Elite Taxi",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a taxi brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 26,
+    name: "Livin Buddy",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/Found_the_perfect_space_axijlu.jpg",
+    brand: "Livin Buddy",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a room mate app",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 27,
+    name: "Dream Holiday Hub",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/Artboard_1_jja0x3.jpg",
+    brand: "Dream Holiday Hub",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a travel brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 28,
+    name: "Dream Holiday Hub",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/Artboard_1_jja0x3.jpg",
+    brand: "Dream Holiday Hub",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a travel brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 29,
+    name: "Fitleasure",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960263/blue1_r1uxuc.jpg",
+    brand: "Fitleasure",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a fitness brand",
+    link: "", // Replace with actual link
+  },
+  {
+    id: 30,
+    name: "NOHO",
+    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960300/PERI-PERI_03_n6vxph.jpg",
+    brand: "NOHO",
+    category: "Designs",
+    rating: 4.9,
+    year: "2025",
+    description: "Design for a chips brand",
+    link: "", // Replace with actual link
+  },
 ];
 
 const categories = [
