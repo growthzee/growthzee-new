@@ -347,18 +347,21 @@ export default function Teams() {
                 </span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                &quot;I founded Growthzee with a simple belief: digital agencies
-                shouldn&apos;t just deliver assets; they should deliver revenue.
-                We aren&apos;t here to just build pretty websites. We are here
-                to build engines of growth that allow visionary companies to
-                dominate their markets.&quot;
+                &quot;As CEO of Lecomake, I build scalable technology and
+                digital systems. Through Growthzee, I work closely with new and
+                emerging D2C brand owners to turn products into profitable
+                brands. One focuses on building the foundation. The other
+                focuses on accelerating growth. Together, they exist for one
+                purpose — measurable, sustainable impact.&quot;
               </p>
               <div>
                 <h4 className="text-white text-xl font-bold">
                   Ashutosh Bhaskar
                 </h4>
                 <p className="text-gray-500 uppercase tracking-widest text-sm mt-1">
-                  CEO & Founder
+                  CEO — Lecomake Pvt. Ltd.
+                  <br />
+                  Founder — Growthzee
                 </p>
               </div>
             </motion.div>
