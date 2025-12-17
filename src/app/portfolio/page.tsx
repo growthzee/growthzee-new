@@ -195,18 +195,18 @@ const PortfolioData: Portfolio[] = [
       "A refined restaurant website designed to highlight signature dishes, authentic flavors, and a heritage dining experience — all wrapped in a clean, modern, and user-friendly interface.",
     link: "https://www.mathsya.co.in/", // Replace with actual link
   },
-  {
-    id: 15,
-    name: "Hari Priye",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937962/Screenshot_2025-12-05_at_18-02-30_Organic_Ghee_Online_Pure_Desi_Cow_Ghee_India_-_HariPriye_eo1sk9.png",
-    brand: "Hari Priye",
-    category: "Shopify Store",
-    rating: 4.6,
-    year: "2025",
-    description:
-      "A refined restaurant website designed to highlight signature dishes, authentic flavors, and a heritage dining experience — all wrapped in a clean, modern, and user-friendly interface.",
-    link: "https://haripriye.com/", // Replace with actual link
-  },
+  // {
+  //   id: 15,
+  //   name: "Hari Priye",
+  //   img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1764937962/Screenshot_2025-12-05_at_18-02-30_Organic_Ghee_Online_Pure_Desi_Cow_Ghee_India_-_HariPriye_eo1sk9.png",
+  //   brand: "Hari Priye",
+  //   category: "Shopify Store",
+  //   rating: 4.6,
+  //   year: "2025",
+  //   description:
+  //     "A refined restaurant website designed to highlight signature dishes, authentic flavors, and a heritage dining experience — all wrapped in a clean, modern, and user-friendly interface.",
+  //   link: "https://haripriye.com/", // Replace with actual link
+  // },
   {
     id: 16,
     name: "Off Sinners",
