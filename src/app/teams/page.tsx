@@ -193,11 +193,11 @@ const teamMembers = [
 ];
 
 const cultureImages = [
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1974&auto=format&fit=crop",
+  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051521/Artboard_1_gbkvvn.jpg?q=80&w=2070&auto=format&fit=crop",
+  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051521/Artboard_2_i566vq.jpg?q=80&w=2070&auto=format&fit=crop",
+  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051520/Artboard_3_jgaiu2.jpg?q=80&w=2032&auto=format&fit=crop",
+  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051520/Artboard_4_ekzh1h.jpg?q=80&w=2070&auto=format&fit=crop",
+  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051523/Artboard_5_avnygp.jpg?q=80&w=1974&auto=format&fit=crop",
 ];
 
 export default function Teams() {
