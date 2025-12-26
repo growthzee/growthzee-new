@@ -23,9 +23,9 @@ const teamMembers = [
     name: "Ashutosh Bhaskar",
     role: "CEO & Founder",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763980611/1746397814880_kq2o2l.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740674/1746397814880_feewp0.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763980861/Screenshot_2025-11-24_161043_b7qiwe.png",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740653/Screenshot_2025-11-24_161043_wyo9oj.png",
     linkedin: "https://www.linkedin.com/in/ashutosh864/",
   },
   {
@@ -33,9 +33,9 @@ const teamMembers = [
     name: "Pankaj Chandrawanshi",
     role: "Creative Head, Graphic Designer, 3D Artist",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763985704/pankaj_first_image_p8hjne.png",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740460/pankaj_first_image_onjp1s.png",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763985706/pankaj_second_image_zdjkls.png",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740462/pankaj_second_image_b2k4tc.png",
     linkedin:
       "https://www.linkedin.com/in/pankaj-kumar-chandrawanshi-672918316/",
   },
@@ -44,9 +44,9 @@ const teamMembers = [
     name: "Ayan Pakhira",
     role: "Technical Head & Full-Stack Developer",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763984233/20251105_124328_bivwqf.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740502/20251105_124328_rtzmaw.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763981200/20251109_092137_za1m9h.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740539/20251109_092137_xmdh0q.jpg",
     linkedin: "https://www.linkedin.com/in/ayan-pakhira-93a18baa/",
   },
   {
@@ -54,9 +54,9 @@ const teamMembers = [
     name: "Ishika Tyagi",
     role: "HR Recuiter Team",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1765273923/WhatsApp_Image_2025-12-09_at_3.16.12_PM_p8qlt1.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740384/WhatsApp_Image_2025-12-09_at_3.16.12_PM_ulpopd.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1765273923/WhatsApp_Image_2025-12-09_at_3.16.11_PM_iwr18g.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740384/WhatsApp_Image_2025-12-09_at_3.16.11_PM_knmlgr.jpg",
     linkedin: "https://www.linkedin.com/in/ishika-tyagi23",
   },
 
@@ -65,9 +65,9 @@ const teamMembers = [
     name: "Priya Das",
     role: "Social Media Planner",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763980615/PXL_20251110_150432814.RAW-01.COVER_z39eqv.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740670/PXL_20251110_150432814.RAW-01.COVER_1_gxwkco.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763980616/PXL_20251110_150226289.RAW-01.COVER_ynh2tm.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740667/PXL_20251110_150226289.RAW-01.COVER_1_cxzcsx.jpg",
     linkedin: "https://www.linkedin.com/in/daspriya2711/",
   },
   {
@@ -75,9 +75,9 @@ const teamMembers = [
     name: "Ashee Agrawal",
     role: "SEO executive",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763982699/IMG_7726_plt4ab_1_yzlb88.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766741137/IMG_7726_qzu1qi.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763981966/IMG_8081_uif8wx.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740624/IMG_8081_p3jvg8.jpg",
     linkedin: "https://www.linkedin.com/in/ashee-agrawal-36805622b",
   },
   {
@@ -85,9 +85,9 @@ const teamMembers = [
     name: "Arindam Biswas",
     role: "Senior Video Editor",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763980612/IMG_20251115_104356_kb8vuk.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740670/IMG_20251115_104356_iqgfci.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763980613/IMG_20251116_160414_1_h0wura.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740673/IMG_20251116_160414_1_tmxh3i.jpg",
     linkedin: "https://www.linkedin.com/in/arindam-biswas-272813243",
   },
   {
@@ -95,9 +95,9 @@ const teamMembers = [
     name: "Sourav Bharti",
     role: "E-commerce Expert",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763982671/IMG_1087_po8f1q.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766741288/IMG_1087_woobj6.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763982672/IMG_3222_ljfs1d.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766741287/IMG_3222_v87owz.jpg",
     linkedin: "https://www.linkedin.com/in/sourav-bharti-0b968a179",
   },
   {
@@ -105,9 +105,9 @@ const teamMembers = [
     name: "Vivek Naik",
     role: "Senior Graphic Designer",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763984379/1702194090139-01_uzstul.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740497/1702194090139-01_tstxz4.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763984379/1705659569708-01_s6dfji.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740496/1705659569708-01_mhxp5r.jpg",
     linkedin: "https://www.linkedin.com/in/vivek-naik-2a065a2a2",
   },
   {
@@ -115,9 +115,9 @@ const teamMembers = [
     name: "Ritik Singh",
     role: "Senior Graphic Designer ",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763984877/1001486856_zp0yad.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740453/1001486856_1_giq0c8.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763984879/IMG_20251124_160605_hqxu37.png",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740454/IMG_20251124_160605_1_cxezs8.png",
     linkedin: "https://www.linkedin.com/in/ritik-kumar-85828a343",
   },
   {
@@ -125,9 +125,9 @@ const teamMembers = [
     name: "Hamir Thapliya",
     role: "Video Editor",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1764136698/341140393_141784228855439_6958175145674348213_n_un42ds.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766741871/341140393_141784228855439_6958175145674348213_n_zkz1el.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1764136697/WhatsApp_Image_2025-11-25_at_13.52.57_bzmct6.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740458/asd_qm59pp.jpg",
     linkedin: "#",
   },
   {
@@ -135,9 +135,9 @@ const teamMembers = [
     name: "Ankit Patel",
     role: "Junior Video Editor",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763980650/Screenshot_20251124_144632_Gallery_ofobxl.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740659/Screenshot_20251124_144632_Gallery_pqmbmq.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763980650/20250320_063646_iknen0.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740658/20250320_063646_acy5k5.jpg",
     linkedin: "#",
   },
   {
@@ -145,9 +145,9 @@ const teamMembers = [
     name: "Tanisha Yadav",
     role: "Influencer coordinator",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1765273923/WhatsApp_Image_2025-12-09_at_3.12.20_PM_pvsahw.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740384/WhatsApp_Image_2025-12-09_at_3.12.20_PM_bkppfi.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1765273923/WhatsApp_Image_2025-12-09_at_3.12.19_PM_dyrz9b.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740384/WhatsApp_Image_2025-12-09_at_3.12.19_PM_ephtho.jpg",
     linkedin: "#",
   },
   {
@@ -155,9 +155,9 @@ const teamMembers = [
     name: "Om Prakash",
     role: "Junior Video Editor",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763985886/om_first_image_kslqfu.png",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740453/om_first_image_sk0vu5.png",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763985885/om_second_image_dni6ki.png",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740453/om_second_image_ro4rf8.png",
     linkedin: "https://www.linkedin.com/in/om-prakash-927323277",
   },
   {
@@ -165,9 +165,9 @@ const teamMembers = [
     name: "Damini Panjawani",
     role: "Seo Intern",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763988388/IMG_20251124_172450_f9iggy.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740425/IMG_20251124_172450_olaqcw.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763988388/IMG-20250309-WA0004_p91ygc.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740425/IMG-20250309-WA0004_yq3rpi.jpg",
     linkedin: "https://www.linkedin.com/in/damini-panjwani-80b138370",
   },
   {
@@ -175,9 +175,9 @@ const teamMembers = [
     name: "Shruti Barman",
     role: "Graphic Designer Intern",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1764047443/WhatsApp_Image_2025-11-24_at_8.29.24_PM_vjgvok.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740423/WhatsApp_Image_2025-11-24_at_8.29.24_PM_zcjgcf.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1764047444/IMG-20251124-WA0037_uuzrvg.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740424/IMG-20251124-WA0037_hequpq.jpg",
     linkedin: "https://www.linkedin.com/in/shruti-barman-a9b73439a",
   },
   {
@@ -185,19 +185,19 @@ const teamMembers = [
     name: "Mahi Sharma",
     role: "Graphic Designer Intern",
     image1:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763985348/IMG-20250602-WA0062_phc2jx.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740469/IMG-20250602-WA0062_cxxny7.jpg",
     image2:
-      "https://res.cloudinary.com/doy1iucnw/image/upload/v1763985349/IMG-20250830-WA0253_nzw3rs.jpg",
+      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740470/IMG-20250830-WA0253_tma5rh.jpg",
     linkedin: "https://www.linkedin.com/in/mahi-sharma-855ba3278",
   },
 ];
 
 const cultureImages = [
-  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051521/Artboard_1_gbkvvn.jpg?q=80&w=2070&auto=format&fit=crop",
-  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051521/Artboard_2_i566vq.jpg?q=80&w=2070&auto=format&fit=crop",
-  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051520/Artboard_3_jgaiu2.jpg?q=80&w=2032&auto=format&fit=crop",
-  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051520/Artboard_4_ekzh1h.jpg?q=80&w=2070&auto=format&fit=crop",
-  "https://res.cloudinary.com/doy1iucnw/image/upload/v1766051523/Artboard_5_avnygp.jpg?q=80&w=1974&auto=format&fit=crop",
+  "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742156/Artboard_1_zcykb9.jpg?q=80&w=2070&auto=format&fit=crop",
+  "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742157/Artboard_2_p6p4cq.jpg?q=80&w=2070&auto=format&fit=crop",
+  "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742160/Artboard_3_gggsrl.jpg?q=80&w=2032&auto=format&fit=crop",
+  "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742163/Artboard_4_tpgiqr.jpg?q=80&w=2070&auto=format&fit=crop",
+  "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742171/Artboard_7_j4xfyt.jpg?q=80&w=1974&auto=format&fit=crop",
 ];
 
 export default function Teams() {
@@ -318,7 +318,7 @@ export default function Teams() {
                 className="relative aspect-square rounded-[2rem] overflow-hidden border border-white/10"
               >
                 <img
-                  src="https://res.cloudinary.com/doy1iucnw/image/upload/v1763980611/1746397814880_kq2o2l.jpg"
+                  src="https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740674/1746397814880_feewp0.jpg"
                   alt="Ashutosh Bhaskar - Founder & CEO"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
