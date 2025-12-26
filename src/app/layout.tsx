@@ -1,7 +1,15 @@
+import type { Metadata } from "next"; // Added Metadata type
 import { Roboto_Mono, Inter, Jost, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import ZoomInfoTracking from "@/components/ZoomInfoTracking";
+
+// Define your SEO Metadata here
+export const metadata: Metadata = {
+  title: "GrowthZee | Best Digital Marketing Company in India",
+  description:
+    "Best digital marketing company in India delivering SEO, social media, PPC, and growth-driven strategies to boost your brand visibility and online sales.",
+};
 
 const robotoMono = Roboto_Mono({
   weight: ["400", "500", "600", "700"],
