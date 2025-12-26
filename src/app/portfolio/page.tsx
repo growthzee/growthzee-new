@@ -222,7 +222,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 17,
     name: "NOHO",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765957807/mashala-mint-Recovered_01_tz3wsl.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742456/mashala-mint-Recovered_01_tryexq.jpg",
     brand: "NOHO",
     category: "Designs",
     rating: 4.8,
@@ -233,7 +233,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 18,
     name: "Kbiyara Crest",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765957807/opening_soon_qadoyc.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742453/opening_soon_lfxq6d.jpg",
     brand: "Kbiyara Crest",
     category: "Designs",
     rating: 4.8,
@@ -244,7 +244,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 19,
     name: "Vorne",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765957808/Artboard_6_vblmox.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742459/Artboard_6_gsuowj.jpg",
     brand: "Vorne",
     category: "Designs",
     rating: 5,
@@ -255,7 +255,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 20,
     name: "Vorne",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765959988/Artboard_4_a96ala.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742446/Artboard_4_tduabx.jpg",
     brand: "Vorne",
     category: "Designs",
     rating: 4.9,
@@ -266,7 +266,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 21,
     name: "Fitleasure",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765959988/Artboard_11_mn746k.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742444/Artboard_11_jcul0c.jpg",
     brand: "Fitleasure",
     category: "Designs",
     rating: 4.9,
@@ -277,7 +277,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 22,
     name: "Jobzshala",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765959988/4_yanceb.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742450/4_vaas4n.jpg",
     brand: "Jobzshala",
     category: "Designs",
     rating: 4.9,
@@ -288,7 +288,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 23,
     name: "NOHO",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960258/PERI-PERI_02_gqtouc.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742424/PERI-PERI_03_skqmhl.jpg",
     brand: "NOHO",
     category: "Designs",
     rating: 4.9,
@@ -299,7 +299,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 24,
     name: "Dream Holiday Hub",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960260/Artboard_4_1_a5hnjr.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742432/Artboard_1_dqnkvi.jpg",
     brand: "Dream Holiday Hub",
     category: "Designs",
     rating: 4.9,
@@ -310,7 +310,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 25,
     name: "Elite Taxi",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/3_am_ftk0cz.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742438/3_am_vujm9j.jpg",
     brand: "Elite Taxi",
     category: "Designs",
     rating: 4.9,
@@ -321,7 +321,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 26,
     name: "Livin Buddy",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/Found_the_perfect_space_axijlu.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742435/Found_the_perfect_space_kcm0fy.jpg",
     brand: "Livin Buddy",
     category: "Designs",
     rating: 4.9,
@@ -332,7 +332,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 27,
     name: "Dream Holiday Hub",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/Artboard_1_jja0x3.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742429/Artboard_4_1_mt0xca.jpg",
     brand: "Dream Holiday Hub",
     category: "Designs",
     rating: 4.9,
@@ -340,21 +340,21 @@ const PortfolioData: Portfolio[] = [
     description: "Design for a travel brand",
     link: "", // Replace with actual link
   },
-  {
-    id: 28,
-    name: "Dream Holiday Hub",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/Artboard_1_jja0x3.jpg",
-    brand: "Dream Holiday Hub",
-    category: "Designs",
-    rating: 4.9,
-    year: "2025",
-    description: "Design for a travel brand",
-    link: "", // Replace with actual link
-  },
+  // {
+  //   id: 28,
+  //   name: "Dream Holiday Hub",
+  //   img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960261/Artboard_1_jja0x3.jpg",
+  //   brand: "Dream Holiday Hub",
+  //   category: "Designs",
+  //   rating: 4.9,
+  //   year: "2025",
+  //   description: "Design for a travel brand",
+  //   link: "", // Replace with actual link
+  // },
   {
     id: 29,
     name: "Fitleasure",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960263/blue1_r1uxuc.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742441/blue1_hlzxz0.jpg",
     brand: "Fitleasure",
     category: "Designs",
     rating: 4.9,
@@ -365,7 +365,7 @@ const PortfolioData: Portfolio[] = [
   {
     id: 30,
     name: "NOHO",
-    img: "https://res.cloudinary.com/doy1iucnw/image/upload/v1765960300/PERI-PERI_03_n6vxph.jpg",
+    img: "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766742426/PERI-PERI_02_tajyxr.jpg",
     brand: "NOHO",
     category: "Designs",
     rating: 4.9,
