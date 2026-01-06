@@ -25,30 +25,13 @@ export default function Hero() {
       className="relative w-full min-h-screen bg-black overflow-hidden flex flex-col justify-between"
     >
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {/* ------------------------------------------------------ */}
-        {/* --- UPDATED WRAPPER: Starts below Navbar ------------- */}
-        {/* ------------------------------------------------------ */}
-        {/* Changed 'inset-0' to 'top-20 bottom-0 left-0 right-0' 
-            top-20 (80px) is usually enough to clear the Navbar. 
-            Adjust to top-16 or top-24 if your navbar is smaller/larger. */}
-        <div className="absolute top-20 left-0 right-0 bottom-0 z-0">
-          <Image
-            src="/images/001c.png"
-            alt="Growthzee Hero Background"
-            fill
-            priority
-            className="object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/90" />
-        </div>
-        {/* ------------------------------------------------------ */}
-
-        {/* Floating Elements (Unchanged) */}
+        {/* Floating Elements (Kept for depth) */}
         <div className="absolute right-[-10%] top-[-12%] w-[560px] h-[560px] blur-[140px] opacity-40 bg-[radial-gradient(closest-side,rgba(128,224,26,0.35),transparent_70%)]"></div>
         <div className="absolute left-[-12%] bottom-[-14%] w-[620px] h-[620px] blur-[150px] opacity-40 bg-[radial-gradient(closest-side,rgba(128,224,26,0.32),transparent_70%)]"></div>
         <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-[#80e01a]/8 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/3 w-60 h-60 bg-[#80e01a]/12 rounded-full blur-2xl"></div>
 
+        {/* Noise Texture */}
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{
