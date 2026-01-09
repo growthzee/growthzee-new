@@ -155,8 +155,8 @@ export default function EcommerceManagement() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <a
-                href="/ecommerce-guide.pdf" // Path relative to public folder
-                download="Ecommerce_Guide_2026.pdf" // Optional: Renames the file for the user
+                href="/Growthzee_Amazon_Performance_growth_partner.pdf" // Path relative to public folder
+                download="Growthzee_Amazon_Performance_growth_partner.pdf" // Optional: Renames the file for the user
                 className="inline-block"
               >
                 <motion.button
