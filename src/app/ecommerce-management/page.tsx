@@ -147,16 +147,27 @@ export default function EcommerceManagement() {
               enjoy. Full control of your profiles along with results-focused ad
               campaigns helps boost sales without stress
             </motion.p>
-            <motion.button
+
+            {/* UPDATED BUTTON FOR PDF DOWNLOAD */}
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-black font-bold text-sm uppercase tracking-widest hover:bg-[#80e01a] transition-colors duration-300 flex items-center gap-2"
             >
-              Get Free Audit <ArrowRight size={16} />
-            </motion.button>
+              <a
+                href="/ecommerce-guide.pdf" // Path relative to public folder
+                download="Ecommerce_Guide_2026.pdf" // Optional: Renames the file for the user
+                className="inline-block"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-white text-black font-bold text-sm uppercase tracking-widest hover:bg-[#80e01a] transition-colors duration-300 flex items-center gap-2"
+                >
+                  Learn More <ArrowRight size={16} />
+                </motion.button>
+              </a>
+            </motion.div>
           </div>
 
           {/* Abstract Visuals */}
@@ -291,7 +302,7 @@ export default function EcommerceManagement() {
         </div>
       </section>
 
-      {/* --- Comparison Section (NEW) --- */}
+      {/* --- Comparison Section --- */}
       <section className="py-24 px-6 lg:px-16 max-w-[1400px] mx-auto">
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
@@ -425,9 +436,8 @@ export default function EcommerceManagement() {
         </div>
       </section>
 
-      {/* --- Testimonials (NEW) --- */}
+      {/* --- Testimonials --- */}
       <section className="py-32 bg-[#0a0a0a] border-t border-white/5 relative overflow-hidden">
-        {/* Decorative background element */}
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#80e01a] rounded-full blur-[200px] opacity-5 pointer-events-none"></div>
 
         <div className="max-w-[1400px] mx-auto px-6 lg:px-16 relative z-10">
@@ -503,7 +513,7 @@ export default function EcommerceManagement() {
         </div>
       </section>
 
-      {/* --- FAQ Section (NEW) --- */}
+      {/* --- FAQ Section --- */}
       <section className="py-24 px-6 lg:px-16 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">
           Common Questions
@@ -511,19 +521,11 @@ export default function EcommerceManagement() {
         <div className="space-y-4">
           <FAQItem
             question="Do you guarantee sales?"
-            answer="We guarantee the planning, the work, and the optimization. Although no one can take control of the market, we let our results do the talking — and that is the main reason why clients give us the green light as the best digital marketing company for delivering growth consistently through expert digital marketing services."
+            answer="We guarantee the planning, the work, and the optimization. Although no one can take control of the market, we let our results do the talking."
           />
           <FAQItem
             question="What is your pricing structure?"
-            answer="Our hybrid model is composed of a flat retainer + a small percentage of the revenue. This keeps things transparent and performance-oriented, pretty much like how the best digital marketing services provider should function."
-          />
-          <FAQItem
-            question="Which marketplaces do you handle?"
-            answer="We handle Amazon (India & Global), Flipkart, Meesho, Myntra, Nykaa, and Ajio with the support of our experience as a leading digital marketing agency in India."
-          />
-          <FAQItem
-            question="How long before we see results?"
-            answer="PPC results are visible within a week or two. SEO and organic growth take around a month to a month and a half. It is due to our thorough planning that we are counted among the best digital marketing companies in India for quick and steady ​‍​‌‍​‍‌results."
+            answer="Our hybrid model is composed of a flat retainer + a small percentage of the revenue."
           />
         </div>
       </section>
