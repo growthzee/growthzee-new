@@ -543,7 +543,7 @@ export default function EcommerceManagement() {
               they find you.
             </p>
             <button className="px-10 py-5 bg-black text-white text-lg font-bold uppercase tracking-widest rounded-full hover:scale-105 transition-transform duration-300 shadow-2xl">
-              Audit My Store
+              Get Started
             </button>
           </div>
         </div>

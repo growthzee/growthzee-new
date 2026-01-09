@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   Activity,
   ArrowRight,
-  ArrowUpRight, // The new interaction icon
+  ArrowUpRight,
   BarChart3,
   Calendar,
   Check,
@@ -29,7 +29,7 @@ import {
   Users,
   X,
   Zap,
-  Clock, // Used to replace Play in metrics
+  Clock,
 } from "lucide-react";
 
 // --- Components ---
@@ -67,11 +67,9 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
   );
 };
 
-// --- Updated UGCCard (NO PLAY ICON) ---
 const UGCCard = ({ videoSource, creator, stats, href }) => (
   <Link href={href || "#"} className="block group">
     <div className="relative aspect-[9/16] bg-gray-900 rounded-2xl overflow-hidden border border-white/10 shadow-lg hover:shadow-[#80e01a]/20 transition-all duration-500">
-      {/* Video Element: Autoplay, Loop, Muted */}
       <video
         src={videoSource}
         autoPlay
@@ -80,16 +78,12 @@ const UGCCard = ({ videoSource, creator, stats, href }) => (
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-30 transition-all duration-700 group-hover:scale-110"
       />
-
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
-
-      {/* REPLACED PLAY ICON WITH ARROW-UP-RIGHT */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100">
         <div className="w-16 h-16 bg-[#80e01a] rounded-full flex items-center justify-center text-black shadow-[0_0_30px_rgba(128,224,26,0.6)]">
           <ArrowUpRight className="w-8 h-8 stroke-[2.5px]" />
         </div>
       </div>
-
       <div className="absolute bottom-0 left-0 w-full p-6">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-full border-2 border-[#80e01a] p-0.5 overflow-hidden bg-black">
@@ -287,7 +281,7 @@ const ugcMetrics = [
     title: "Retention",
     value: "65",
     unit: "%",
-    icon: <Clock className="w-6 h-6" />, // Replaced Play icon here too
+    icon: <Clock className="w-6 h-6" />,
     description: "High watch times with effective visual hooks.",
   },
 ];
@@ -295,6 +289,17 @@ const ugcMetrics = [
 export default function SocialAndUGC() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
   const [activeTab, setActiveTab] = useState("organic");
+
+  const scrollToCaseStudies = (e) => {
+    e.preventDefault();
+    const element = document.getElementById("case-studies");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-[#80e01a] selection:text-black">
@@ -344,12 +349,25 @@ export default function SocialAndUGC() {
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-[#80e01a] text-black font-bold rounded-full hover:bg-[#80e01a]/90 transition-all shadow-[0_0_20px_rgba(128,224,26,0.3)] flex items-center gap-2">
-              <Zap className="w-4 h-4 fill-current" /> Get Organic Growth
-            </button>
-            <button className="px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all">
-              View Case Studies
-            </button>
+            {/* 1. DOWNLOAD BUTTON UPDATE */}
+            <a
+              href="/Growthzee_SMM_Offer.pdf"
+              download="Growthzee_SMM_Offer.pdf"
+            >
+              <button className="px-8 py-4 bg-[#80e01a] text-black font-bold rounded-full hover:bg-[#80e01a]/90 transition-all shadow-[0_0_20px_rgba(128,224,26,0.3)] flex items-center gap-2">
+                <Zap className="w-4 h-4 fill-current" /> Learn More
+              </button>
+            </a>
+
+            {/* 2. CASE STUDIES SCROLL UPDATE */}
+            <Link href="#case-studies">
+              <button
+                onClick={scrollToCaseStudies}
+                className="px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all"
+              >
+                View Case Studies
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -412,7 +430,6 @@ export default function SocialAndUGC() {
               </button>
             </div>
           </div>
-
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -472,8 +489,8 @@ export default function SocialAndUGC() {
           </AnimatePresence>
         </div>
 
-        {/* --- CASE STUDIES SECTION (The Video Grid) --- */}
-        <div className="mb-32">
+        {/* --- CASE STUDIES SECTION (ID ADDED HERE) --- */}
+        <div id="case-studies" className="mb-32 scroll-mt-24">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">
@@ -491,7 +508,6 @@ export default function SocialAndUGC() {
               View All Projects <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {ugcExamples.map((item, idx) => (
               <UGCCard key={idx} {...item} />
