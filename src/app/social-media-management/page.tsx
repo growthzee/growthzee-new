@@ -502,7 +502,7 @@ export default function SocialAndUGC() {
               </p>
             </div>
             <Link
-              href="/case-studies"
+              href="/portfolio"
               className="flex items-center gap-2 text-[#80e01a] font-bold hover:underline underline-offset-4"
             >
               View All Projects <ArrowUpRight className="w-4 h-4" />
