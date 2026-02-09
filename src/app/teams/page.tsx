@@ -61,16 +61,6 @@ const teamMembers = [
   },
 
   {
-    id: 5,
-    name: "Priya Das",
-    role: "Social Media Planner",
-    image1:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740670/PXL_20251110_150432814.RAW-01.COVER_1_gxwkco.jpg",
-    image2:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740667/PXL_20251110_150226289.RAW-01.COVER_1_cxzcsx.jpg",
-    linkedin: "https://www.linkedin.com/in/daspriya2711/",
-  },
-  {
     id: 6,
     name: "Ashee Agrawal",
     role: "SEO executive",
@@ -90,26 +80,7 @@ const teamMembers = [
       "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740673/IMG_20251116_160414_1_tmxh3i.jpg",
     linkedin: "https://www.linkedin.com/in/arindam-biswas-272813243",
   },
-  {
-    id: 8,
-    name: "Sourav Bharti",
-    role: "E-commerce Expert",
-    image1:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766741288/IMG_1087_woobj6.jpg",
-    image2:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766741287/IMG_3222_v87owz.jpg",
-    linkedin: "https://www.linkedin.com/in/sourav-bharti-0b968a179",
-  },
-  {
-    id: 9,
-    name: "Vivek Naik",
-    role: "Senior Graphic Designer",
-    image1:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740497/1702194090139-01_tstxz4.jpg",
-    image2:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740496/1705659569708-01_mhxp5r.jpg",
-    linkedin: "https://www.linkedin.com/in/vivek-naik-2a065a2a2",
-  },
+
   {
     id: 10,
     name: "Ritik Singh",
@@ -120,16 +91,7 @@ const teamMembers = [
       "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740454/IMG_20251124_160605_1_cxezs8.png",
     linkedin: "https://www.linkedin.com/in/ritik-kumar-85828a343",
   },
-  {
-    id: 11,
-    name: "Hamir Thapliya",
-    role: "Video Editor",
-    image1:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766741871/341140393_141784228855439_6958175145674348213_n_zkz1el.jpg",
-    image2:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740458/asd_qm59pp.jpg",
-    linkedin: "#",
-  },
+
   {
     id: 12,
     name: "Ankit Patel",
@@ -149,46 +111,6 @@ const teamMembers = [
     image2:
       "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740384/WhatsApp_Image_2025-12-09_at_3.12.19_PM_ephtho.jpg",
     linkedin: "#",
-  },
-  {
-    id: 14,
-    name: "Om Prakash",
-    role: "Junior Video Editor",
-    image1:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740453/om_first_image_sk0vu5.png",
-    image2:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740453/om_second_image_ro4rf8.png",
-    linkedin: "https://www.linkedin.com/in/om-prakash-927323277",
-  },
-  {
-    id: 15,
-    name: "Damini Panjawani",
-    role: "Seo Intern",
-    image1:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740425/IMG_20251124_172450_olaqcw.jpg",
-    image2:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740425/IMG-20250309-WA0004_yq3rpi.jpg",
-    linkedin: "https://www.linkedin.com/in/damini-panjwani-80b138370",
-  },
-  {
-    id: 16,
-    name: "Shruti Barman",
-    role: "Graphic Designer Intern",
-    image1:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740423/WhatsApp_Image_2025-11-24_at_8.29.24_PM_zcjgcf.jpg",
-    image2:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740424/IMG-20251124-WA0037_hequpq.jpg",
-    linkedin: "https://www.linkedin.com/in/shruti-barman-a9b73439a",
-  },
-  {
-    id: 17,
-    name: "Mahi Sharma",
-    role: "Graphic Designer Intern",
-    image1:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740469/IMG-20250602-WA0062_cxxny7.jpg",
-    image2:
-      "https://res.cloudinary.com/dbtmhiwij/image/upload/v1766740470/IMG-20250830-WA0253_tma5rh.jpg",
-    linkedin: "https://www.linkedin.com/in/mahi-sharma-855ba3278",
   },
 ];
 
