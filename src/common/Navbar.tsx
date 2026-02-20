@@ -24,18 +24,18 @@ export default function Navbar() {
       { name: "Case Studies", href: "/portfolio" },
       { name: "Services", href: "/services" },
       { name: "About Us", href: "/about-us" },
-      { name: "Team", href: "/teams" },
+      // { name: "Team", href: "/teams" },
       { name: "Blogs", href: "/blogs" },
       { name: "Contact", href: "/contact" },
     ],
-    []
+    [],
   );
 
   // Function to open Gmail directly
   const handleBookCall = () => {
     // This URL format tells Gmail to open the compose window
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${MY_EMAIL}&su=${encodeURIComponent(
-      EMAIL_SUBJECT
+      EMAIL_SUBJECT,
     )}&body=${encodeURIComponent(EMAIL_BODY)}`;
 
     // Open in a new tab
