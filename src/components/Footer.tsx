@@ -154,7 +154,7 @@ export default function Footer() {
           {/* Left Side: Lecomake Logo & Copyright */}
           <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
             <img
-              src="https://res.cloudinary.com/doy1iucnw/image/upload/v1764053666/lecomake_website_logo_updated_hai4yd.png" // Used your uploaded image filename assuming local serve or fallback to placeholder if needed in real app
+              src="/lecomake.png" // Used your uploaded image filename assuming local serve or fallback to placeholder if needed in real app
               alt="Lecomake Logo"
               className="h-10 w-auto invert"
             />
@@ -181,14 +181,14 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-1 hover:scale-105 transition-transform duration-300">
                 <img
-                  src="https://res.cloudinary.com/doy1iucnw/image/upload/v1764138930/fulllogo_transparent_lo5vkw.png"
+                  src="/tisa.png"
                   alt="Tisa Logo"
                   className="h-12 w-auto object-contain"
                 />
               </div>
               <div className="flex items-center gap-1 hover:scale-105 transition-transform duration-300">
                 <img
-                  src="https://res.cloudinary.com/doy1iucnw/image/upload/v1764138988/ninebytez_fk1kfa.png"
+                  src="/self.png"
                   alt="Ninebytes Logo"
                   className="h-12 w-auto object-contain"
                 />
