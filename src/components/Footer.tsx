@@ -160,7 +160,7 @@ export default function Footer() {
             />
             <div className="text-[10px] sm:text-xs text-gray-500 font-sans leading-relaxed">
               <p>All trademarks are the property of their respective owners</p>
-              <p>All rights reserved © 2025 Lecomake.</p>
+              <p>All rights reserved © {new Date().getFullYear()} Lecomake.</p>
             </div>
           </div>
 

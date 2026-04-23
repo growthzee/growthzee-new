@@ -16,7 +16,7 @@ export default function ContactPage() {
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -59,7 +59,7 @@ export default function ContactPage() {
       icon: "📍",
       title: "Visit Us",
       description: "Come say hello",
-      contact: "Bilaspur 495001 (C.G.)",
+      contact: "Raipur, Chhattisgarh",
       gradientFrom: "#80e01a",
       gradientTo: "#60c015",
     },
@@ -129,7 +129,7 @@ export default function ContactPage() {
                     background: `linear-gradient(135deg, ${method.gradientFrom}, ${method.gradientTo})`,
                   }}
                 ></div>
-                <div className="relative bg-black border border-[#80e01a] rounded-2xl p-8 text-center hover:border-[#80e01a]/80 transition-all duration-300 shadow-sm hover:shadow-lg">
+                <div className="relative bg-black border border-[#80e01a] rounded-2xl p-8 text-center hover:border-[#80e01a]/80 transition-all duration-300 shadow-sm hover:shadow-lg h-full">
                   <div className="text-4xl mb-4">{method.icon}</div>
                   <h3 className="text-white text-xl font-semibold mb-2">
                     {method.title}
@@ -152,9 +152,9 @@ export default function ContactPage() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="lg:col-span-3"
             >
-              <div className="relative">
+              <div className="relative h-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#80e01a]/10 to-[#60c015]/10 rounded-3xl blur-xl"></div>
-                <div className="relative bg-black border border-[#80e01a] rounded-3xl p-8 md:p-12 shadow-lg">
+                <div className="relative bg-black border border-[#80e01a] rounded-3xl p-8 md:p-12 shadow-lg h-full">
                   <div className="flex items-center mb-8">
                     <div className="w-12 h-12 bg-gradient-to-r from-[#80e01a] to-[#60c015] rounded-xl flex items-center justify-center text-2xl mr-4">
                       ✉️
@@ -288,6 +288,26 @@ export default function ContactPage() {
                       </h4>
                       <p className="text-gray-300 text-sm">2-8 weeks typical</p>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Our Address */}
+              <div className="bg-black border border-[#80e01a] rounded-2xl p-8 shadow-sm">
+                <h3 className="text-white text-2xl font-bold mb-6">
+                  Our Address
+                </h3>
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#80e01a] to-[#60c015] rounded-lg flex items-center justify-center text-sm flex-shrink-0">
+                    📍
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      First Floor, Office No. 01, Nerals House, <br />
+                      Near Shyam Nagar Gurudwara, Opp. Krishna Mandir, <br />
+                      Shyam Nagar, Raipur, <br />
+                      Chhattisgarh – 492006
+                    </p>
                   </div>
                 </div>
               </div>
