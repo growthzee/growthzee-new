@@ -104,6 +104,11 @@ export default function Footer() {
               >
                 WhatsApp: +91 99638 32825
               </p>
+              <p className="text-white/70 text-[18px] font-mono mt-4 leading-relaxed">
+                First Floor, Office No. 01, Nerals House, <br />
+                Near Shyam Nagar Gurudwara, Opp. Krishna Mandir, Shyam Nagar,
+                Raipur <br /> Chhattisgarh – 492006
+              </p>
               <div className="flex gap-4 mt-6">
                 <a
                   href="https://www.linkedin.com/company/growthzee/"
