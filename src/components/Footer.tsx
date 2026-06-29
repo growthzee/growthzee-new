@@ -73,13 +73,16 @@ export default function Footer() {
               </h4>
               <ul className="text-white/70 space-y-4 text-left cursor-pointer text-[18px] font-mono mt-5">
                 <li className="hover:text-[#80e01a] duration-300 transition-all">
-                  <Link href="/#home">Home</Link>
+                  <Link href="/home">Home</Link>
                 </li>
                 <li className="hover:text-[#80e01a] duration-300 transition-all">
-                  <Link href="/#portfolio">Portfolio</Link>
+                  <Link href="/portfolio">Portfolio</Link>
                 </li>
                 <li className="hover:text-[#80e01a] duration-300 transition-all">
-                  <Link href="/#services">Services</Link>
+                  <Link href="/services">Services</Link>
+                </li>
+                <li className="hover:text-[#80e01a] duration-300 transition-all">
+                  <Link href="/packages">Packages</Link>
                 </li>
                 <li className="hover:text-[#80e01a] duration-300 transition-all">
                   <Link href="/about-us">About</Link>
