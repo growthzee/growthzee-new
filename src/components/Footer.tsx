@@ -82,6 +82,9 @@ export default function Footer() {
                   <Link href="/services">Services</Link>
                 </li>
                 <li className="hover:text-[#80e01a] duration-300 transition-all">
+                  <Link href="/growthzee-partners">Growthzee Partners</Link>
+                </li>
+                <li className="hover:text-[#80e01a] duration-300 transition-all">
                   <Link href="/packages">Packages</Link>
                 </li>
                 <li className="hover:text-[#80e01a] duration-300 transition-all">

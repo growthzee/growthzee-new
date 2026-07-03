@@ -116,6 +116,7 @@ export default function Navbar() {
       { name: "Home", href: "/" },
       { name: "Case Studies", href: "/portfolio" },
       { name: "Services", href: "/services" },
+      { name: "Growthzee Partners", href: "/growthzee-partners" },
       { name: "Packages", href: "/packages" },
       { name: "About Us", href: "/about-us" },
       { name: "Blogs", href: "/blogs" },
