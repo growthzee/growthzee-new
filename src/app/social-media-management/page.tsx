@@ -1,40 +1,35 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
 import Navbar from "@/common/Navbar";
 import Footer from "@/components/Footer";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  Activity,
-  ArrowRight,
   ArrowUpRight,
   BarChart3,
-  Calendar,
   Check,
   CheckCircle2,
   ChevronDown,
-  Clapperboard,
-  Cpu,
-  Eye,
   Heart,
-  Layers,
   MessageCircle,
   Repeat,
-  ShieldCheck,
-  Smartphone,
   Sparkles,
-  TrendingUp,
-  UserCheck,
   Users,
   X,
   Zap,
-  Clock,
 } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 // --- Components ---
 
-const FAQItem = ({ question, answer, isOpen, onClick }) => {
+interface FAQItemProps {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onClick: () => void;
+}
+
+const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
   return (
     <div className="border-b border-white/10 last:border-0">
       <button
@@ -262,33 +257,27 @@ const organicMetrics = [
   },
 ];
 
-const ugcMetrics = [
-  {
-    title: "Ad CTR",
-    value: "2.1",
-    unit: "%",
-    icon: <ArrowRight className="w-6 h-6" />,
-    description: "UGC ads perform 1.8x better than static assets.",
-  },
-  {
-    title: "CPA Reduction",
-    value: "35",
-    unit: "%",
-    icon: <Check className="w-6 h-6" />,
-    description: "Lower acquisition costs through authentic content.",
-  },
-  {
-    title: "Retention",
-    value: "65",
-    unit: "%",
-    icon: <Clock className="w-6 h-6" />,
-    description: "High watch times with effective visual hooks.",
-  },
+const clientLogos = [
+  "/asian bond logo 001.png",
+  "/fulllogo_transparent.png",
+  "/rasoi king new logo (1).png",
+  "/IMG_2413.png",
+  "/Untitled-design-1 (4).png",
+  "/kbiyara logo green.png",
+  "/Jobzshala Logo-02.png",
+  "/logo lockup green.png",
+  "/Auraways logo 1.png",
+  "/HARIPRIYE LOGO-01.png",
+  "/logo.png",
+  "/474802338_660290993335714_3333538994452480484_n.jpg",
+  "/514589699_18275147488279885_1787357067326707066_n.jpg",
+  "/533137437_17851901640527703_3307439172453013123_n.jpg",
+  "/612992896_17874398616472016_3111202136808826232_n.jpg",
+  "/619934683_17849456628666008_8975028287258288799_n.jpg",
 ];
 
 export default function SocialAndUGC() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
-  const [activeTab, setActiveTab] = useState("organic");
 
   const scrollToCaseStudies = (e) => {
     e.preventDefault();
@@ -313,7 +302,7 @@ export default function SocialAndUGC() {
 
       <main className="relative z-10 pt-32 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
         {/* --- Hero --- */}
-        <div className="text-center max-w-5xl mx-auto mb-24">
+        <div className="text-center max-w-5xl mx-auto mb-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -349,7 +338,6 @@ export default function SocialAndUGC() {
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            {/* 1. DOWNLOAD BUTTON UPDATE */}
             <a
               href="/Growthzee_SMM_Offer.pdf"
               download="Growthzee_SMM_Offer.pdf"
@@ -359,7 +347,6 @@ export default function SocialAndUGC() {
               </button>
             </a>
 
-            {/* 2. CASE STUDIES SCROLL UPDATE */}
             <Link href="#case-studies">
               <button
                 onClick={scrollToCaseStudies}
@@ -371,125 +358,78 @@ export default function SocialAndUGC() {
           </div>
         </div>
 
-        {/* --- Metrics --- */}
-        <div className="mb-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-[#111] border border-white/10 rounded-3xl p-8">
-              <h3 className="text-2xl font-bold text-[#80e01a] mb-8">
-                Organic Performance
-              </h3>
-              <div className="grid grid-cols-3 gap-4">
-                {organicMetrics.map((m, i) => (
-                  <MetricBlock key={i} {...m} />
-                ))}
-              </div>
-            </div>
-            <div className="bg-[#111] border border-white/10 rounded-3xl p-8">
-              <h3 className="text-2xl font-bold text-[#80e01a] mb-8">
-                UGC Creative Impact
-              </h3>
-              <div className="grid grid-cols-3 gap-4">
-                {ugcMetrics.map((m, i) => (
-                  <MetricBlock key={i} {...m} />
-                ))}
-              </div>
+        {/* --- Client Marquee --- */}
+        <div className="mb-32 overflow-hidden relative w-full">
+          <style>{`
+            @keyframes scroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-scroll {
+              animation: scroll 30s linear infinite;
+              display: flex;
+              width: max-content;
+            }
+          `}</style>
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Trusted By
+          </h2>
+          <div className="flex w-full relative">
+            <div className="animate-scroll gap-16 items-center px-8">
+              {/* Doubled the logos array to achieve a seamless infinite loop */}
+              {[...clientLogos, ...clientLogos].map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo}
+                  alt={`Client Logo ${index}`}
+                  className="h-16 w-auto object-contain max-w-[200px] grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                />
+              ))}
             </div>
           </div>
         </div>
 
-        {/* --- Tab Switcher --- */}
-        <div className="mb-32">
-          <div className="flex justify-center mb-12">
-            <div className="bg-[#111] p-1.5 rounded-full border border-white/10 inline-flex relative">
-              <div
-                className={`absolute h-[calc(100%-12px)] top-1.5 transition-all duration-300 rounded-full bg-[#80e01a] ${
-                  activeTab === "organic"
-                    ? "left-1.5 w-[160px]"
-                    : "left-[170px] w-[160px]"
-                }`}
-              ></div>
-              <button
-                onClick={() => setActiveTab("organic")}
-                className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold w-[160px] ${
-                  activeTab === "organic"
-                    ? "text-black"
-                    : "text-gray-400 hover:text-white"
-                }`}
-              >
-                Organic Social
-              </button>
-              <button
-                onClick={() => setActiveTab("ugc")}
-                className={`relative z-10 px-8 py-3 rounded-full text-sm font-bold w-[160px] ${
-                  activeTab === "ugc"
-                    ? "text-black"
-                    : "text-gray-400 hover:text-white"
-                }`}
-              >
-                UGC Studio
-              </button>
+        {/* --- Organic Metrics --- */}
+        <div className="mb-32 max-w-5xl mx-auto">
+          <div className="bg-[#111] border border-white/10 rounded-3xl p-8 lg:p-12">
+            <h3 className="text-2xl font-bold text-[#80e01a] mb-10 text-center">
+              Organic Performance
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {organicMetrics.map((m, i) => (
+                <MetricBlock key={i} {...m} />
+              ))}
             </div>
           </div>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
-              {activeTab === "organic" ? (
-                <>
-                  <ServiceCard
-                    icon={<Users className="w-6 h-6" />}
-                    title="Community Management"
-                    description="We react to comments, DMs, and daily interactions to convert followers into loyal fans."
-                    benefits={[
-                      "Daily Engagement",
-                      "Sentiment Analysis",
-                      "Inbox Zero Strategy",
-                    ]}
-                  />
-                  <ServiceCard
-                    icon={<Repeat className="w-6 h-6" />}
-                    title="Strategy & Curation"
-                    description="Consistency leads to trust. We prepare and design the whole content roadmap for your brand."
-                    benefits={[
-                      "Content Calendar",
-                      "Caption Copywriting",
-                      "Visual Grid Planning",
-                    ]}
-                  />
-                </>
-              ) : (
-                <>
-                  <ServiceCard
-                    icon={<UserCheck className="w-6 h-6" />}
-                    title="Creator Sourcing"
-                    description="We match your brand with vetted creators who actually look like your target customer."
-                    benefits={[
-                      "Demographic Matching",
-                      "Vetted Network",
-                      "Rights Management",
-                    ]}
-                  />
-                  <ServiceCard
-                    icon={<Clapperboard className="w-6 h-6" />}
-                    title="Content Production"
-                    description="Native-style videos (Reels/TikToks) ready to post or use in your paid ad campaigns."
-                    benefits={[
-                      "Scripting & Briefing",
-                      "Native Editing",
-                      "Hook Variations",
-                    ]}
-                  />
-                </>
-              )}
-            </motion.div>
-          </AnimatePresence>
         </div>
 
-        {/* --- CASE STUDIES SECTION (ID ADDED HERE) --- */}
+        {/* --- Organic Services --- */}
+        <div className="mb-32 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ServiceCard
+              icon={<Users className="w-6 h-6" />}
+              title="Community Management"
+              description="We react to comments, DMs, and daily interactions to convert followers into loyal fans."
+              benefits={[
+                "Daily Engagement",
+                "Sentiment Analysis",
+                "Inbox Zero Strategy",
+              ]}
+            />
+            <ServiceCard
+              icon={<Repeat className="w-6 h-6" />}
+              title="Strategy & Curation"
+              description="Consistency leads to trust. We prepare and design the whole content roadmap for your brand."
+              benefits={[
+                "Content Calendar",
+                "Caption Copywriting",
+                "Visual Grid Planning",
+              ]}
+            />
+          </div>
+        </div>
+
+        {/* --- CASE STUDIES SECTION --- */}
         <div id="case-studies" className="mb-32 scroll-mt-24">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div>
