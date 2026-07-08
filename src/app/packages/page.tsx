@@ -652,19 +652,43 @@ const smmPlans = [
     sections: [
       {
         title: "🎥 Content Creation",
-        items: ["6 Reels", "4 Creative Posts", "2 Carousel Posts", "Festival Story"],
+        items: [
+          "6 Reels",
+          "4 Creative Posts",
+          "2 Carousel Posts",
+          "Festival Story",
+        ],
       },
       {
         title: "🧠 Content Planning",
-        items: ["Monthly Content Calendar", "Content Strategy", "Reel Script Planning", "Creative Planning", "Hashtag Research", "Trend Research"],
+        items: [
+          "Monthly Content Calendar",
+          "Content Strategy",
+          "Reel Script Planning",
+          "Creative Planning",
+          "Hashtag Research",
+          "Trend Research",
+        ],
       },
       {
         title: "🎨 Creative Design",
-        items: ["Professional Creative Designs", "Brand Color Consistency", "Feed Grid Planning", "Brand Identity Alignment"],
+        items: [
+          "Professional Creative Designs",
+          "Brand Color Consistency",
+          "Feed Grid Planning",
+          "Brand Identity Alignment",
+        ],
       },
       {
         title: "⚙️ Social Media Management",
-        items: ["Instagram Management", "Facebook Management", "Profile Optimization", "Bio Optimization", "Scheduled Posting", "Basic Engagement Monitoring"],
+        items: [
+          "Instagram Management",
+          "Facebook Management",
+          "Profile Optimization",
+          "Bio Optimization",
+          "Scheduled Posting",
+          "Basic Engagement Monitoring",
+        ],
       },
       {
         title: "📊 Monthly Report",
@@ -682,19 +706,42 @@ const smmPlans = [
     sections: [
       {
         title: "🎥 Content Creation",
-        items: ["8 Reels", "6 Creative Posts", "2 Carousel Posts", "Festival Story"],
+        items: [
+          "8 Reels",
+          "6 Creative Posts",
+          "2 Carousel Posts",
+          "Festival Story",
+        ],
       },
       {
         title: "🧠 Strategy",
-        items: ["Monthly Content Calendar", "Creative Strategy", "Reel Script Planning", "Trend Research", "Hashtag Strategy", "Feed Planning"],
+        items: [
+          "Monthly Content Calendar",
+          "Creative Strategy",
+          "Reel Script Planning",
+          "Trend Research",
+          "Hashtag Strategy",
+          "Feed Planning",
+        ],
       },
       {
         title: "⚙️ Social Media Management",
-        items: ["Complete Instagram Management", "Facebook Page Management", "Profile Optimization", "Scheduled Posting", "Basic Community Monitoring"],
+        items: [
+          "Complete Instagram Management",
+          "Facebook Page Management",
+          "Profile Optimization",
+          "Scheduled Posting",
+          "Basic Community Monitoring",
+        ],
       },
       {
         title: "📊 Monthly Report",
-        items: ["Content Performance", "Reach", "Engagement", "Growth Suggestions"],
+        items: [
+          "Content Performance",
+          "Reach",
+          "Engagement",
+          "Growth Suggestions",
+        ],
       },
     ],
   },
@@ -708,23 +755,53 @@ const smmPlans = [
     sections: [
       {
         title: "🎥 Content Creation",
-        items: ["10 Reels", "8 Creative Posts", "3 Carousel Posts", "Story Design Support"],
+        items: [
+          "10 Reels",
+          "8 Creative Posts",
+          "3 Carousel Posts",
+          "Story Design Support",
+        ],
       },
       {
         title: "🧠 Advanced Content Strategy",
-        items: ["Monthly Content Planning", "Content Calendar", "Reel Script Planning", "Campaign Planning", "Competitor Analysis", "Trend Research", "Hashtag Strategy"],
+        items: [
+          "Monthly Content Planning",
+          "Content Calendar",
+          "Reel Script Planning",
+          "Campaign Planning",
+          "Competitor Analysis",
+          "Trend Research",
+          "Hashtag Strategy",
+        ],
       },
       {
         title: "🎨 Creative Direction",
-        items: ["Premium Creative Design", "Feed Grid Planning", "Brand Identity Consistency", "Campaign Creative Planning"],
+        items: [
+          "Premium Creative Design",
+          "Feed Grid Planning",
+          "Brand Identity Consistency",
+          "Campaign Creative Planning",
+        ],
       },
       {
         title: "⚙️ Account Management",
-        items: ["Instagram Management", "Facebook Management", "Profile Optimization", "Scheduled Posting", "Basic Community Engagement", "Monthly Account Review"],
+        items: [
+          "Instagram Management",
+          "Facebook Management",
+          "Profile Optimization",
+          "Scheduled Posting",
+          "Basic Community Engagement",
+          "Monthly Account Review",
+        ],
       },
       {
         title: "📊 Reporting",
-        items: ["Monthly Performance Report", "Growth Insights", "Content Performance", "Quarterly Brand Review"],
+        items: [
+          "Monthly Performance Report",
+          "Growth Insights",
+          "Content Performance",
+          "Quarterly Brand Review",
+        ],
       },
     ],
   },
@@ -912,29 +989,38 @@ export default function MarketingPricingPage() {
             </div>
 
             {/* SMM Tab View Content */}
+            {/* SMM Tab View Content */}
             {activeTab === "smm" && (
               <div className="w-full animate-fadeIn">
                 <div className="text-center mb-10">
-                  <h3 className="text-xl md:text-3xl font-bold text-[#00F0FF] mb-2">
+                  <h3 className="text-xl md:text-3xl font-bold text-[#9bfe3d] mb-2">
                     GrowthZee Social Media Management & Creative Design
                   </h3>
                   <p className="text-[#bfcab0] text-sm md:text-base max-w-2xl mx-auto">
-                    Build a Brand. Build Trust. Build Consistency. We help businesses establish a professional and engaging presence across social media through strategic content planning, creative design, and consistent brand communication.
+                    Build a Brand. Build Trust. Build Consistency. We help
+                    businesses establish a professional and engaging presence
+                    across social media through strategic content planning,
+                    creative design, and consistent brand communication.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start mb-12">
                   {smmPlans.map((pkg) => {
                     const isOpen = !!expandedSMMCards[pkg.id];
-                    const allPoints = pkg.sections.flatMap(sec => [sec.title, ...sec.items]);
-                    const renderedPoints = isOpen ? pkg.sections : pkg.sections.slice(0, 2);
+                    const allPoints = pkg.sections.flatMap((sec) => [
+                      sec.title,
+                      ...sec.items,
+                    ]);
+                    const renderedPoints = isOpen
+                      ? pkg.sections
+                      : pkg.sections.slice(0, 2);
 
                     return (
                       <div
                         key={pkg.id}
-                        className={`glass-card p-6 md:p-8 rounded-2xl flex flex-col transition-all duration-300 ${pkg.id === 2 ? "border-[#00F0FF] shadow-[0_0_20px_rgba(0,240,255,0.1)]" : ""}`}
+                        className={`glass-card p-6 md:p-8 rounded-2xl flex flex-col transition-all duration-300 ${pkg.id === 2 ? "border-[#9bfe3d] shadow-[0_0_20px_rgba(155,254,61,0.1)]" : ""}`}
                       >
-                        <div className="font-mono text-xs text-[#00F0FF] uppercase mb-2 tracking-wider">
+                        <div className="font-mono text-xs text-[#9bfe3d] uppercase mb-2 tracking-wider">
                           {pkg.badge}
                         </div>
                         <div className="text-xs text-[#bfcab0] mb-4 font-mono">
@@ -955,12 +1041,15 @@ export default function MarketingPricingPage() {
                         <div className="space-y-4 flex-grow mb-6">
                           {renderedPoints.map((sec, sIdx) => (
                             <div key={sIdx} className="space-y-2">
-                              <h4 className="text-xs font-mono font-bold text-[#00F0FF] tracking-wide mt-2">
+                              <h4 className="text-xs font-mono font-bold text-[#9bfe3d] tracking-wide mt-2">
                                 {sec.title}
                               </h4>
                               <ul className="space-y-1.5">
                                 {sec.items.map((item, iIdx) => (
-                                  <li key={iIdx} className="flex items-center gap-2.5 text-xs text-[#e5e2e1]">
+                                  <li
+                                    key={iIdx}
+                                    className="flex items-center gap-2.5 text-xs text-[#e5e2e1]"
+                                  >
                                     <span className="material-symbols-outlined text-[#9bfe3d] text-[14px] shrink-0">
                                       check_circle
                                     </span>
@@ -982,20 +1071,28 @@ export default function MarketingPricingPage() {
                                     [pkg.id]: !prev[pkg.id],
                                   }))
                                 }
-                                className="inline-flex items-center gap-1 text-[10px] font-mono text-[#00F0FF] hover:text-white transition-colors underline underline-offset-4 cursor-pointer"
+                                className="inline-flex items-center gap-1 text-[10px] font-mono text-[#9bfe3d] hover:text-white transition-colors underline underline-offset-4 cursor-pointer"
                               >
-                                <span>{isOpen ? "Hide Details" : "View Details"}</span>
+                                <span>
+                                  {isOpen ? "Hide Details" : "View Details"}
+                                </span>
                                 <span
                                   className="material-symbols-outlined text-[12px]"
-                                  style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+                                  style={{
+                                    transform: isOpen
+                                      ? "rotate(180deg)"
+                                      : "rotate(0deg)",
+                                  }}
                                 >
                                   keyboard_arrow_down
                                 </span>
                               </button>
                             </div>
                           )}
-                          <button className={`w-full py-3.5 rounded-xl font-bold text-sm transition-all ${pkg.id === 2 ? "bg-[#00eefc] text-[#00363a] hover:shadow-[0_0_20px_rgba(0,238,252,0.4)]" : "border border-white/10 hover:bg-white/5 text-white"}`}>
-                            {pkg.id === 2 ? "Popular Choice" : "Choose Plan"}
+                          <button
+                            className={`w-full py-2.5 rounded-xl text-xs uppercase tracking-wider font-bold transition-all ${pkg.id === 2 ? "bg-[#80e01a] text-[#1a3700] hover:shadow-[0_0_20px_rgba(155,254,61,0.35)]" : "border border-white/10 hover:bg-white/5 text-white"}`}
+                          >
+                            Choose Plan
                           </button>
                         </div>
                       </div>
@@ -1003,7 +1100,7 @@ export default function MarketingPricingPage() {
                   })}
                 </div>
 
-                {/* Sub-sections embedded smoothly into the SMM layout stack */}
+                {/* Sub-sections layout blocks matching key performance tabs */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1280px] mx-auto mb-8">
                   <div className="p-5 md:p-6 rounded-xl bg-white/3 border border-white/5">
                     <h4 className="text-xs md:text-sm font-mono text-[#9bfe3d] uppercase tracking-widest mb-4">
@@ -1021,7 +1118,9 @@ export default function MarketingPricingPage() {
                         "Step 8: Publishing & Monitoring",
                       ].map((step, idx) => (
                         <div key={idx} className="flex items-start gap-2">
-                          <span className="text-[#00F0FF] font-mono shrink-0">✓</span>
+                          <span className="text-[#9bfe3d] font-mono shrink-0">
+                            ✓
+                          </span>
                           <span>{step}</span>
                         </div>
                       ))}
@@ -1029,7 +1128,7 @@ export default function MarketingPricingPage() {
                   </div>
 
                   <div className="p-5 md:p-6 rounded-xl bg-white/3 border border-white/5">
-                    <h4 className="text-xs md:text-sm font-mono text-[#00F0FF] uppercase tracking-widest mb-4">
+                    <h4 className="text-xs md:text-sm font-mono text-[#9bfe3d] uppercase tracking-widest mb-4">
                       🤝 Why GrowthZee?
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] text-[#bfcab0]">
@@ -1060,7 +1159,16 @@ export default function MarketingPricingPage() {
                       ❌ Not Included (Available as Add-ons)
                     </h4>
                     <ul className="grid grid-cols-2 gap-2 text-[11px] text-[#bfcab0]">
-                      {["Product Photoshoot", "Model Shoot", "UGC Video Production", "Paid Advertising", "Influencer Marketing", "Video Shoot", "Advanced Motion Graphics", "Website Development"].map((item, i) => (
+                      {[
+                        "Product Photoshoot",
+                        "Model Shoot",
+                        "UGC Video Production",
+                        "Paid Advertising",
+                        "Influencer Marketing",
+                        "Video Shoot",
+                        "Advanced Motion Graphics",
+                        "Website Development",
+                      ].map((item, i) => (
                         <li key={i} className="flex items-center gap-2">
                           <span className="text-red-500/60 shrink-0">✕</span>
                           {item}
@@ -1076,8 +1184,14 @@ export default function MarketingPricingPage() {
                     <ul className="space-y-1 text-[11px] text-[#bfcab0]">
                       <li>• 100% Advance Payment execution framework.</li>
                       <li>• 18% GST Applicable uniformly on the invoices.</li>
-                      <li>• Content Production cycles require explicit Client Approval prior to scheduling updates.</li>
-                      <li>• Organic growth is scaling systematically dependent on platform algorithms & audience consistency benchmarks.</li>
+                      <li>
+                        • Content Production cycles require explicit Client
+                        Approval prior to scheduling updates.
+                      </li>
+                      <li>
+                        • Organic growth is scaling systematically dependent on
+                        platform algorithms & audience consistency benchmarks.
+                      </li>
                     </ul>
                   </div>
                 </div>
