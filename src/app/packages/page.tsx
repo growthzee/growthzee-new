@@ -641,6 +641,95 @@ const individualServices = [
   },
 ];
 
+const smmPlans = [
+  {
+    id: 1,
+    badge: "Plan A – Startup Brand Plan",
+    price: "9,999",
+    suffix: "+ 18% GST (100% Advance)",
+    platforms: "Instagram & Facebook",
+    type: "Organic Social Media Management (Paid Ads Not Included)",
+    sections: [
+      {
+        title: "🎥 Content Creation",
+        items: ["6 Reels", "4 Creative Posts", "2 Carousel Posts", "Festival Story"],
+      },
+      {
+        title: "🧠 Content Planning",
+        items: ["Monthly Content Calendar", "Content Strategy", "Reel Script Planning", "Creative Planning", "Hashtag Research", "Trend Research"],
+      },
+      {
+        title: "🎨 Creative Design",
+        items: ["Professional Creative Designs", "Brand Color Consistency", "Feed Grid Planning", "Brand Identity Alignment"],
+      },
+      {
+        title: "⚙️ Social Media Management",
+        items: ["Instagram Management", "Facebook Management", "Profile Optimization", "Bio Optimization", "Scheduled Posting", "Basic Engagement Monitoring"],
+      },
+      {
+        title: "📊 Monthly Report",
+        items: ["Reach", "Engagement", "Profile Growth", "Content Performance"],
+      },
+    ],
+  },
+  {
+    id: 2,
+    badge: "Plan B – Growth & Consistency Plan",
+    price: "14,999",
+    suffix: "+ 18% GST (100% Advance)",
+    platforms: "Instagram & Facebook",
+    type: "Organic Social Media Management (Paid Ads Not Included)",
+    sections: [
+      {
+        title: "🎥 Content Creation",
+        items: ["8 Reels", "6 Creative Posts", "2 Carousel Posts", "Festival Story"],
+      },
+      {
+        title: "🧠 Strategy",
+        items: ["Monthly Content Calendar", "Creative Strategy", "Reel Script Planning", "Trend Research", "Hashtag Strategy", "Feed Planning"],
+      },
+      {
+        title: "⚙️ Social Media Management",
+        items: ["Complete Instagram Management", "Facebook Page Management", "Profile Optimization", "Scheduled Posting", "Basic Community Monitoring"],
+      },
+      {
+        title: "📊 Monthly Report",
+        items: ["Content Performance", "Reach", "Engagement", "Growth Suggestions"],
+      },
+    ],
+  },
+  {
+    id: 3,
+    badge: "Plan C – Brand Authority Plan",
+    price: "19,999",
+    suffix: "+ 18% GST (100% Advance)",
+    platforms: "Instagram & Facebook",
+    type: "Organic Social Media Management (Paid Ads Not Included)",
+    sections: [
+      {
+        title: "🎥 Content Creation",
+        items: ["10 Reels", "8 Creative Posts", "3 Carousel Posts", "Story Design Support"],
+      },
+      {
+        title: "🧠 Advanced Content Strategy",
+        items: ["Monthly Content Planning", "Content Calendar", "Reel Script Planning", "Campaign Planning", "Competitor Analysis", "Trend Research", "Hashtag Strategy"],
+      },
+      {
+        title: "🎨 Creative Direction",
+        items: ["Premium Creative Design", "Feed Grid Planning", "Brand Identity Consistency", "Campaign Creative Planning"],
+      },
+      {
+        title: "⚙️ Account Management",
+        items: ["Instagram Management", "Facebook Management", "Profile Optimization", "Scheduled Posting", "Basic Community Engagement", "Monthly Account Review"],
+      },
+      {
+        title: "📊 Reporting",
+        items: ["Monthly Performance Report", "Growth Insights", "Content Performance", "Quarterly Brand Review"],
+      },
+    ],
+  },
+];
+
 export default function MarketingPricingPage() {
   const [activeTab, setActiveTab] = useState<
     "smm" | "performance" | "full-suite" | "service"
@@ -657,6 +746,9 @@ export default function MarketingPricingPage() {
     Record<number, boolean>
   >({});
   const [expandedGrowthCards, setExpandedGrowthCards] = useState<
+    Record<number, boolean>
+  >({});
+  const [expandedSMMCards, setExpandedSMMCards] = useState<
     Record<number, boolean>
   >({});
 
@@ -746,7 +838,7 @@ export default function MarketingPricingPage() {
             </div>
           </section>
 
-          {/* Trust Bar Section - Restored to full size */}
+          {/* Trust Bar Section */}
           <div className="flex w-full overflow-hidden mask-gradient pb-6">
             <motion.div
               className="flex gap-14 sm:gap-20 items-center whitespace-nowrap"
@@ -821,104 +913,173 @@ export default function MarketingPricingPage() {
 
             {/* SMM Tab View Content */}
             {activeTab === "smm" && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 animate-fadeIn">
-                <div className="glass-card p-6 md:p-8 rounded-2xl flex flex-col">
-                  <div className="font-mono text-xs text-[#00F0FF] uppercase mb-4 tracking-wider">
-                    SMM Basic
-                  </div>
-                  <div className="mb-6">
-                    <span className="text-2xl md:text-4xl font-bold">
-                      ₹10,000
-                    </span>
-                    <span className="text-[#bfcab0]">/mo</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 flex-grow">
-                    {[
-                      "2 Platforms",
-                      "12 Posts",
-                      "Basic Engagement",
-                      "Monthly Report",
-                    ].map((feat, i) => (
-                      <li
-                        key={i}
-                        className="flex items-center gap-3 text-xs md:text-sm text-[#e5e2e1]"
-                      >
-                        <span className="material-symbols-outlined text-[#00F0FF] text-[18px]">
-                          check_circle
-                        </span>
-                        {feat}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="w-full py-3.5 rounded-xl border border-white/10 hover:bg-white/5 transition-all font-bold text-sm">
-                    Choose Plan
-                  </button>
+              <div className="w-full animate-fadeIn">
+                <div className="text-center mb-10">
+                  <h3 className="text-xl md:text-3xl font-bold text-[#00F0FF] mb-2">
+                    GrowthZee Social Media Management & Creative Design
+                  </h3>
+                  <p className="text-[#bfcab0] text-sm md:text-base max-w-2xl mx-auto">
+                    Build a Brand. Build Trust. Build Consistency. We help businesses establish a professional and engaging presence across social media through strategic content planning, creative design, and consistent brand communication.
+                  </p>
                 </div>
-                <div className="glass-card p-6 md:p-8 rounded-2xl flex flex-col border-[#00F0FF] shadow-[0_0_20px_rgba(0,240,255,0.1)]">
-                  <div className="font-mono text-xs text-[#00F0FF] uppercase mb-4 tracking-wider">
-                    SMM Pro
-                  </div>
-                  <div className="mb-6">
-                    <span className="text-2xl md:text-4xl font-bold">
-                      ₹20,000
-                    </span>
-                    <span className="text-[#bfcab0]">/mo</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 flex-grow">
-                    {[
-                      "4 Platforms",
-                      "20 Posts",
-                      "Community Management",
-                      "Monthly Reels (2)",
-                      "Advanced Analytics",
-                    ].map((feat, i) => (
-                      <li
-                        key={i}
-                        className="flex items-center gap-3 text-xs md:text-sm text-[#e5e2e1]"
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start mb-12">
+                  {smmPlans.map((pkg) => {
+                    const isOpen = !!expandedSMMCards[pkg.id];
+                    const allPoints = pkg.sections.flatMap(sec => [sec.title, ...sec.items]);
+                    const renderedPoints = isOpen ? pkg.sections : pkg.sections.slice(0, 2);
+
+                    return (
+                      <div
+                        key={pkg.id}
+                        className={`glass-card p-6 md:p-8 rounded-2xl flex flex-col transition-all duration-300 ${pkg.id === 2 ? "border-[#00F0FF] shadow-[0_0_20px_rgba(0,240,255,0.1)]" : ""}`}
                       >
-                        <span className="material-symbols-outlined text-[#00F0FF] text-[18px]">
-                          check_circle
-                        </span>
-                        {feat}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="w-full py-3.5 rounded-xl bg-[#00eefc] text-[#00363a] font-bold hover:shadow-[0_0_20px_rgba(0,238,252,0.4)] transition-all text-sm">
-                    Popular Choice
-                  </button>
+                        <div className="font-mono text-xs text-[#00F0FF] uppercase mb-2 tracking-wider">
+                          {pkg.badge}
+                        </div>
+                        <div className="text-xs text-[#bfcab0] mb-4 font-mono">
+                          Platforms: {pkg.platforms}
+                        </div>
+                        <div className="mb-4">
+                          <span className="text-2xl md:text-4xl font-bold text-white">
+                            ₹{pkg.price}
+                          </span>
+                          <div className="text-[10px] md:text-[11px] text-[#bfcab0] font-mono mt-0.5">
+                            {pkg.suffix}
+                          </div>
+                        </div>
+                        <div className="text-xs text-[#9bfe3d] border-b border-white/5 pb-4 mb-4 font-medium">
+                          {pkg.type}
+                        </div>
+
+                        <div className="space-y-4 flex-grow mb-6">
+                          {renderedPoints.map((sec, sIdx) => (
+                            <div key={sIdx} className="space-y-2">
+                              <h4 className="text-xs font-mono font-bold text-[#00F0FF] tracking-wide mt-2">
+                                {sec.title}
+                              </h4>
+                              <ul className="space-y-1.5">
+                                {sec.items.map((item, iIdx) => (
+                                  <li key={iIdx} className="flex items-center gap-2.5 text-xs text-[#e5e2e1]">
+                                    <span className="material-symbols-outlined text-[#9bfe3d] text-[14px] shrink-0">
+                                      check_circle
+                                    </span>
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="space-y-3 pt-4 border-t border-white/5 mt-auto">
+                          {allPoints.length > 6 && (
+                            <div className="text-left">
+                              <button
+                                onClick={() =>
+                                  setExpandedSMMCards((prev) => ({
+                                    ...prev,
+                                    [pkg.id]: !prev[pkg.id],
+                                  }))
+                                }
+                                className="inline-flex items-center gap-1 text-[10px] font-mono text-[#00F0FF] hover:text-white transition-colors underline underline-offset-4 cursor-pointer"
+                              >
+                                <span>{isOpen ? "Hide Details" : "View Details"}</span>
+                                <span
+                                  className="material-symbols-outlined text-[12px]"
+                                  style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+                                >
+                                  keyboard_arrow_down
+                                </span>
+                              </button>
+                            </div>
+                          )}
+                          <button className={`w-full py-3.5 rounded-xl font-bold text-sm transition-all ${pkg.id === 2 ? "bg-[#00eefc] text-[#00363a] hover:shadow-[0_0_20px_rgba(0,238,252,0.4)]" : "border border-white/10 hover:bg-white/5 text-white"}`}>
+                            {pkg.id === 2 ? "Popular Choice" : "Choose Plan"}
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-                <div className="glass-card p-6 md:p-8 rounded-2xl flex flex-col">
-                  <div className="font-mono text-xs text-[#00F0FF] uppercase mb-4 tracking-wider">
-                    SMM Elite
+
+                {/* Sub-sections embedded smoothly into the SMM layout stack */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1280px] mx-auto mb-8">
+                  <div className="p-5 md:p-6 rounded-xl bg-white/3 border border-white/5">
+                    <h4 className="text-xs md:text-sm font-mono text-[#9bfe3d] uppercase tracking-widest mb-4">
+                      🚀 Client Onboarding Process
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] text-[#bfcab0]">
+                      {[
+                        "Step 1: 100% Advance Payment",
+                        "Step 2: Master Service Agreement (MSA)",
+                        "Step 3: Instagram & Facebook Access",
+                        "Step 4: Deep Brand & Competitor Discussion",
+                        "Step 5: Content Calendar Preparation",
+                        "Step 6: Client Approval Loop",
+                        "Step 7: Production (Reels, Carousels)",
+                        "Step 8: Publishing & Monitoring",
+                      ].map((step, idx) => (
+                        <div key={idx} className="flex items-start gap-2">
+                          <span className="text-[#00F0FF] font-mono shrink-0">✓</span>
+                          <span>{step}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="mb-6">
-                    <span className="text-2xl md:text-4xl font-bold">
-                      ₹40,000
-                    </span>
-                    <span className="text-[#bfcab0]">/mo</span>
+
+                  <div className="p-5 md:p-6 rounded-xl bg-white/3 border border-white/5">
+                    <h4 className="text-xs md:text-sm font-mono text-[#00F0FF] uppercase tracking-widest mb-4">
+                      🤝 Why GrowthZee?
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] text-[#bfcab0]">
+                      {[
+                        "Dedicated Account Manager",
+                        "Professional Creative Team",
+                        "Monthly Content Strategy",
+                        "Consistent Brand Voice",
+                        "Premium Design Architecture",
+                        "Transparent Workflow Logs",
+                        "Business-Focused Approach",
+                        "Strict Timely Delivery",
+                      ].map((val, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <span className="material-symbols-outlined text-[#9bfe3d] text-[14px]">
+                            check_circle
+                          </span>
+                          <span>{val}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <ul className="space-y-3 mb-8 flex-grow">
-                    {[
-                      "All Platforms",
-                      "Daily Posting",
-                      "Influencer Coordination",
-                      "4 Reels/mo",
-                      "Dedicated Social Lead",
-                    ].map((feat, i) => (
-                      <li
-                        key={i}
-                        className="flex items-center gap-3 text-xs md:text-sm text-[#e5e2e1]"
-                      >
-                        <span className="material-symbols-outlined text-[#00F0FF] text-[18px]">
-                          check_circle
-                        </span>
-                        {feat}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="w-full py-3.5 rounded-xl border border-white/10 hover:bg-white/5 transition-all font-bold text-sm">
-                    Contact Us
-                  </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1280px] mx-auto">
+                  <div className="p-5 md:p-6 rounded-xl bg-red-500/5 border border-red-500/10">
+                    <h4 className="text-xs md:text-sm font-mono text-red-400 uppercase tracking-widest mb-3">
+                      ❌ Not Included (Available as Add-ons)
+                    </h4>
+                    <ul className="grid grid-cols-2 gap-2 text-[11px] text-[#bfcab0]">
+                      {["Product Photoshoot", "Model Shoot", "UGC Video Production", "Paid Advertising", "Influencer Marketing", "Video Shoot", "Advanced Motion Graphics", "Website Development"].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <span className="text-red-500/60 shrink-0">✕</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="p-5 md:p-6 rounded-xl bg-white/3 border border-white/5">
+                    <h4 className="text-xs md:text-sm font-mono text-amber-400 uppercase tracking-widest mb-3">
+                      📌 Important Terms
+                    </h4>
+                    <ul className="space-y-1 text-[11px] text-[#bfcab0]">
+                      <li>• 100% Advance Payment execution framework.</li>
+                      <li>• 18% GST Applicable uniformly on the invoices.</li>
+                      <li>• Content Production cycles require explicit Client Approval prior to scheduling updates.</li>
+                      <li>• Organic growth is scaling systematically dependent on platform algorithms & audience consistency benchmarks.</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             )}
@@ -1383,7 +1544,7 @@ export default function MarketingPricingPage() {
                 </div>
 
                 <div className="p-6 md:p-8 bg-black/40 border border-white/5 rounded-2xl text-center flex flex-col justify-center min-h-[250px] md:min-h-[300px]">
-                  <div className="font-mono text-[10px] md:text-xs text-[#bfcab0] uppercase mb-3 md:mb-4 tracking-wider">
+                  <div className="font-mono text-[10px] md:text-[12px] text-[#bfcab0] uppercase mb-3 md:mb-4 tracking-wider">
                     Estimated 12-Month Growth
                   </div>
                   <div className="text-3xl md:text-5xl font-bold text-[#9bfe3d] mb-2">
