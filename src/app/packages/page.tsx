@@ -1026,14 +1026,14 @@ export default function MarketingPricingPage() {
                         <div className="text-xs text-[#bfcab0] mb-4 font-mono">
                           Platforms: {pkg.platforms}
                         </div>
-                        <div className="mb-4">
+                        {/* <div className="mb-4">
                           <span className="text-2xl md:text-4xl font-bold text-white">
                             ₹{pkg.price}
                           </span>
                           <div className="text-[10px] md:text-[11px] text-[#bfcab0] font-mono mt-0.5">
                             {pkg.suffix}
                           </div>
-                        </div>
+                        </div> */}
                         <div className="text-xs text-[#9bfe3d] border-b border-white/5 pb-4 mb-4 font-medium">
                           {pkg.type}
                         </div>
@@ -1289,14 +1289,14 @@ export default function MarketingPricingPage() {
                             <h3 className="text-base md:text-lg font-bold font-jost text-white mb-3 min-h-[44px] flex items-center leading-snug">
                               {pkg.name}
                             </h3>
-                            <div className="mb-4 md:mb-6">
+                            {/* <div className="mb-4 md:mb-6">
                               <span className="text-2xl md:text-3xl font-extrabold text-white">
                                 ₹{pkg.price}
                               </span>
                               <div className="text-[10px] md:text-[11px] text-[#bfcab0] font-mono mt-0.5">
                                 {pkg.suffix}
                               </div>
-                            </div>
+                            </div> */}
                           </div>
 
                           <ul className="space-y-2 mb-6 flex-grow flex flex-col">
@@ -1479,14 +1479,14 @@ export default function MarketingPricingPage() {
                             <h3 className="text-base md:text-lg font-bold font-jost text-white mb-3 min-h-[44px] flex items-center leading-snug">
                               {pkg.name}
                             </h3>
-                            <div className="mb-4 md:mb-6">
+                            {/* <div className="mb-4 md:mb-6">
                               <span className="text-2xl md:text-3xl font-extrabold text-white">
                                 ₹{pkg.price}
                               </span>
                               <div className="text-[10px] md:text-[11px] text-[#bfcab0] font-mono mt-0.5">
                                 {pkg.suffix}
                               </div>
-                            </div>
+                            </div> */}
                           </div>
 
                           <ul className="space-y-2 mb-6 flex-grow flex flex-col">
@@ -1589,14 +1589,14 @@ export default function MarketingPricingPage() {
                     </div>
 
                     <div className="mt-auto">
-                      <div className="mb-4 border-t border-white/5 pt-4 flex items-baseline gap-1">
+                      {/* <div className="mb-4 border-t border-white/5 pt-4 flex items-baseline gap-1">
                         <span className="text-xl md:text-2xl font-extrabold text-white">
                           {svc.price === "Custom" ? "Custom" : `₹${svc.price}`}
                         </span>
                         <span className="text-[10px] md:text-[11px] font-mono text-[#bfcab0]">
                           {svc.suffix}
                         </span>
-                      </div>
+                      </div> */}
                       <button className="w-full py-2.5 rounded-xl border border-white/10 text-white font-bold text-xs uppercase tracking-wider hover:bg-white/10 hover:text-[#00F0FF] transition-all cursor-pointer">
                         Book Service
                       </button>

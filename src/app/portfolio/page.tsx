@@ -1,17 +1,16 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  FaTimes,
-  FaExternalLinkAlt,
-  FaEye,
-  FaStar,
-  FaArrowRight,
-  FaCheck,
-} from "react-icons/fa";
 import Navbar from "@/common/Navbar";
 import Footer from "@/components/Footer";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
+import {
+  FaArrowRight,
+  FaCheck,
+  FaExternalLinkAlt,
+  FaStar,
+  FaTimes,
+} from "react-icons/fa";
 
 // 1. Redefined Interface with rich graphical metadata
 interface Portfolio {

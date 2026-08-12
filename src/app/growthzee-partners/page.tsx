@@ -420,9 +420,9 @@ export default function PartnerProgramPage() {
                 <div className="font-mono text-[10px] text-[#9bfe3d] uppercase tracking-wider mb-1">
                   Monthly Investment
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 font-jost">
+                {/* <h3 className="text-2xl font-bold text-white mb-2 font-jost">
                   ₹19,999 + 18% GST / Month
-                </h3>
+                </h3> */}
                 <p className="text-xs text-[#bfcab0] leading-relaxed">
                   Valid until your brand achieves ₹3,00,000 in Monthly Revenue.
                   Once crossing consistently, your plan automatically
@@ -448,9 +448,9 @@ export default function PartnerProgramPage() {
                 <span className="text-[10px] font-mono text-[#00F0FF] uppercase tracking-wider block mb-2">
                   Partnership Fee
                 </span>
-                <div className="text-5xl font-extrabold text-[#9bfe3d] tracking-tight mb-2">
+                {/* <div className="text-5xl font-extrabold text-[#9bfe3d] tracking-tight mb-2">
                   3.5%
-                </div>
+                </div> */}
                 <p className="text-xs text-[#bfcab0] leading-relaxed">
                   Calculated cleanly off total monthly net revenue metrics (GST
                   Included).
