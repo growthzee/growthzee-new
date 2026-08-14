@@ -1,5 +1,4 @@
 "use client";
-import AnnouncementPopup from "@/components/AnnouncementPopup";
 import Creation from "@/components/Creation";
 import Faq from "@/components/Faq";
 import FolderStack from "@/components/folderstack";
@@ -20,7 +19,6 @@ import SuccessStories from "@/components/successstories";
 export default function Home() {
   return (
     <main>
-      <AnnouncementPopup />
       <Hero />
 
       {/* <Portfolio /> */}
